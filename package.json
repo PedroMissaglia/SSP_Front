@@ -17,6 +17,7 @@
     "gulp-uglify": "^3.0.2",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
+    "particlesjs": "^2.2.3",
     "popper.js": "^1.15.0",
     "pug": "2.0.0-beta11",
     "sass": "^1.23.0-module.beta.1",

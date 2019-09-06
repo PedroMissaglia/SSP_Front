@@ -1,14 +1,13 @@
-window.onload = function() {
-  var particles = Particles.init({
-    selector: '.background',
-    color: ['#DBEDF3'],
-    connectParticles: false,
-    speed: 1,
-    maxParticles: 300
-  });
+/*!
+ * A lightweight, dependency-free and responsive javascript plugin for particle backgrounds.
+ *
+ * @author Marc Bruederlin <hello@marcbruederlin.com>
+ * @version 2.2.3
+ * @license MIT
+ * @see https://github.com/marcbruederlin/particles.js
+ */
 
-} 
-
+/* exported Particles */
 var Particles = (function(window, document) {
   'use strict';
 

@@ -21,6 +21,7 @@ input.form-control{
 }
 button.btn.btn-primary.btn-block.btn-flat{
     font-size: 20px;
+    background: #284854;
 }
 
 div.icheck-primary{
@@ -31,14 +32,20 @@ input#remember{
 }
 a.btn.btn-block.btn-primary{
     font-size: 20px;
+    background: #284854;
 }
 
 div.login-logo{
     width: 500px;
+    border-top-width: 0px;
+    top: 100px;
+    margin-top: 100px;
 }
 
 div.login-box{
     width: 500px;
+    margin: 0 auto;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02);
 }
 
 h2.login-box-msg{
@@ -48,3 +55,23 @@ h2.login-box-msg{
 h1.logo{
     font-size: 40px;
 }
+
+a.forgotPassword{
+
+    font-size: 15px;
+}
+a.text-center{
+
+    font-size: 15px;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-image: url('https://images.wallpaperscraft.com/image/stars_sky_night_113553_1920x1080.jpg');
+
+  }

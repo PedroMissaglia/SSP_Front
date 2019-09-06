@@ -4,13 +4,12 @@ block content
   .login
     .login-box
       .login-logo
-        h1.logo Super Secret Project
-          br
         .card.col-mb-4
           .card-body.login-card-body
             h2.login-box-msg Login
+              h3 Super Secret Project
             br
-            form(action='../../index3.html', method='post')
+            form(action='register.pug', method='post')
               .input-group.mb-4
                 input.form-control(name ="email" type='email', placeholder='Email')
                 .input-group-append
@@ -43,7 +42,9 @@ block content
             // /.social-auth-links 
             br
             p.mb-1
-              a(href='#') I forgot my password
+              a.text-center(href='#') I forgot my password
             br  
             p.mb-0
               a.text-center(href='views/register.pug') Register a new membership
+            div(id="particles-js")  
+  canvas(class="background")
