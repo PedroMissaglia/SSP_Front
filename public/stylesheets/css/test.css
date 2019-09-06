@@ -1,13 +1,50 @@
-body
-{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    margin: 0px;
-    padding: 0px;
-    margin: 0;
-    height: 200%;
+body{
+    height:100%;
+    width:100%;
+    min-height: 100px;
 }
 
-body.login{
-    height: 100%;
+
+div.card.col-mb-4{
+
+    padding: 10px 10px 20px 20px;
+    padding-left: 10px;
+    width: 500px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+input.form-control{
+    height: 34.5px;
+    width: 116px;
+    font-size: 15px;
+}
+button.btn.btn-primary.btn-block.btn-flat{
+    font-size: 20px;
+}
+
+div.icheck-primary{
+    width: 150px;
+}
+input#remember{
+    width: 20px;
+}
+a.btn.btn-block.btn-primary{
+    font-size: 20px;
+}
+
+div.login-logo{
+    width: 500px;
+}
+
+div.login-box{
+    width: 500px;
+}
+
+h2.login-box-msg{
+    font-size: 35px;
+}
+
+h1.logo{
+    font-size: 40px;
 }
