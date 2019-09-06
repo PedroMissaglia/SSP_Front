@@ -1,0 +1,1547 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title AdminLTE 3 | Widgets
+    // Tell the browser to be responsive to screen width 
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    // Font Awesome 
+    link(rel='stylesheet', href='../plugins/fontawesome-free/css/all.min.css')
+    // Ionicons 
+    link(rel='stylesheet', href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
+    // Theme style 
+    link(rel='stylesheet', href='../dist/css/adminlte.min.css')
+    // Google Font: Source Sans Pro 
+    link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700', rel='stylesheet')
+  body.hold-transition.sidebar-mini
+    .wrapper
+      // Navbar 
+      nav.main-header.navbar.navbar-expand.navbar-white.navbar-light
+        // Left navbar links 
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(data-widget='pushmenu', href='#')
+              i.fas.fa-bars
+          li.nav-item.d-none.d-sm-inline-block
+            a.nav-link(href='../index3.html') Home
+          li.nav-item.d-none.d-sm-inline-block
+            a.nav-link(href='#') Contact
+        // SEARCH FORM 
+        form.form-inline.ml-3
+          .input-group.input-group-sm
+            input.form-control.form-control-navbar(type='search', placeholder='Search', aria-label='Search')
+            .input-group-append
+              button.btn.btn-navbar(type='submit')
+                i.fas.fa-search
+        // Right navbar links 
+        ul.navbar-nav.ml-auto
+          // Messages Dropdown Menu 
+          li.nav-item.dropdown
+            a.nav-link(data-toggle='dropdown', href='#')
+              i.far.fa-comments
+              span.badge.badge-danger.navbar-badge 3
+            .dropdown-menu.dropdown-menu-lg.dropdown-menu-right
+              a.dropdown-item(href='#')
+                // Message Start 
+                .media
+                  img.img-size-50.mr-3.img-circle(src='../dist/img/user1-128x128.jpg', alt='User Avatar')
+                  .media-body
+                    h3.dropdown-item-title
+                      | Brad Diesel
+                      span.float-right.text-sm.text-danger
+                        i.fas.fa-star
+                    p.text-sm Call me whenever you can...
+                    p.text-sm.text-muted
+                      i.far.fa-clock.mr-1
+                      | 4 Hours Ago
+                // Message End 
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                // Message Start 
+                .media
+                  img.img-size-50.img-circle.mr-3(src='../dist/img/user8-128x128.jpg', alt='User Avatar')
+                  .media-body
+                    h3.dropdown-item-title
+                      | John Pierce
+                      span.float-right.text-sm.text-muted
+                        i.fas.fa-star
+                    p.text-sm I got your message bro
+                    p.text-sm.text-muted
+                      i.far.fa-clock.mr-1
+                      | 4 Hours Ago
+                // Message End 
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                // Message Start 
+                .media
+                  img.img-size-50.img-circle.mr-3(src='../dist/img/user3-128x128.jpg', alt='User Avatar')
+                  .media-body
+                    h3.dropdown-item-title
+                      | Nora Silvester
+                      span.float-right.text-sm.text-warning
+                        i.fas.fa-star
+                    p.text-sm The subject goes here
+                    p.text-sm.text-muted
+                      i.far.fa-clock.mr-1
+                      | 4 Hours Ago
+                // Message End 
+              .dropdown-divider
+              a.dropdown-item.dropdown-footer(href='#') See All Messages
+          // Notifications Dropdown Menu 
+          li.nav-item.dropdown
+            a.nav-link(data-toggle='dropdown', href='#')
+              i.far.fa-bell
+              span.badge.badge-warning.navbar-badge 15
+            .dropdown-menu.dropdown-menu-lg.dropdown-menu-right
+              span.dropdown-item.dropdown-header 15 Notifications
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                i.fas.fa-envelope.mr-2
+                | 4 new messages
+                span.float-right.text-muted.text-sm 3 mins
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                i.fas.fa-users.mr-2
+                | 8 friend requests
+                span.float-right.text-muted.text-sm 12 hours
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                i.fas.fa-file.mr-2
+                | 3 new reports
+                span.float-right.text-muted.text-sm 2 days
+              .dropdown-divider
+              a.dropdown-item.dropdown-footer(href='#') See All Notifications
+          li.nav-item
+            a.nav-link(data-widget='control-sidebar', data-slide='true', href='#')
+              i.fas.fa-th-large
+      // /.navbar 
+      // Main Sidebar Container 
+      aside.main-sidebar.sidebar-dark-primary.elevation-4
+        // Brand Logo 
+        a.brand-link(href='../index3.html')
+          img.brand-image.img-circle.elevation-3(src='../dist/img/AdminLTELogo.png', alt='AdminLTE Logo', style='opacity: .8')
+          span.brand-text.font-weight-light AdminLTE 3
+        // Sidebar 
+        .sidebar
+          // Sidebar user panel (optional) 
+          .user-panel.mt-3.pb-3.mb-3.d-flex
+            .image
+              img.img-circle.elevation-2(src='../dist/img/user2-160x160.jpg', alt='User Image')
+            .info
+              a.d-block(href='#') Alexander Pierce
+          // Sidebar Menu 
+          nav.mt-2
+            ul.nav.nav-pills.nav-sidebar.flex-column(data-widget='treeview', role='menu', data-accordion='false')
+              //                 Add icons to the links using the .nav-icon class
+                               with font-awesome or any other icon font library 
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-tachometer-alt
+                  p
+                    | Dashboard
+                    i.right.fas.fa-angle-left
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='../index.html')
+                      i.far.fa-circle.nav-icon
+                      p Dashboard v1
+                  li.nav-item
+                    a.nav-link(href='../index2.html')
+                      i.far.fa-circle.nav-icon
+                      p Dashboard v2
+                  li.nav-item
+                    a.nav-link(href='../index3.html')
+                      i.far.fa-circle.nav-icon
+                      p Dashboard v3
+              li.nav-item
+                a.nav-link.active(href='widgets.html')
+                  i.nav-icon.fas.fa-th
+                  p
+                    | Widgets
+                    span.right.badge.badge-danger New
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-copy
+                  p
+                    | Layout Options
+                    i.fas.fa-angle-left.right
+                    span.badge.badge-info.right 6
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='layout/top-nav.html')
+                      i.far.fa-circle.nav-icon
+                      p Top Navigation
+                  li.nav-item
+                    a.nav-link(href='layout/boxed.html')
+                      i.far.fa-circle.nav-icon
+                      p Boxed
+                  li.nav-item
+                    a.nav-link(href='layout/fixed-sidebar.html')
+                      i.far.fa-circle.nav-icon
+                      p Fixed Sidebar
+                  li.nav-item
+                    a.nav-link(href='layout/fixed-topnav.html')
+                      i.far.fa-circle.nav-icon
+                      p Fixed Navbar
+                  li.nav-item
+                    a.nav-link(href='layout/fixed-footer.html')
+                      i.far.fa-circle.nav-icon
+                      p Fixed Footer
+                  li.nav-item
+                    a.nav-link(href='layout/collapsed-sidebar.html')
+                      i.far.fa-circle.nav-icon
+                      p Collapsed Sidebar
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-chart-pie
+                  p
+                    | Charts
+                    i.right.fas.fa-angle-left
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='charts/chartjs.html')
+                      i.far.fa-circle.nav-icon
+                      p ChartJS
+                  li.nav-item
+                    a.nav-link(href='charts/flot.html')
+                      i.far.fa-circle.nav-icon
+                      p Flot
+                  li.nav-item
+                    a.nav-link(href='charts/inline.html')
+                      i.far.fa-circle.nav-icon
+                      p Inline
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-tree
+                  p
+                    | UI Elements
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='UI/general.html')
+                      i.far.fa-circle.nav-icon
+                      p General
+                  li.nav-item
+                    a.nav-link(href='UI/icons.html')
+                      i.far.fa-circle.nav-icon
+                      p Icons
+                  li.nav-item
+                    a.nav-link(href='UI/buttons.html')
+                      i.far.fa-circle.nav-icon
+                      p Buttons
+                  li.nav-item
+                    a.nav-link(href='UI/sliders.html')
+                      i.far.fa-circle.nav-icon
+                      p Sliders
+                  li.nav-item
+                    a.nav-link(href='UI/modals.html')
+                      i.far.fa-circle.nav-icon
+                      p Modals & Alerts
+                  li.nav-item
+                    a.nav-link(href='UI/navbar.html')
+                      i.far.fa-circle.nav-icon
+                      p Navbar & Tabs
+                  li.nav-item
+                    a.nav-link(href='UI/timeline.html')
+                      i.far.fa-circle.nav-icon
+                      p Timeline
+                  li.nav-item
+                    a.nav-link(href='UI/ribbons.html')
+                      i.far.fa-circle.nav-icon
+                      p Ribbons
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-edit
+                  p
+                    | Forms
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='forms/general.html')
+                      i.far.fa-circle.nav-icon
+                      p General Elements
+                  li.nav-item
+                    a.nav-link(href='forms/advanced.html')
+                      i.far.fa-circle.nav-icon
+                      p Advanced Elements
+                  li.nav-item
+                    a.nav-link(href='forms/editors.html')
+                      i.far.fa-circle.nav-icon
+                      p Editors
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-table
+                  p
+                    | Tables
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='tables/simple.html')
+                      i.far.fa-circle.nav-icon
+                      p Simple Tables
+                  li.nav-item
+                    a.nav-link(href='tables/data.html')
+                      i.far.fa-circle.nav-icon
+                      p DataTables
+                  li.nav-item
+                    a.nav-link(href='tables/jsgrid.html')
+                      i.far.fa-circle.nav-icon
+                      p jsGrid
+              li.nav-header EXAMPLES
+              li.nav-item
+                a.nav-link(href='calendar.html')
+                  i.nav-icon.far.fa-calendar-alt
+                  p
+                    | Calendar
+                    span.badge.badge-info.right 2
+              li.nav-item
+                a.nav-link(href='gallery.html')
+                  i.nav-icon.far.fa-image
+                  p Gallery
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-envelope
+                  p
+                    | Mailbox
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='mailbox/mailbox.html')
+                      i.far.fa-circle.nav-icon
+                      p Inbox
+                  li.nav-item
+                    a.nav-link(href='mailbox/compose.html')
+                      i.far.fa-circle.nav-icon
+                      p Compose
+                  li.nav-item
+                    a.nav-link(href='mailbox/read-mail.html')
+                      i.far.fa-circle.nav-icon
+                      p Read
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-book
+                  p
+                    | Pages
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='examples/invoice.html')
+                      i.far.fa-circle.nav-icon
+                      p Invoice
+                  li.nav-item
+                    a.nav-link(href='examples/profile.html')
+                      i.far.fa-circle.nav-icon
+                      p Profile
+                  li.nav-item
+                    a.nav-link(href='examples/e_commerce.html')
+                      i.far.fa-circle.nav-icon
+                      p E-commerce
+                  li.nav-item
+                    a.nav-link(href='examples/projects.html')
+                      i.far.fa-circle.nav-icon
+                      p Projects
+                  li.nav-item
+                    a.nav-link(href='examples/project_add.html')
+                      i.far.fa-circle.nav-icon
+                      p Project Add
+                  li.nav-item
+                    a.nav-link(href='examples/project_edit.html')
+                      i.far.fa-circle.nav-icon
+                      p Project Edit
+                  li.nav-item
+                    a.nav-link(href='examples/project_detail.html')
+                      i.far.fa-circle.nav-icon
+                      p Project Detail
+                  li.nav-item
+                    a.nav-link(href='examples/contacts.html')
+                      i.far.fa-circle.nav-icon
+                      p Contacts
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-plus-square
+                  p
+                    | Extras
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='examples/login.html')
+                      i.far.fa-circle.nav-icon
+                      p Login
+                  li.nav-item
+                    a.nav-link(href='examples/register.html')
+                      i.far.fa-circle.nav-icon
+                      p Register
+                  li.nav-item
+                    a.nav-link(href='examples/lockscreen.html')
+                      i.far.fa-circle.nav-icon
+                      p Lockscreen
+                  li.nav-item
+                    a.nav-link(href='examples/legacy-user-menu.html')
+                      i.far.fa-circle.nav-icon
+                      p Legacy User Menu
+                  li.nav-item
+                    a.nav-link(href='examples/language-menu.html')
+                      i.far.fa-circle.nav-icon
+                      p Language Menu
+                  li.nav-item
+                    a.nav-link(href='examples/404.html')
+                      i.far.fa-circle.nav-icon
+                      p Error 404
+                  li.nav-item
+                    a.nav-link(href='examples/500.html')
+                      i.far.fa-circle.nav-icon
+                      p Error 500
+                  li.nav-item
+                    a.nav-link(href='examples/blank.html')
+                      i.far.fa-circle.nav-icon
+                      p Blank Page
+                  li.nav-item
+                    a.nav-link(href='../starter.html')
+                      i.far.fa-circle.nav-icon
+                      p Starter Page
+              li.nav-header MISCELLANEOUS
+              li.nav-item
+                a.nav-link(href='https://adminlte.io/docs/3.0')
+                  i.nav-icon.fas.fa-file
+                  p Documentation
+              li.nav-header LABELS
+              li.nav-item
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-circle.text-danger
+                  p.text Important
+              li.nav-item
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-circle.text-warning
+                  p Warning
+              li.nav-item
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-circle.text-info
+                  p Informational
+          // /.sidebar-menu 
+        // /.sidebar 
+      // Content Wrapper. Contains page content 
+      .content-wrapper
+        // Content Header (Page header) 
+        section.content-header
+          .container-fluid
+            .row.mb-2
+              .col-sm-6
+                h1 Widgets
+              .col-sm-6
+                ol.breadcrumb.float-sm-right
+                  li.breadcrumb-item
+                    a(href='#') Home
+                  li.breadcrumb-item.active Widgets
+          // /.container-fluid 
+        // Main content 
+        section.content
+          .container-fluid
+            h5.mb-2 Info Box
+            .row
+              .col-md-3.col-sm-6.col-12
+                .info-box
+                  span.info-box-icon.bg-info
+                    i.far.fa-envelope
+                  .info-box-content
+                    span.info-box-text Messages
+                    span.info-box-number 1,410
+                  // /.info-box-content 
+                // /.info-box 
+              // /.col 
+              .col-md-3.col-sm-6.col-12
+                .info-box
+                  span.info-box-icon.bg-success
+                    i.far.fa-flag
+                  .info-box-content
+                    span.info-box-text Bookmarks
+                    span.info-box-number 410
+                  // /.info-box-content 
+                // /.info-box 
+              // /.col 
+              .col-md-3.col-sm-6.col-12
+                .info-box
+                  span.info-box-icon.bg-warning
+                    i.far.fa-copy
+                  .info-box-content
+                    span.info-box-text Uploads
+                    span.info-box-number 13,648
+                  // /.info-box-content 
+                // /.info-box 
+              // /.col 
+              .col-md-3.col-sm-6.col-12
+                .info-box
+                  span.info-box-icon.bg-danger
+                    i.far.fa-star
+                  .info-box-content
+                    span.info-box-text Likes
+                    span.info-box-number 93,139
+                  // /.info-box-content 
+                // /.info-box 
+              // /.col 
+            // /.row 
+            // =========================================================== 
+            h5.mt-4.mb-2
+              | Info Box With
+              code bg-*
+            .row
+              .col-md-3.col-sm-6.col-12
+                .info-box.bg-info
+                  span.info-box-icon
+                    i.far.fa-bookmark
+                  .info-box-content
+                    span.info-box-text Bookmarks
+                    span.info-box-number 41,410
+                    .progress
+                      .progress-bar(style='width: 70%')
+                    span.progress-description 70% Increase in 30 Days
+                  // /.info-box-content 
+                // /.info-box 
+              // /.col 
+              .col-md-3.col-sm-6.col-12
+                .info-box.bg-success
+                  span.info-box-icon
+                    i.far.fa-thumbs-up
+                  .info-box-content
+                    span.info-box-text Likes
+                    span.info-box-number 41,410
+                    .progress
+                      .progress-bar(style='width: 70%')
+                    span.progress-description 70% Increase in 30 Days
+                  // /.info-box-content 
+                // /.info-box 
+              // /.col 
+              .col-md-3.col-sm-6.col-12
+                .info-box.bg-warning
+                  span.info-box-icon
+                    i.far.fa-calendar-alt
+                  .info-box-content
+                    span.info-box-text Events
+                    span.info-box-number 41,410
+                    .progress
+                      .progress-bar(style='width: 70%')
+                    span.progress-description 70% Increase in 30 Days
+                  // /.info-box-content 
+                // /.info-box 
+              // /.col 
+              .col-md-3.col-sm-6.col-12
+                .info-box.bg-danger
+                  span.info-box-icon
+                    i.fas.fa-comments
+                  .info-box-content
+                    span.info-box-text Comments
+                    span.info-box-number 41,410
+                    .progress
+                      .progress-bar(style='width: 70%')
+                    span.progress-description 70% Increase in 30 Days
+                  // /.info-box-content 
+                // /.info-box 
+              // /.col 
+            // /.row 
+            // =========================================================== 
+            h5.mt-4.mb-2
+              | Info Box With
+              code bg-gradient-*
+            .row
+              .col-md-3.col-sm-6.col-12
+                .info-box.bg-gradient-info
+                  span.info-box-icon
+                    i.far.fa-bookmark
+                  .info-box-content
+                    span.info-box-text Bookmarks
+                    span.info-box-number 41,410
+                    .progress
+                      .progress-bar(style='width: 70%')
+                    span.progress-description 70% Increase in 30 Days
+                  // /.info-box-content 
+                // /.info-box 
+              // /.col 
+              .col-md-3.col-sm-6.col-12
+                .info-box.bg-gradient-success
+                  span.info-box-icon
+                    i.far.fa-thumbs-up
+                  .info-box-content
+                    span.info-box-text Likes
+                    span.info-box-number 41,410
+                    .progress
+                      .progress-bar(style='width: 70%')
+                    span.progress-description 70% Increase in 30 Days
+                  // /.info-box-content 
+                // /.info-box 
+              // /.col 
+              .col-md-3.col-sm-6.col-12
+                .info-box.bg-gradient-warning
+                  span.info-box-icon
+                    i.far.fa-calendar-alt
+                  .info-box-content
+                    span.info-box-text Events
+                    span.info-box-number 41,410
+                    .progress
+                      .progress-bar(style='width: 70%')
+                    span.progress-description 70% Increase in 30 Days
+                  // /.info-box-content 
+                // /.info-box 
+              // /.col 
+              .col-md-3.col-sm-6.col-12
+                .info-box.bg-gradient-danger
+                  span.info-box-icon
+                    i.fas.fa-comments
+                  .info-box-content
+                    span.info-box-text Comments
+                    span.info-box-number 41,410
+                    .progress
+                      .progress-bar(style='width: 70%')
+                    span.progress-description 70% Increase in 30 Days
+                  // /.info-box-content 
+                // /.info-box 
+              // /.col 
+            // /.row 
+            // =========================================================== 
+            // Small Box (Stat card) 
+            h5.mb-2.mt-4 Small Box
+            .row
+              .col-lg-3.col-6
+                // small card 
+                .small-box.bg-info
+                  .inner
+                    h3 150
+                    p New Orders
+                  .icon
+                    i.fas.fa-shopping-cart
+                  a.small-box-footer(href='#')
+                    | More info
+                    i.fas.fa-arrow-circle-right
+              // ./col 
+              .col-lg-3.col-6
+                // small card 
+                .small-box.bg-success
+                  .inner
+                    h3
+                      | 53
+                      sup(style='font-size: 20px') %
+                    p Bounce Rate
+                  .icon
+                    i.ion.ion-stats-bars
+                  a.small-box-footer(href='#')
+                    | More info
+                    i.fas.fa-arrow-circle-right
+              // ./col 
+              .col-lg-3.col-6
+                // small card 
+                .small-box.bg-warning
+                  .inner
+                    h3 44
+                    p User Registrations
+                  .icon
+                    i.fas.fa-user-plus
+                  a.small-box-footer(href='#')
+                    | More info
+                    i.fas.fa-arrow-circle-right
+              // ./col 
+              .col-lg-3.col-6
+                // small card 
+                .small-box.bg-danger
+                  .inner
+                    h3 65
+                    p Unique Visitors
+                  .icon
+                    i.fas.fa-chart-pie
+                  a.small-box-footer(href='#')
+                    | More info
+                    i.fas.fa-arrow-circle-right
+              // ./col 
+            // /.row 
+            // Small Box (Stat card) 
+            .row
+              .col-lg-3.col-6
+                // small card 
+                .small-box.bg-info
+                  // Loading (remove the following to stop the loading)
+                  .overlay
+                    i.fas.fa-3x.fa-sync-alt
+                  // end loading 
+                  .inner
+                    h3 150
+                    p New Orders
+                  .icon
+                    i.fas.fa-shopping-cart
+                  a.small-box-footer(href='#')
+                    | More info
+                    i.fas.fa-arrow-circle-right
+              // ./col 
+              .col-lg-3.col-6
+                // small card 
+                .small-box.bg-success
+                  // Loading (remove the following to stop the loading)
+                  .overlay.dark
+                    i.fas.fa-3x.fa-sync-alt
+                  // end loading 
+                  .inner
+                    h3
+                      | 53
+                      sup(style='font-size: 20px') %
+                    p Bounce Rate
+                  .icon
+                    i.ion.ion-stats-bars
+                  a.small-box-footer(href='#')
+                    | More info
+                    i.fas.fa-arrow-circle-right
+              // ./col 
+            // /.row 
+            // =========================================================== 
+            h4.mb-2.mt-4 Cards
+            h5.mb-2 Abilities
+            .row
+              .col-md-3
+                .card.card-primary.collapsed-card
+                  .card-header
+                    h3.card-title Expandable
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-plus
+                    // /.card-tools 
+                  // /.card-header 
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+              // /.col 
+              .col-md-3
+                .card.card-success
+                  .card-header
+                    h3.card-title Collapsable
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                    // /.card-tools 
+                  // /.card-header 
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+              // /.col 
+              .col-md-3
+                .card.card-warning
+                  .card-header
+                    h3.card-title Removable
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='remove')
+                        i.fas.fa-times
+                    // /.card-tools 
+                  // /.card-header 
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+              // /.col 
+              .col-md-3
+                .card.card-danger
+                  .card-header
+                    h3.card-title Maximizable
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='maximize')
+                        i.fas.fa-expand
+                    // /.card-tools 
+                  // /.card-header 
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+              // /.col 
+            // /.row 
+            .row
+              .col-md-3
+                .card.card-primary
+                  .card-header
+                    h3.card-title Card Refresh
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='card-refresh', data-source='/pages/widgets.html', data-source-selector='#card-refresh-content')
+                        i.fas.fa-sync-alt
+                    // /.card-tools 
+                  // /.card-header 
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+                .d-none#card-refresh-content The body of the card after card refresh
+              // /.col 
+              .col-md-3
+                .card.card-success
+                  .card-header
+                    h3.card-title All together
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='card-refresh', data-source='/pages/widgets.html', data-source-selector='#card-refresh-content')
+                        i.fas.fa-sync-alt
+                      button.btn.btn-tool(type='button', data-card-widget='maximize')
+                        i.fas.fa-expand
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                      button.btn.btn-tool(type='button', data-card-widget='remove')
+                        i.fas.fa-times
+                    // /.card-tools 
+                  // /.card-header 
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+              // /.col 
+              .col-md-3
+                .card.card-warning
+                  .card-header
+                    h3.card-title Loading state
+                  .card-body The body of the card
+                  // /.card-body 
+                  // Loading (remove the following to stop the loading)
+                  .overlay
+                    i.fas.fa-2x.fa-sync-alt
+                  // end loading 
+                // /.card 
+              // /.col 
+              .col-md-3
+                .card.card-danger
+                  .card-header
+                    h3.card-title Loading state (dark)
+                  .card-body The body of the card
+                  // /.card-body 
+                  // Loading (remove the following to stop the loading)
+                  .overlay.dark
+                    i.fas.fa-2x.fa-sync-alt
+                  // end loading 
+                // /.card 
+              // /.col 
+            // /.row 
+            // =========================================================== 
+            h5.mb-2 Colors Variations
+            .row
+              .col-md-3
+                .card.card-primary
+                  .card-header
+                    h3.card-title Primary Outline
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                    // /.card-tools 
+                  // /.card-header 
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+              // /.col 
+              .col-md-3
+                .card.card-success
+                  .card-header
+                    h3.card-title Success Outline
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='remove')
+                        i.fas.fa-times
+                    // /.card-tools 
+                  // /.card-header 
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+              // /.col 
+              .col-md-3
+                .card.card-warning
+                  .card-header
+                    h3.card-title Warning Outline
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                    // /.card-tools 
+                  // /.card-header 
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+              // /.col 
+              .col-md-3
+                .card.card-danger
+                  .card-header
+                    h3.card-title Danger Outline
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+              // /.col 
+            // /.row 
+            .row
+              .col-md-3
+                .card.card-outline.card-primary
+                  .card-header
+                    h3.card-title Primary Outline
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                    // /.card-tools 
+                  // /.card-header 
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+              // /.col 
+              .col-md-3
+                .card.card-outline.card-success
+                  .card-header
+                    h3.card-title Success Outline
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='remove')
+                        i.fas.fa-times
+                    // /.card-tools 
+                  // /.card-header 
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+              // /.col 
+              .col-md-3
+                .card.card-outline.card-warning
+                  .card-header
+                    h3.card-title Warning Outline
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                    // /.card-tools 
+                  // /.card-header 
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+              // /.col 
+              .col-md-3
+                .card.card-outline.card-danger
+                  .card-header
+                    h3.card-title Danger Outline
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+              // /.col 
+            // /.row 
+            .row
+              .col-md-3
+                .card.bg-primary
+                  .card-header
+                    h3.card-title Primary
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                    // /.card-tools 
+                  // /.card-header 
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+              // /.col 
+              .col-md-3
+                .card.bg-success
+                  .card-header
+                    h3.card-title Success
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='remove')
+                        i.fas.fa-times
+                    // /.card-tools 
+                  // /.card-header 
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+              // /.col 
+              .col-md-3
+                .card.bg-warning
+                  .card-header
+                    h3.card-title Warning
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                    // /.card-tools 
+                  // /.card-header 
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+              // /.col 
+              .col-md-3
+                .card.bg-danger
+                  .card-header
+                    h3.card-title Danger
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+              // /.col 
+            // /.row 
+            .row
+              .col-md-3
+                .card.bg-gradient-primary
+                  .card-header
+                    h3.card-title Primary Gradient
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                    // /.card-tools 
+                  // /.card-header 
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+              // /.col 
+              .col-md-3
+                .card.bg-gradient-success
+                  .card-header
+                    h3.card-title Success Gradient
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='remove')
+                        i.fas.fa-times
+                    // /.card-tools 
+                  // /.card-header 
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+              // /.col 
+              .col-md-3
+                .card.bg-gradient-warning
+                  .card-header
+                    h3.card-title Warning Gradient
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                    // /.card-tools 
+                  // /.card-header 
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+              // /.col 
+              .col-md-3
+                .card.bg-gradient-danger
+                  .card-header
+                    h3.card-title Danger Gradient
+                  .card-body The body of the card
+                  // /.card-body 
+                // /.card 
+              // /.col 
+            // /.row 
+            // =========================================================== 
+            // Direct Chat 
+            h4.mt-4.mb-2 Direct Chat
+            .row
+              .col-md-3
+                // DIRECT CHAT PRIMARY 
+                .card.card-prirary.cardutline.direct-chat.direct-chat-primary
+                  .card-header
+                    h3.card-title Direct Chat
+                    .card-tools
+                      span.badge.bg-primary(data-toggle='tooltip', title='3 New Messages') 3
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                      button.btn.btn-tool(type='button', data-toggle='tooltip', title='Contacts', data-widget='chat-pane-toggle')
+                        i.fas.fa-comments
+                      button.btn.btn-tool(type='button', data-card-widget='remove')
+                        i.fas.fa-times
+                  // /.card-header 
+                  .card-body
+                    // Conversations are loaded here 
+                    .direct-chat-messages
+                      // Message. Default to the left 
+                      .direct-chat-msg
+                        .direct-chat-infos.clearfix
+                          span.direct-chat-name.float-left Alexander Pierce
+                          span.direct-chat-timestamp.float-right 23 Jan 2:00 pm
+                        // /.direct-chat-infos 
+                        |  
+                        img.direct-chat-img(src='../dist/img/user1-128x128.jpg', alt='Message User Image')
+                        // /.direct-chat-img 
+                        .direct-chat-text Is this template really for free? That's unbelievable!
+                        // /.direct-chat-text 
+                      // /.direct-chat-msg 
+                      // Message to the right 
+                      .direct-chat-msg.right
+                        .direct-chat-infos.clearfix
+                          span.direct-chat-name.float-right Sarah Bullock
+                          span.direct-chat-timestamp.float-left 23 Jan 2:05 pm
+                        // /.direct-chat-infos 
+                        |  
+                        img.direct-chat-img(src='../dist/img/user3-128x128.jpg', alt='Message User Image')
+                        // /.direct-chat-img 
+                        .direct-chat-text You better believe it!
+                        // /.direct-chat-text 
+                      // /.direct-chat-msg 
+                    ///.direct-chat-messages
+                    // Contacts are loaded here 
+                    .direct-chat-contacts
+                      ul.contacts-list
+                        li
+                          a(href='#')
+                            img.contacts-list-img(src='../dist/img/user1-128x128.jpg')
+                            .contacts-list-info
+                              span.contacts-list-name
+                                | Count Dracula
+                                small.contacts-list-date.float-right 2/28/2015
+                              span.contacts-list-msg How have you been? I was...
+                            // /.contacts-list-info 
+                        // End Contact Item 
+                      // /.contatcts-list 
+                    // /.direct-chat-pane 
+                  // /.card-body 
+                  .card-footer
+                    form(action='#', method='post')
+                      .input-group
+                        input.form-control(type='text', name='message', placeholder='Type Message ...')
+                        span.input-group-append
+                          button.btn.btn-primary(type='submit') Send
+                  // /.card-footer
+                ///.direct-chat 
+              // /.col 
+              .col-md-3
+                // DIRECT CHAT SUCCESS 
+                .card.card-sucress.cardutline.direct-chat.direct-chat-success
+                  .card-header
+                    h3.card-title Direct Chat
+                    .card-tools
+                      span.badge.bg-success(data-toggle='tooltip', title='3 New Messages') 3
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                      button.btn.btn-tool(type='button', data-toggle='tooltip', title='Contacts', data-widget='chat-pane-toggle')
+                        i.fas.fa-comments
+                      button.btn.btn-tool(type='button', data-card-widget='remove')
+                        i.fas.fa-times
+                  // /.card-header 
+                  .card-body
+                    // Conversations are loaded here 
+                    .direct-chat-messages
+                      // Message. Default to the left 
+                      .direct-chat-msg
+                        .direct-chat-infos.clearfix
+                          span.direct-chat-name.float-left Alexander Pierce
+                          span.direct-chat-timestamp.float-right 23 Jan 2:00 pm
+                        // /.direct-chat-infos 
+                        |  
+                        img.direct-chat-img(src='../dist/img/user1-128x128.jpg', alt='Message User Image')
+                        // /.direct-chat-img 
+                        .direct-chat-text Is this template really for free? That's unbelievable!
+                        // /.direct-chat-text 
+                      // /.direct-chat-msg 
+                      // Message to the right 
+                      .direct-chat-msg.right
+                        .direct-chat-infos.clearfix
+                          span.direct-chat-name.float-right Sarah Bullock
+                          span.direct-chat-timestamp.float-left 23 Jan 2:05 pm
+                        // /.direct-chat-infos 
+                        |  
+                        img.direct-chat-img(src='../dist/img/user3-128x128.jpg', alt='Message User Image')
+                        // /.direct-chat-img 
+                        .direct-chat-text You better believe it!
+                        // /.direct-chat-text 
+                      // /.direct-chat-msg 
+                    ///.direct-chat-messages
+                    // Contacts are loaded here 
+                    .direct-chat-contacts
+                      ul.contacts-list
+                        li
+                          a(href='#')
+                            img.contacts-list-img(src='../dist/img/user1-128x128.jpg')
+                            .contacts-list-info
+                              span.contacts-list-name
+                                | Count Dracula
+                                small.contacts-list-date.float-right 2/28/2015
+                              span.contacts-list-msg How have you been? I was...
+                            // /.contacts-list-info 
+                        // End Contact Item 
+                      // /.contatcts-list 
+                    // /.direct-chat-pane 
+                  // /.card-body 
+                  .card-footer
+                    form(action='#', method='post')
+                      .input-group
+                        input.form-control(type='text', name='message', placeholder='Type Message ...')
+                        span.input-group-append
+                          button.btn.btn-success(type='submit') Send
+                  // /.card-footer
+                ///.direct-chat 
+              // /.col 
+              .col-md-3
+                // DIRECT CHAT WARNING 
+                .card.card-warning.direct-chat.direct-chat-warning
+                  .card-header
+                    h3.card-title Direct Chat
+                    .card-tools
+                      span.badge.bg-danger(data-toggle='tooltip', title='3 New Messages') 3
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                      button.btn.btn-tool(type='button', data-toggle='tooltip', title='Contacts', data-widget='chat-pane-toggle')
+                        i.fas.fa-comments
+                      button.btn.btn-tool(type='button', data-card-widget='remove')
+                        i.fas.fa-times
+                  // /.card-header 
+                  .card-body
+                    // Conversations are loaded here 
+                    .direct-chat-messages
+                      // Message. Default to the left 
+                      .direct-chat-msg
+                        .direct-chat-infos.clearfix
+                          span.direct-chat-name.float-left Alexander Pierce
+                          span.direct-chat-timestamp.float-right 23 Jan 2:00 pm
+                        // /.direct-chat-infos 
+                        |  
+                        img.direct-chat-img(src='../dist/img/user1-128x128.jpg', alt='Message User Image')
+                        // /.direct-chat-img 
+                        .direct-chat-text Is this template really for free? That's unbelievable!
+                        // /.direct-chat-text 
+                      // /.direct-chat-msg 
+                      // Message to the right 
+                      .direct-chat-msg.right
+                        .direct-chat-infos.clearfix
+                          span.direct-chat-name.float-right Sarah Bullock
+                          span.direct-chat-timestamp.float-left 23 Jan 2:05 pm
+                        // /.direct-chat-infos 
+                        |  
+                        img.direct-chat-img(src='../dist/img/user3-128x128.jpg', alt='Message User Image')
+                        // /.direct-chat-img 
+                        .direct-chat-text You better believe it!
+                        // /.direct-chat-text 
+                      // /.direct-chat-msg 
+                    ///.direct-chat-messages
+                    // Contacts are loaded here 
+                    .direct-chat-contacts
+                      ul.contacts-list
+                        li
+                          a(href='#')
+                            img.contacts-list-img(src='../dist/img/user1-128x128.jpg')
+                            .contacts-list-info
+                              span.contacts-list-name
+                                | Count Dracula
+                                small.contacts-list-date.float-right 2/28/2015
+                              span.contacts-list-msg How have you been? I was...
+                            // /.contacts-list-info 
+                        // End Contact Item 
+                      // /.contatcts-list 
+                    // /.direct-chat-pane 
+                  // /.card-body 
+                  .card-footer
+                    form(action='#', method='post')
+                      .input-group
+                        input.form-control(type='text', name='message', placeholder='Type Message ...')
+                        span.input-group-append
+                          button.btn.btn-warning(type='submit') Send
+                  // /.card-footer
+                ///.direct-chat 
+              // /.col 
+              .col-md-3
+                // DIRECT CHAT DANGER 
+                .card.card-danger.direct-chat.direct-chat-danger
+                  .card-header
+                    h3.card-title Direct Chat
+                    .card-tools
+                      span.badge(data-toggle='tooltip', title='3 New Messages') 3
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                      button.btn.btn-tool(type='button', data-toggle='tooltip', title='Contacts', data-widget='chat-pane-toggle')
+                        i.fas.fa-comments
+                      button.btn.btn-tool(type='button', data-card-widget='remove')
+                        i.fas.fa-times
+                  // /.card-header 
+                  .card-body
+                    // Conversations are loaded here 
+                    .direct-chat-messages
+                      // Message. Default to the left 
+                      .direct-chat-msg
+                        .direct-chat-infos.clearfix
+                          span.direct-chat-name.float-left Alexander Pierce
+                          span.direct-chat-timestamp.float-right 23 Jan 2:00 pm
+                        // /.direct-chat-infos 
+                        |  
+                        img.direct-chat-img(src='../dist/img/user1-128x128.jpg', alt='Message User Image')
+                        // /.direct-chat-img 
+                        .direct-chat-text Is this template really for free? That's unbelievable!
+                        // /.direct-chat-text 
+                      // /.direct-chat-msg 
+                      // Message to the right 
+                      .direct-chat-msg.right
+                        .direct-chat-infos.clearfix
+                          span.direct-chat-name.float-right Sarah Bullock
+                          span.direct-chat-timestamp.float-left 23 Jan 2:05 pm
+                        // /.direct-chat-infos 
+                        |  
+                        img.direct-chat-img(src='../dist/img/user3-128x128.jpg', alt='Message User Image')
+                        // /.direct-chat-img 
+                        .direct-chat-text You better believe it!
+                        // /.direct-chat-text 
+                      // /.direct-chat-msg 
+                    ///.direct-chat-messages
+                    // Contacts are loaded here 
+                    .direct-chat-contacts
+                      ul.contacts-list
+                        li
+                          a(href='#')
+                            img.contacts-list-img(src='../dist/img/user1-128x128.jpg')
+                            .contacts-list-info
+                              span.contacts-list-name
+                                | Count Dracula
+                                small.contacts-list-date.float-right 2/28/2015
+                              span.contacts-list-msg How have you been? I was...
+                            // /.contacts-list-info 
+                        // End Contact Item 
+                      // /.contatcts-list 
+                    // /.direct-chat-pane 
+                  // /.card-body 
+                  .card-footer
+                    form(action='#', method='post')
+                      .input-group
+                        input.form-control(type='text', name='message', placeholder='Type Message ...')
+                        span.input-group-append
+                          button.btn.btn-danger(type='submit') Send
+                  // /.card-footer
+                ///.direct-chat 
+              // /.col 
+            // /.row 
+            h3.mt-4.mb-4 Social Widgets
+            .row
+              .col-md-4
+                // Widget: user widget style 2 
+                .card.card-widget.widget-user-2
+                  // Add the bg color to the header using any of the bg-* classes 
+                  .widget-user-header.bg-warning
+                    .widget-user-image
+                      img.img-circle.elevation-2(src='../dist/img/user7-128x128.jpg', alt='User Avatar')
+                    // /.widget-user-image 
+                    h3.widget-user-username Nadia Carmichael
+                    h5.widget-user-desc Lead Developer
+                  .card-footer.p-0
+                    ul.nav.flex-column
+                      li.nav-item
+                        a.nav-link(href='#')
+                          | Projects
+                          span.float-right.badge.bg-primary 31
+                      li.nav-item
+                        a.nav-link(href='#')
+                          | Tasks
+                          span.float-right.badge.bg-info 5
+                      li.nav-item
+                        a.nav-link(href='#')
+                          | Completed Projects
+                          span.float-right.badge.bg-success 12
+                      li.nav-item
+                        a.nav-link(href='#')
+                          | Followers
+                          span.float-right.badge.bg-danger 842
+                // /.widget-user 
+              // /.col 
+              .col-md-4
+                // Widget: user widget style 1 
+                .card.card-widget.widget-user
+                  // Add the bg color to the header using any of the bg-* classes 
+                  .widget-user-header.bg-info
+                    h3.widget-user-username Alexander Pierce
+                    h5.widget-user-desc Founder & CEO
+                  .widget-user-image
+                    img.img-circle.elevation-2(src='../dist/img/user1-128x128.jpg', alt='User Avatar')
+                  .card-footer
+                    .row
+                      .col-sm-4.border-right
+                        .description-block
+                          h5.description-header 3,200
+                          span.description-text SALES
+                        // /.description-block 
+                      // /.col 
+                      .col-sm-4.border-right
+                        .description-block
+                          h5.description-header 13,000
+                          span.description-text FOLLOWERS
+                        // /.description-block 
+                      // /.col 
+                      .col-sm-4
+                        .description-block
+                          h5.description-header 35
+                          span.description-text PRODUCTS
+                        // /.description-block 
+                      // /.col 
+                    // /.row 
+                // /.widget-user 
+              // /.col 
+              .col-md-4
+                // Widget: user widget style 1 
+                .card.card-widget.widget-user
+                  // Add the bg color to the header using any of the bg-* classes 
+                  .widget-user-header.text-white(style='background: url('../dist/img/photo1.png') center center;')
+                    h3.widget-user-username.text-right Elizabeth Pierce
+                    h5.widget-user-desc.text-right Web Designer
+                  .widget-user-image
+                    img.img-circle(src='../dist/img/user3-128x128.jpg', alt='User Avatar')
+                  .card-footer
+                    .row
+                      .col-sm-4.border-right
+                        .description-block
+                          h5.description-header 3,200
+                          span.description-text SALES
+                        // /.description-block 
+                      // /.col 
+                      .col-sm-4.border-right
+                        .description-block
+                          h5.description-header 13,000
+                          span.description-text FOLLOWERS
+                        // /.description-block 
+                      // /.col 
+                      .col-sm-4
+                        .description-block
+                          h5.description-header 35
+                          span.description-text PRODUCTS
+                        // /.description-block 
+                      // /.col 
+                    // /.row 
+                // /.widget-user 
+              // /.col 
+            // /.row 
+            .row
+              .col-md-6
+                // Box Comment 
+                .card.card-widget
+                  .card-header
+                    .user-block
+                      img.img-circle(src='../dist/img/user1-128x128.jpg', alt='User Image')
+                      span.username
+                        a(href='#') Jonathan Burke Jr.
+                      span.description Shared publicly - 7:30 PM Today
+                    // /.user-block 
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-toggle='tooltip', title='Mark as read')
+                        i.far.fa-circle
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                      button.btn.btn-tool(type='button', data-card-widget='remove')
+                        i.fas.fa-times
+                    // /.card-tools 
+                  // /.card-header 
+                  .card-body
+                    img.img-fluid.pad(src='../dist/img/photo2.png', alt='Photo')
+                    p I took this photo this morning. What do you guys think?
+                    button.btn.btn-default.btn-sm(type='button')
+                      i.fas.fa-share
+                      | Share
+                    button.btn.btn-default.btn-sm(type='button')
+                      i.far.fa-thumbs-up
+                      | Like
+                    span.float-right.text-muted 127 likes - 3 comments
+                  // /.card-body 
+                  .card-footer.card-comments
+                    .card-comment
+                      // User image 
+                      |  
+                      img.img-circle.img-sm(src='../dist/img/user3-128x128.jpg', alt='User Image')
+                      .comment-text
+                        span.username
+                          | Maria Gonzales
+                          span.text-muted.float-right 8:03 PM Today
+                        // /.username 
+                        |  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                      // /.comment-text 
+                    // /.card-comment 
+                    .card-comment
+                      // User image 
+                      |  
+                      img.img-circle.img-sm(src='../dist/img/user4-128x128.jpg', alt='User Image')
+                      .comment-text
+                        span.username
+                          | Luna Stark
+                          span.text-muted.float-right 8:03 PM Today
+                        // /.username 
+                        |  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                      // /.comment-text 
+                    // /.card-comment 
+                  // /.card-footer 
+                  .card-footer
+                    form(action='#', method='post')
+                      img.img-fluid.img-circle.img-sm(src='../dist/img/user4-128x128.jpg', alt='Alt Text')
+                      // .img-push is used to add margin to elements next to floating images 
+                      .img-push
+                        input.form-control.form-control-sm(type='text', placeholder='Press enter to post comment')
+                  // /.card-footer 
+                // /.card 
+              // /.col 
+              .col-md-6
+                // Box Comment 
+                .card.card-widget
+                  .card-header
+                    .user-block
+                      img.img-circle(src='../dist/img/user1-128x128.jpg', alt='User Image')
+                      span.username
+                        a(href='#') Jonathan Burke Jr.
+                      span.description Shared publicly - 7:30 PM Today
+                    // /.user-block 
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-toggle='tooltip', title='Mark as read')
+                        i.far.fa-circle
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                      button.btn.btn-tool(type='button', data-card-widget='remove')
+                        i.fas.fa-times
+                    // /.card-tools 
+                  // /.card-header 
+                  .card-body
+                    // post text 
+                    p Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at
+                    p the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+                    // Attachment 
+                    .attachment-block.clearfix
+                      img.attachment-img(src='../dist/img/photo1.png', alt='Attachment Image')
+                      .attachment-pushed
+                        h4.attachment-heading
+                          a(href='http://www.lipsum.com/') Lorem ipsum text generator
+                        .attachment-text
+                          | Description about the attachment can be placed here. Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+                          a(href='#') more
+                        // /.attachment-text 
+                      // /.attachment-pushed 
+                    // /.attachment-block 
+                    // Social sharing buttons 
+                    button.btn.btn-default.btn-sm(type='button')
+                      i.fas.fa-share
+                      | Share
+                    button.btn.btn-default.btn-sm(type='button')
+                      i.far.fa-thumbs-up
+                      | Like
+                    span.float-right.text-muted 45 likes - 2 comments
+                  // /.card-body 
+                  .card-footer.card-comments
+                    .card-comment
+                      // User image 
+                      |  
+                      img.img-circle.img-sm(src='../dist/img/user3-128x128.jpg', alt='User Image')
+                      .comment-text
+                        span.username
+                          | Maria Gonzales
+                          span.text-muted.float-right 8:03 PM Today
+                        // /.username 
+                        |  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                      // /.comment-text 
+                    // /.card-comment 
+                    .card-comment
+                      // User image 
+                      |  
+                      img.img-circle.img-sm(src='../dist/img/user5-128x128.jpg', alt='User Image')
+                      .comment-text
+                        span.username
+                          | Nora Havisham
+                          span.text-muted.float-right 8:03 PM Today
+                        // /.username 
+                        |  The point of using Lorem Ipsum is that it hrs a morer-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                      // /.comment-text 
+                    // /.card-comment 
+                  // /.card-footer 
+                  .card-footer
+                    form(action='#', method='post')
+                      img.img-fluid.img-circle.img-sm(src='../dist/img/user4-128x128.jpg', alt='Alt Text')
+                      // .img-push is used to add margin to elements next to floating images 
+                      .img-push
+                        input.form-control.form-control-sm(type='text', placeholder='Press enter to post comment')
+                  // /.card-footer 
+                // /.card 
+              // /.col 
+            // /.row 
+          // /.container-fluid 
+        // /.content 
+        a#back-to-top.btn.btn-primary.back-to-top(href='#', role='button', aria-label='Scroll to top')
+          i.fas.fa-chevron-up
+      // /.content-wrapper 
+      footer.main-footer
+        .float-right.d-none.d-sm-block
+          b Version
+          | 3.0.0-rc.1
+        strong
+          | Copyright © 2014-2019
+          a(href='http://adminlte.io') AdminLTE.io
+          | .
+        | All rights reserved.
+      // Control Sidebar 
+      aside.control-sidebar.control-sidebar-dark
+        // Control sidebar content goes here 
+      // /.control-sidebar 
+    // ./wrapper 
+    // jQuery 
+    script(src='../plugins/jquery/jquery.min.js')
+    // Bootstrap 4 
+    script(src='../plugins/bootstrap/js/bootstrap.bundle.min.js')
+    // AdminLTE App 
+    script(src='../dist/js/adminlte.min.js')
+    // AdminLTE for demo purposes 
+    script(src='../dist/js/demo.js')

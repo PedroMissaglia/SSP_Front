@@ -1,0 +1,705 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title AdminLTE 3 | Calendar
+    // Tell the browser to be responsive to screen width 
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    // Font Awesome 
+    link(rel='stylesheet', href='../plugins/fontawesome-free/css/all.min.css')
+    // Ionicons 
+    link(rel='stylesheet', href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
+    // fullCalendar 
+    link(rel='stylesheet', href='../plugins/fullcalendar/main.min.css')
+    link(rel='stylesheet', href='../plugins/fullcalendar-interaction/main.min.css')
+    link(rel='stylesheet', href='../plugins/fullcalendar-daygrid/main.min.css')
+    link(rel='stylesheet', href='../plugins/fullcalendar-timegrid/main.min.css')
+    link(rel='stylesheet', href='../plugins/fullcalendar-bootstrap/main.min.css')
+    // Theme style 
+    link(rel='stylesheet', href='../dist/css/adminlte.min.css')
+    // Google Font: Source Sans Pro 
+    link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700', rel='stylesheet')
+  body.hold-transition.sidebar-mini
+    .wrapper
+      // Navbar 
+      nav.main-header.navbar.navbar-expand.navbar-white.navbar-light
+        // Left navbar links 
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(data-widget='pushmenu', href='#')
+              i.fas.fa-bars
+          li.nav-item.d-none.d-sm-inline-block
+            a.nav-link(href='../index3.html') Home
+          li.nav-item.d-none.d-sm-inline-block
+            a.nav-link(href='#') Contact
+        // SEARCH FORM 
+        form.form-inline.ml-3
+          .input-group.input-group-sm
+            input.form-control.form-control-navbar(type='search', placeholder='Search', aria-label='Search')
+            .input-group-append
+              button.btn.btn-navbar(type='submit')
+                i.fas.fa-search
+        // Right navbar links 
+        ul.navbar-nav.ml-auto
+          // Messages Dropdown Menu 
+          li.nav-item.dropdown
+            a.nav-link(data-toggle='dropdown', href='#')
+              i.far.fa-comments
+              span.badge.badge-danger.navbar-badge 3
+            .dropdown-menu.dropdown-menu-lg.dropdown-menu-right
+              a.dropdown-item(href='#')
+                // Message Start 
+                .media
+                  img.img-size-50.mr-3.img-circle(src='../dist/img/user1-128x128.jpg', alt='User Avatar')
+                  .media-body
+                    h3.dropdown-item-title
+                      | Brad Diesel
+                      span.float-right.text-sm.text-danger
+                        i.fas.fa-star
+                    p.text-sm Call me whenever you can...
+                    p.text-sm.text-muted
+                      i.far.fa-clock.mr-1
+                      | 4 Hours Ago
+                // Message End 
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                // Message Start 
+                .media
+                  img.img-size-50.img-circle.mr-3(src='../dist/img/user8-128x128.jpg', alt='User Avatar')
+                  .media-body
+                    h3.dropdown-item-title
+                      | John Pierce
+                      span.float-right.text-sm.text-muted
+                        i.fas.fa-star
+                    p.text-sm I got your message bro
+                    p.text-sm.text-muted
+                      i.far.fa-clock.mr-1
+                      | 4 Hours Ago
+                // Message End 
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                // Message Start 
+                .media
+                  img.img-size-50.img-circle.mr-3(src='../dist/img/user3-128x128.jpg', alt='User Avatar')
+                  .media-body
+                    h3.dropdown-item-title
+                      | Nora Silvester
+                      span.float-right.text-sm.text-warning
+                        i.fas.fa-star
+                    p.text-sm The subject goes here
+                    p.text-sm.text-muted
+                      i.far.fa-clock.mr-1
+                      | 4 Hours Ago
+                // Message End 
+              .dropdown-divider
+              a.dropdown-item.dropdown-footer(href='#') See All Messages
+          // Notifications Dropdown Menu 
+          li.nav-item.dropdown
+            a.nav-link(data-toggle='dropdown', href='#')
+              i.far.fa-bell
+              span.badge.badge-warning.navbar-badge 15
+            .dropdown-menu.dropdown-menu-lg.dropdown-menu-right
+              span.dropdown-item.dropdown-header 15 Notifications
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                i.fas.fa-envelope.mr-2
+                | 4 new messages
+                span.float-right.text-muted.text-sm 3 mins
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                i.fas.fa-users.mr-2
+                | 8 friend requests
+                span.float-right.text-muted.text-sm 12 hours
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                i.fas.fa-file.mr-2
+                | 3 new reports
+                span.float-right.text-muted.text-sm 2 days
+              .dropdown-divider
+              a.dropdown-item.dropdown-footer(href='#') See All Notifications
+          li.nav-item
+            a.nav-link(data-widget='control-sidebar', data-slide='true', href='#')
+              i.fas.fa-th-large
+      // /.navbar 
+      // Main Sidebar Container 
+      aside.main-sidebar.sidebar-dark-primary.elevation-4
+        // Brand Logo 
+        a.brand-link(href='../index3.html')
+          img.brand-image.img-circle.elevation-3(src='../dist/img/AdminLTELogo.png', alt='AdminLTE Logo', style='opacity: .8')
+          span.brand-text.font-weight-light AdminLTE 3
+        // Sidebar 
+        .sidebar
+          // Sidebar user panel (optional) 
+          .user-panel.mt-3.pb-3.mb-3.d-flex
+            .image
+              img.img-circle.elevation-2(src='../dist/img/user2-160x160.jpg', alt='User Image')
+            .info
+              a.d-block(href='#') Alexander Pierce
+          // Sidebar Menu 
+          nav.mt-2
+            ul.nav.nav-pills.nav-sidebar.flex-column(data-widget='treeview', role='menu', data-accordion='false')
+              //                 Add icons to the links using the .nav-icon class
+                               with font-awesome or any other icon font library 
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-tachometer-alt
+                  p
+                    | Dashboard
+                    i.right.fas.fa-angle-left
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='../index.html')
+                      i.far.fa-circle.nav-icon
+                      p Dashboard v1
+                  li.nav-item
+                    a.nav-link(href='../index2.html')
+                      i.far.fa-circle.nav-icon
+                      p Dashboard v2
+                  li.nav-item
+                    a.nav-link(href='../index3.html')
+                      i.far.fa-circle.nav-icon
+                      p Dashboard v3
+              li.nav-item
+                a.nav-link(href='widgets.html')
+                  i.nav-icon.fas.fa-th
+                  p
+                    | Widgets
+                    span.right.badge.badge-danger New
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-copy
+                  p
+                    | Layout Options
+                    i.fas.fa-angle-left.right
+                    span.badge.badge-info.right 6
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='layout/top-nav.html')
+                      i.far.fa-circle.nav-icon
+                      p Top Navigation
+                  li.nav-item
+                    a.nav-link(href='layout/boxed.html')
+                      i.far.fa-circle.nav-icon
+                      p Boxed
+                  li.nav-item
+                    a.nav-link(href='layout/fixed-sidebar.html')
+                      i.far.fa-circle.nav-icon
+                      p Fixed Sidebar
+                  li.nav-item
+                    a.nav-link(href='layout/fixed-topnav.html')
+                      i.far.fa-circle.nav-icon
+                      p Fixed Navbar
+                  li.nav-item
+                    a.nav-link(href='layout/fixed-footer.html')
+                      i.far.fa-circle.nav-icon
+                      p Fixed Footer
+                  li.nav-item
+                    a.nav-link(href='layout/collapsed-sidebar.html')
+                      i.far.fa-circle.nav-icon
+                      p Collapsed Sidebar
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-chart-pie
+                  p
+                    | Charts
+                    i.right.fas.fa-angle-left
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='charts/chartjs.html')
+                      i.far.fa-circle.nav-icon
+                      p ChartJS
+                  li.nav-item
+                    a.nav-link(href='charts/flot.html')
+                      i.far.fa-circle.nav-icon
+                      p Flot
+                  li.nav-item
+                    a.nav-link(href='charts/inline.html')
+                      i.far.fa-circle.nav-icon
+                      p Inline
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-tree
+                  p
+                    | UI Elements
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='UI/general.html')
+                      i.far.fa-circle.nav-icon
+                      p General
+                  li.nav-item
+                    a.nav-link(href='UI/icons.html')
+                      i.far.fa-circle.nav-icon
+                      p Icons
+                  li.nav-item
+                    a.nav-link(href='UI/buttons.html')
+                      i.far.fa-circle.nav-icon
+                      p Buttons
+                  li.nav-item
+                    a.nav-link(href='UI/sliders.html')
+                      i.far.fa-circle.nav-icon
+                      p Sliders
+                  li.nav-item
+                    a.nav-link(href='UI/modals.html')
+                      i.far.fa-circle.nav-icon
+                      p Modals & Alerts
+                  li.nav-item
+                    a.nav-link(href='UI/navbar.html')
+                      i.far.fa-circle.nav-icon
+                      p Navbar & Tabs
+                  li.nav-item
+                    a.nav-link(href='UI/timeline.html')
+                      i.far.fa-circle.nav-icon
+                      p Timeline
+                  li.nav-item
+                    a.nav-link(href='UI/ribbons.html')
+                      i.far.fa-circle.nav-icon
+                      p Ribbons
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-edit
+                  p
+                    | Forms
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='forms/general.html')
+                      i.far.fa-circle.nav-icon
+                      p General Elements
+                  li.nav-item
+                    a.nav-link(href='forms/advanced.html')
+                      i.far.fa-circle.nav-icon
+                      p Advanced Elements
+                  li.nav-item
+                    a.nav-link(href='forms/editors.html')
+                      i.far.fa-circle.nav-icon
+                      p Editors
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-table
+                  p
+                    | Tables
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='tables/simple.html')
+                      i.far.fa-circle.nav-icon
+                      p Simple Tables
+                  li.nav-item
+                    a.nav-link(href='tables/data.html')
+                      i.far.fa-circle.nav-icon
+                      p DataTables
+                  li.nav-item
+                    a.nav-link(href='tables/jsgrid.html')
+                      i.far.fa-circle.nav-icon
+                      p jsGrid
+              li.nav-header EXAMPLES
+              li.nav-item
+                a.nav-link.active(href='calendar.html')
+                  i.nav-icon.far.fa-calendar-alt
+                  p
+                    | Calendar
+                    span.badge.badge-info.right 2
+              li.nav-item
+                a.nav-link(href='gallery.html')
+                  i.nav-icon.far.fa-image
+                  p Gallery
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-envelope
+                  p
+                    | Mailbox
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='mailbox/mailbox.html')
+                      i.far.fa-circle.nav-icon
+                      p Inbox
+                  li.nav-item
+                    a.nav-link(href='mailbox/compose.html')
+                      i.far.fa-circle.nav-icon
+                      p Compose
+                  li.nav-item
+                    a.nav-link(href='mailbox/read-mail.html')
+                      i.far.fa-circle.nav-icon
+                      p Read
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-book
+                  p
+                    | Pages
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='examples/invoice.html')
+                      i.far.fa-circle.nav-icon
+                      p Invoice
+                  li.nav-item
+                    a.nav-link(href='examples/profile.html')
+                      i.far.fa-circle.nav-icon
+                      p Profile
+                  li.nav-item
+                    a.nav-link(href='examples/e_commerce.html')
+                      i.far.fa-circle.nav-icon
+                      p E-commerce
+                  li.nav-item
+                    a.nav-link(href='examples/projects.html')
+                      i.far.fa-circle.nav-icon
+                      p Projects
+                  li.nav-item
+                    a.nav-link(href='examples/project_add.html')
+                      i.far.fa-circle.nav-icon
+                      p Project Add
+                  li.nav-item
+                    a.nav-link(href='examples/project_edit.html')
+                      i.far.fa-circle.nav-icon
+                      p Project Edit
+                  li.nav-item
+                    a.nav-link(href='examples/project_detail.html')
+                      i.far.fa-circle.nav-icon
+                      p Project Detail
+                  li.nav-item
+                    a.nav-link(href='examples/contacts.html')
+                      i.far.fa-circle.nav-icon
+                      p Contacts
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-plus-square
+                  p
+                    | Extras
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='examples/login.html')
+                      i.far.fa-circle.nav-icon
+                      p Login
+                  li.nav-item
+                    a.nav-link(href='examples/register.html')
+                      i.far.fa-circle.nav-icon
+                      p Register
+                  li.nav-item
+                    a.nav-link(href='examples/lockscreen.html')
+                      i.far.fa-circle.nav-icon
+                      p Lockscreen
+                  li.nav-item
+                    a.nav-link(href='examples/legacy-user-menu.html')
+                      i.far.fa-circle.nav-icon
+                      p Legacy User Menu
+                  li.nav-item
+                    a.nav-link(href='examples/language-menu.html')
+                      i.far.fa-circle.nav-icon
+                      p Language Menu
+                  li.nav-item
+                    a.nav-link(href='examples/404.html')
+                      i.far.fa-circle.nav-icon
+                      p Error 404
+                  li.nav-item
+                    a.nav-link(href='examples/500.html')
+                      i.far.fa-circle.nav-icon
+                      p Error 500
+                  li.nav-item
+                    a.nav-link(href='examples/blank.html')
+                      i.far.fa-circle.nav-icon
+                      p Blank Page
+                  li.nav-item
+                    a.nav-link(href='../starter.html')
+                      i.far.fa-circle.nav-icon
+                      p Starter Page
+              li.nav-header MISCELLANEOUS
+              li.nav-item
+                a.nav-link(href='https://adminlte.io/docs/3.0')
+                  i.nav-icon.fas.fa-file
+                  p Documentation
+              li.nav-header LABELS
+              li.nav-item
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-circle.text-danger
+                  p.text Important
+              li.nav-item
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-circle.text-warning
+                  p Warning
+              li.nav-item
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-circle.text-info
+                  p Informational
+          // /.sidebar-menu 
+        // /.sidebar 
+      // Content Wrapper. Contains page content 
+      .content-wrapper
+        // Content Header (Page header) 
+        section.content-header
+          .container-fluid
+            .row.mb-2
+              .col-sm-6
+                h1 Calendar
+              .col-sm-6
+                ol.breadcrumb.float-sm-right
+                  li.breadcrumb-item
+                    a(href='#') Home
+                  li.breadcrumb-item.active Calendar
+          // /.container-fluid 
+        // Main content 
+        section.content
+          .container-fluid
+            .row
+              .col-md-3
+                .sticky-top.mb-3
+                  .card
+                    .card-header
+                      h4.card-title Draggable Events
+                    .card-body
+                      // the events 
+                      #external-events
+                        .external-event.bg-success Lunch
+                        .external-event.bg-warning Go home
+                        .external-event.bg-info Do homework
+                        .external-event.bg-primary Work on UI design
+                        .external-event.bg-danger Sleep tight
+                        .checkbox
+                          label(for='drop-remove')
+                            input#drop-remove(type='checkbox')
+                            |  remove after drop
+                    // /.card-body 
+                  // /.card 
+                  .card
+                    .card-header
+                      h3.card-title Create Event
+                    .card-body
+                      .btn-group(style='width: 100%; margin-bottom: 10px;')
+                        //<button type="button" id="color-chooser-btn" class="btn btn-info btn-block dropdown-toggle" data-toggle="dropdown">Color <span class="caret"></span></button>
+                        ul.fc-color-picker#color-chooser
+                          li
+                            a.text-primary(href='#')
+                              i.fas.fa-square
+                          li
+                            a.text-warning(href='#')
+                              i.fas.fa-square
+                          li
+                            a.text-success(href='#')
+                              i.fas.fa-square
+                          li
+                            a.text-danger(href='#')
+                              i.fas.fa-square
+                          li
+                            a.text-muted(href='#')
+                              i.fas.fa-square
+                      // /btn-group 
+                      .input-group
+                        input#new-event.form-control(type='text', placeholder='Event Title')
+                        .input-group-append
+                          button#add-new-event.btn.btn-primary(type='button') Add
+                        // /btn-group 
+                      // /input-group 
+              // /.col 
+              .col-md-9
+                .card.card-primary
+                  .card-body.p-0
+                    // THE CALENDAR 
+                    #calendar
+                  // /.card-body 
+                // /.card 
+              // /.col 
+            // /.row 
+          // /.container-fluid 
+        // /.content 
+      // /.content-wrapper 
+      footer.main-footer
+        .float-right.d-none.d-sm-block
+          b Version
+          | 3.0.0-rc.1
+        strong
+          | Copyright © 2014-2019
+          a(href='http://adminlte.io') AdminLTE.io
+          | .
+        | All rights reserved.
+      // Control Sidebar 
+      aside.control-sidebar.control-sidebar-dark
+        // Control sidebar content goes here 
+      // /.control-sidebar 
+    // ./wrapper 
+    // jQuery 
+    script(src='../plugins/jquery/jquery.min.js')
+    // Bootstrap 
+    script(src='../plugins/bootstrap/js/bootstrap.bundle.min.js')
+    // jQuery UI 
+    script(src='../plugins/jquery-ui/jquery-ui.min.js')
+    // AdminLTE App 
+    script(src='../dist/js/adminlte.min.js')
+    // AdminLTE for demo purposes 
+    script(src='../dist/js/demo.js')
+    // fullCalendar 2.2.5 
+    script(src='../plugins/moment/moment.min.js')
+    script(src='../plugins/fullcalendar/main.min.js')
+    script(src='../plugins/fullcalendar-daygrid/main.min.js')
+    script(src='../plugins/fullcalendar-timegrid/main.min.js')
+    script(src='../plugins/fullcalendar-interaction/main.min.js')
+    script(src='../plugins/fullcalendar-bootstrap/main.min.js')
+    // Page specific script 
+    script $(function () {
+
+    /* initialize the external events
+     -----------------------------------------------------------------*/
+    function ini_events(ele) {
+      ele.each(function () {
+
+        // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+        // it doesn't need to have a start or end
+        var eventObject = {
+          title: $.trim($(this).text()) // use the element's text as the event title
+        }
+
+        // store the Event Object in the DOM element so we can get to it later
+        $(this).data('eventObject', eventObject)
+
+        // make the event draggable using jQuery UI
+        $(this).draggable({
+          zIndex        : 1070,
+          revert        : true, // will cause the event to go back to its
+          revertDuration: 0  //  original position after the drag
+        })
+
+      })
+    }
+
+    ini_events($('#external-events div.external-event'))
+
+    /* initialize the calendar
+     -----------------------------------------------------------------*/
+    //Date for the calendar events (dummy data)
+    var date = new Date()
+    var d    = date.getDate(),
+        m    = date.getMonth(),
+        y    = date.getFullYear()
+
+    var Calendar = FullCalendar.Calendar;
+    var Draggable = FullCalendarInteraction.Draggable;
+
+    var containerEl = document.getElementById('external-events');
+    var checkbox = document.getElementById('drop-remove');
+    var calendarEl = document.getElementById('calendar');
+
+    // initialize the external events
+    // -----------------------------------------------------------------
+
+    new Draggable(containerEl, {
+      itemSelector: '.external-event',
+      eventData: function(eventEl) {
+        console.log(eventEl);
+        return {
+          title: eventEl.innerText,
+          backgroundColor: window.getComputedStyle( eventEl ,null).getPropertyValue('background-color'),
+          borderColor: window.getComputedStyle( eventEl ,null).getPropertyValue('background-color'),
+          textColor: window.getComputedStyle( eventEl ,null).getPropertyValue('color'),
+        };
+      }
+    });
+
+    var calendar = new Calendar(calendarEl, {
+      plugins: [ 'bootstrap', 'interaction', 'dayGrid', 'timeGrid' ],
+      header    : {
+        left  : 'prev,next today',
+        center: 'title',
+        right : 'dayGridMonth,timeGridWeek,timeGridDay'
+      },
+      //Random default events
+      events    : [
+        {
+          title          : 'All Day Event',
+          start          : new Date(y, m, 1),
+          backgroundColor: '#f56954', //red
+          borderColor    : '#f56954' //red
+        },
+        {
+          title          : 'Long Event',
+          start          : new Date(y, m, d - 5),
+          end            : new Date(y, m, d - 2),
+          backgroundColor: '#f39c12', //yellow
+          borderColor    : '#f39c12' //yellow
+        },
+        {
+          title          : 'Meeting',
+          start          : new Date(y, m, d, 10, 30),
+          allDay         : false,
+          backgroundColor: '#0073b7', //Blue
+          borderColor    : '#0073b7' //Blue
+        },
+        {
+          title          : 'Lunch',
+          start          : new Date(y, m, d, 12, 0),
+          end            : new Date(y, m, d, 14, 0),
+          allDay         : false,
+          backgroundColor: '#00c0ef', //Info (aqua)
+          borderColor    : '#00c0ef' //Info (aqua)
+        },
+        {
+          title          : 'Birthday Party',
+          start          : new Date(y, m, d + 1, 19, 0),
+          end            : new Date(y, m, d + 1, 22, 30),
+          allDay         : false,
+          backgroundColor: '#00a65a', //Success (green)
+          borderColor    : '#00a65a' //Success (green)
+        },
+        {
+          title          : 'Click for Google',
+          start          : new Date(y, m, 28),
+          end            : new Date(y, m, 29),
+          url            : 'http://google.com/',
+          backgroundColor: '#3c8dbc', //Primary (light-blue)
+          borderColor    : '#3c8dbc' //Primary (light-blue)
+        }
+      ],
+      editable  : true,
+      droppable : true, // this allows things to be dropped onto the calendar !!!
+      drop      : function(info) {
+        // is the "remove after drop" checkbox checked?
+        if (checkbox.checked) {
+          // if so, remove the element from the "Draggable Events" list
+          info.draggedEl.parentNode.removeChild(info.draggedEl);
+        }
+      }    
+    });
+
+    calendar.render();
+    // $('#calendar').fullCalendar()
+
+    /* ADDING EVENTS */
+    var currColor = '#3c8dbc' //Red by default
+    //Color chooser button
+    var colorChooser = $('#color-chooser-btn')
+    $('#color-chooser > li > a').click(function (e) {
+      e.preventDefault()
+      //Save color
+      currColor = $(this).css('color')
+      //Add color effect to button
+      $('#add-new-event').css({
+        'background-color': currColor,
+        'border-color'    : currColor
+      })
+    })
+    $('#add-new-event').click(function (e) {
+      e.preventDefault()
+      //Get value and make sure it is not null
+      var val = $('#new-event').val()
+      if (val.length == 0) {
+        return
+      }
+
+      //Create events
+      var event = $('<div />')
+      event.css({
+        'background-color': currColor,
+        'border-color'    : currColor,
+        'color'           : '#fff'
+      }).addClass('external-event')
+      event.html(val)
+      $('#external-events').prepend(event)
+
+      //Add draggable funtionality
+      ini_events(event)
+
+      //Remove event from text input
+      $('#new-event').val('')
+    })
+  })

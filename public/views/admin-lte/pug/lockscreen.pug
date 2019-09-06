@@ -1,0 +1,54 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title AdminLTE 3 | Lockscreen
+    // Tell the browser to be responsive to screen width 
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    // Font Awesome 
+    link(rel='stylesheet', href='../../plugins/fontawesome-free/css/all.min.css')
+    // Ionicons 
+    link(rel='stylesheet', href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
+    // Theme style 
+    link(rel='stylesheet', href='../../dist/css/adminlte.min.css')
+    // Google Font: Source Sans Pro 
+    link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700', rel='stylesheet')
+  body.hold-transition.lockscreen
+    // Automatic element centering 
+    .lockscreen-wrapper
+      .lockscreen-logo
+        a(href='../../index2.html')
+          b Admin
+          | LTE
+      // User name 
+      .lockscreen-name John Doe
+      // START LOCK SCREEN ITEM 
+      .lockscreen-item
+        // lockscreen image 
+        .lockscreen-image
+          img(src='../../dist/img/user1-128x128.jpg', alt='User Image')
+        // /.lockscreen-image 
+        // lockscreen credentials (contains the form) 
+        form.lockscreen-credentials
+          .input-group
+            input.form-control(type='password', placeholder='password')
+            .input-group-append
+              button.btn(type='button')
+                i.fas.fa-arrow-right.text-muted
+        // /.lockscreen credentials 
+      // /.lockscreen-item 
+      .help-block.text-center Enter your password to retrieve your session
+      .text-center
+        a(href='login.html') Or sign in as a different user
+      .lockscreen-footer.text-center
+        | Copyright © 2014-2019
+        b
+          a.text-black(href='http://adminlte.io') AdminLTE.io
+        br
+        | All rights reserved
+    // /.center 
+    // jQuery 
+    script(src='../../plugins/jquery/jquery.min.js')
+    // Bootstrap 4 
+    script(src='../../plugins/bootstrap/js/bootstrap.bundle.min.js')
