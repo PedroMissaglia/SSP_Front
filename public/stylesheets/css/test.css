@@ -19,9 +19,9 @@ input.form-control{
     width: 116px;
     font-size: 15px;
 }
-button.btn.btn-primary.btn-block.btn-flat{
-    font-size: 20px;
-    background: #284854;
+button.btn.btn-primary.a{
+    font-size: 15px;
+    margin-left: 190px;
 }
 
 div.icheck-primary{
@@ -32,7 +32,7 @@ input#remember{
 }
 a.btn.btn-block.btn-primary{
     font-size: 20px;
-    background: #284854;
+    background: #0B2F3A;
 }
 
 div.login-logo{
@@ -72,6 +72,6 @@ a.text-center{
     left: 0;
     right: 0;
     z-index: -1;
-    background-image: url('https://images.wallpaperscraft.com/image/stars_sky_night_113553_1920x1080.jpg');
-
+    /*background-image: url('https://images.wallpaperscraft.com/image/stars_space_dark_139528_1920x1080.jpg');
+    */
   }

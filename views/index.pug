@@ -9,42 +9,27 @@ block content
             h2.login-box-msg Login
               h3 Super Secret Project
             br
-            form(action='register.pug', method='post')
+            form(name ="loginForm" onsubmit="return validateForm()" method="post")
               .input-group.mb-4
-                input.form-control(name ="email" type='email', placeholder='Email')
+                input.form-control(id="1" name ="email" type='email', placeholder='Email')
                 .input-group-append
                   .input-group-text.font-size
                     span.fas.fa-envelope
               br      
               .input-group.mb-4
-                input.form-control(name="senha" type='password', placeholder='Password')
+                input.form-control(id="2" name="senha" type='password', placeholder='Password')
                 .input-group-append
                   .input-group-text
                     span.fas.fa-lock
               br      
-              .row
-                .col-8
-                  .icheck-primary
-                    input#remember(type='checkbox')
-                    label(for='remember')    
-                      h5   Remember Me
-                // /.col 
+              .row               
                 .col-4
-                  button.btn.btn-primary.btn-block.btn-flat(type='submit') Sign In
+                  button.btn.btn-primary.a(type='submit') Sign In
                 // /.col 
               br 
               p - OR -
-              br
-
-              a.btn.btn-block.btn-primary(href='#')
-                i.fab.fa-facebook.mr-2
-                | Sign in using Facebook
-            // /.social-auth-links 
-            br
-            p.mb-1
-              a.text-center(href='#') I forgot my password
-            br  
             p.mb-0
               a.text-center(href='views/register.pug') Register a new membership
+              button(class="btn btn-primary" onclick="getUser()") Testing
             div(id="particles-js")  
   canvas(class="background")

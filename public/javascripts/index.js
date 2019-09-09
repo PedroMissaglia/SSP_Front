@@ -1,10 +1,10 @@
 window.onload = function() {
   var particles = Particles.init({
     selector: '.background',
-    color: ['#DBEDF3'],
-    connectParticles: false,
+    color: ['#FF0000', '#FF7F00', '#FFFF00', '#00FF00', '#00FFFF', '#0000FF', '#8B00FF'],
+    connectParticles: true,
     speed: 1,
-    maxParticles: 300
+    maxParticles: 200
   });
 
 } 
