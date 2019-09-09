@@ -1,17 +1,26 @@
 var url = 'http://localhost:50929/api';
 
-async function getUser() {
+async function validateLogin() {
+    
+    var x = document.forms["loginForm"]["email"].value;
+    var y = document.forms["loginForm"]["senha"].value;
+    
+    if (x == "" || y == "") {
+        alert("Existem campos em branco.");
+        return false;
+      }
+
     try {
         const response = await axios.post( url + '/User/login',
-        {email: 'pedros.missaglia@gmail.com',
-          password: '123456'});
+        {email: x,
+          password: y});
       console.log(response);
     } catch (error) {
       console.error(error);
     }
 }
 
-async function validateForm() {
+async function validateForm(email, senha) {
     
     var x = document.forms["loginForm"]["email"].value;
     var y = document.forms["loginForm"]["senha"].value;

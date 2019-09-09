@@ -1,54 +1,41 @@
-
 extends layout
 
 block content
-  .hold-transition.register-page
-    .register-box
-      .register-logo
-        a(href='../../index2.html')
-          b Admin
-          | LTE
-      .card
-        .card-body.register-card-body
-          p.login-box-msg Register a new membership
-          form(action='../../index.html', method='post')
-            .input-group.mb-3
-              input.form-control(type='text', placeholder='Full name')
-              .input-group-append
-                .input-group-text
-                  span.fas.fa-user
-            .input-group.mb-3
-              input.form-control(type='email', placeholder='Email')
-              .input-group-append
-                .input-group-text
-                  span.fas.fa-envelope
-            .input-group.mb-3
-              input.form-control(type='password', placeholder='Password')
-              .input-group-append
-                .input-group-text
-                  span.fas.fa-lock
-            .input-group.mb-3
-              input.form-control(type='password', placeholder='Retype password')
-              .input-group-append
-                .input-group-text
-                  span.fas.fa-lock
-            .row
-              .col-8
-                .icheck-primary
-                  input#agreeTerms(type='checkbox', name='terms', value='agree')
-                  label(for='agreeTerms')
-                    | I agree to the
-                    a(href='#') terms
-              // /.col 
-              .col-4
-                button.btn.btn-primary.btn-block.btn-flat(type='submit') Register
-              // /.col 
-          .social-auth-links.text-center
-            p - OR -
-            a.btn.btn-block.btn-primary(href='#')
-              i.fab.fa-facebook.mr-2
-              | Sign up using Facebook
-            a.btn.btn-block.btn-danger(href='#')
-              i.fab.fa-google-plus.mr-2
-              | Sign up using Google+
-          a.text-center(href='login.html') I already have a membership
+  .login
+    .login-box
+      .login-logo
+        .card.col-mb-4
+          .card-body.login-card-body
+            h2.login-box-msg Sign Up
+              h3 Super Secret Project
+            br
+            form(name ="loginForm" onsubmit="validateForm()")
+              .input-group.mb-4
+                input.form-control(id="1" name ="nome" type='text', placeholder='Nome' required)
+                .input-group-append
+                  .input-group-text.font-size
+                    span.fas.fa-envelope
+              .input-group.mb-4
+                input.form-control(id="2" name ="email" type='email', placeholder='Email' required)
+                .input-group-append
+                  .input-group-text.font-size
+                    span.fas.fa-envelope    
+              .input-group.mb-4
+                input.form-control(id="3" name="senha" type='password', placeholder='Password' required)
+                .input-group-append
+                  .input-group-text
+                    span.fas.fa-lock
+              .input-group.mb-4
+                input.form-control(id="4" name="resenha" type='password', placeholder='Password again' required)
+                .input-group-append
+                  .input-group-text
+                    span.fas.fa-lock      
+              br      
+              .row               
+                .col-4
+                  button.btn.btn-primary.a(type="submit") Sign Up
+              br    
+            p.mb-0
+              a.text-center(href='/') Alredy a membership
+            div(id="particles-js")  
+  canvas(class="background")

@@ -9,27 +9,27 @@ block content
             h2.login-box-msg Login
               h3 Super Secret Project
             br
-            form(name ="loginForm" onsubmit="return validateForm()" method="post")
+            form(name ="loginForm" onsubmit="validateForm()")
               .input-group.mb-4
-                input.form-control(id="1" name ="email" type='email', placeholder='Email')
+                input.form-control(id="1" name ="email" type='email', placeholder='Email' required)
                 .input-group-append
                   .input-group-text.font-size
                     span.fas.fa-envelope
               br      
               .input-group.mb-4
-                input.form-control(id="2" name="senha" type='password', placeholder='Password')
+                input.form-control(id="2" name="senha" type='password', placeholder='Password' required)
                 .input-group-append
                   .input-group-text
                     span.fas.fa-lock
               br      
               .row               
                 .col-4
-                  button.btn.btn-primary.a(type='submit') Sign In
+                  button.btn.btn-primary.a(type="submit") Sign In
                 // /.col 
               br 
               p - OR -
             p.mb-0
-              a.text-center(href='views/register.pug') Register a new membership
-              button(class="btn btn-primary" onclick="getUser()") Testing
+              a.text-center(href='register') Register a new membership
+              button(class="btn btn-primary" onclick="validateForm()") Testing
             div(id="particles-js")  
   canvas(class="background")
