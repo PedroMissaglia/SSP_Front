@@ -9,7 +9,7 @@ block content
             h2.login-box-msg Login
               h3 Super Secret Project
             br
-            form(name ="loginForm" onsubmit="validateForm()")
+            form(name ="loginForm" onsubmit="validateLogin()")
               .input-group.mb-4
                 input.form-control(id="1" name ="email" type='email', placeholder='Email' required)
                 .input-group-append
@@ -21,15 +21,14 @@ block content
                 .input-group-append
                   .input-group-text
                     span.fas.fa-lock
-              br      
+              br   
               .row               
                 .col-4
-                  button.btn.btn-primary.a(type="submit") Sign In
-                // /.col 
-              br 
-              p - OR -
+                  button.btn.btn-primary.a(type="submit") Sign in
+                // /.col
+            br 
+            p - OR -
             p.mb-0
               a.text-center(href='register') Register a new membership
-              button(class="btn btn-primary" onclick="validateForm()") Testing
             div(id="particles-js")  
   canvas(class="background")
