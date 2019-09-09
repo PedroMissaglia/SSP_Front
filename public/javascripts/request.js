@@ -1,4 +1,4 @@
-var url = 'http://localhost:50929/api';
+var url = 'https://localhost:44308/api';
 
 async function validateLogin() {
     
@@ -6,7 +6,7 @@ async function validateLogin() {
     var y = document.getElementById('2').value;
     
     try {
-        const response = await axios.post( url + '/User/login',
+        const response = await axios.post( url + '/Users/login',
         {email: x,
           password: y});
       console.log(response);
@@ -16,6 +16,8 @@ async function validateLogin() {
         window.location.href = '/home';
       }
     } catch (error) {
+
+      console.log(error);
       console.log(error.response.status);
       if (error.response.status == '412'){
         console.log('Ops, verifique seu e-mail e senha.');
@@ -27,4 +29,5 @@ async function validateLogin() {
         console.log('Ops, parece que estamos com uma instabilidade, volte mais tarde.');
       }        
     }
+
 }
