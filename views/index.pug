@@ -9,7 +9,7 @@ block content
             h2.login-box-msg Login
               h3 Super Secret Project
             br
-            form(name ="loginForm" action="javascript:validateLogin()")
+            form(name ="loginForm" action="javascript:validateLogin()" id="error")
               .input-group.mb-4
                 input.form-control(id="1" name ="email" type='email', placeholder='Email' required)
                 .input-group-append
@@ -18,7 +18,7 @@ block content
               br      
               .input-group.mb-4
                 input.form-control(id="2" name="senha" type='password', placeholder='Password' required)
-                .input-group-append
+                .input-group-append(id="4")
                   .input-group-text
                     span.fas.fa-lock
               br   
