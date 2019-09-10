@@ -21,23 +21,20 @@ async function validateLogin() {
       console.log(error);
       console.log(error.response.status);
       if (error.response.status == '412'){
-        document.getElementById("1").style.borderLeftColor = 'rgba(255, 0, 0, 0.5)';
+        document.getElementById("1").style.borderLeftColor = 'rgba(255, 0, 0, 1)';
         document.getElementById("1").style.backgroundColor = 'white';
-        document.getElementById("2").style.borderLeftColor = 'rgba(255, 0, 0, 0.5)';
+        document.getElementById("2").style.borderLeftColor = 'rgba(255, 0, 0, 1)';
         document.getElementById("2").style.backgroundColor = 'white';
         swal("Ops!", "Verifique seu e-mail e senha.", "error");
       } 
       else if (error.response.status == '422'){
         console.log('E-mail não cadastrado.');
-        document.getElementById("1").classList.add('alert-danger');
+        document.getElementById("1").style.borderLeftColor = 'rgba(255, 0, 0, 0.5)';
         swal("Ops!", "E-mail não cadastrado.", "error");
-
-
       }
       else{
         console.log('Ops, parece que estamos com uma instabilidade, volte mais tarde.');
-      } 
-           
+      }       
     }
 
 }
