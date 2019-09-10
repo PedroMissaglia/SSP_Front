@@ -9,7 +9,7 @@ block content
             h2.login-box-msg Login
               h3 Super Secret Project
             br
-            div(name ="loginForm")
+            form(name ="loginForm" action="javascript:validateLogin()")
               .input-group.mb-4
                 input.form-control(id="1" name ="email" type='email', placeholder='Email' required)
                 .input-group-append
@@ -24,7 +24,7 @@ block content
               br   
               .row               
                 .col-4
-                  button.btn.btn-primary.a(onclick="validateLogin()") Sign in
+                  button.btn.btn-primary.a(type="submit") Sign in
                 // /.col
             br 
             p - OR -

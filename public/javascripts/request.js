@@ -1,5 +1,7 @@
 var url = 'https://localhost:44308/api';
 
+const Swal = require('sweetalert2')
+
 async function validateLogin() {
     
     var x = document.getElementById('1').value;
@@ -11,6 +13,7 @@ async function validateLogin() {
           password: y});
       console.log(response);
       console.log(response.status);
+
       if (response.status == '200'){
         console.log('Logado');
         window.location.href = '/home';
@@ -21,6 +24,7 @@ async function validateLogin() {
       console.log(error.response.status);
       if (error.response.status == '412'){
         console.log('Ops, verifique seu e-mail e senha.');
+        ascjc();
       } 
       else if (error.response.status == '422'){
         console.log('E-mail não cadastrado.');
@@ -30,4 +34,12 @@ async function validateLogin() {
       }        
     }
 
+}
+
+function ascjc(){
+  Swal.fire(
+    'The Internet?',
+    'That thing is still around?',
+    'question'
+  )
 }
