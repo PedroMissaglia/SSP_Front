@@ -1,0 +1,138 @@
+extends layout
+
+block content
+
+  body.hold-transition.sidebar-mini
+    .wrapper
+      // Navbar 
+      nav.main-header.navbar.navbar-expand.navbar-white.navbar-light
+        // Left navbar links 
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(data-widget='pushmenu', href='#')
+              i.fas.fa-bars
+          li.nav-item.d-none.d-sm-inline-block
+            a.nav-link(href='home') Home
+          li.nav-item.d-none.d-sm-inline-block
+            a.nav-link(href='profile') Contact
+        // Right navbar links 
+        ul.navbar-nav.ml-auto
+          // Notifications Dropdown Menu 
+          li.nav-item.dropdown
+            a.nav-link(data-toggle='dropdown', href='#')
+              i.far.fa-bell
+              span.badge.badge-warning.navbar-badge 15
+            .dropdown-menu.dropdown-menu-lg.dropdown-menu-right
+              span.dropdown-item.dropdown-header 15 Notifications
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                i.fas.fa-envelope.mr-2
+                | 4 new messages
+                span.float-right.text-muted.text-sm 3 mins
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                i.fas.fa-users.mr-2
+                | 8 friend requests
+                span.float-right.text-muted.text-sm 12 hours
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                i.fas.fa-file.mr-2
+                | 3 new reports
+                span.float-right.text-muted.text-sm 2 days
+              .dropdown-divider
+              a.dropdown-item.dropdown-footer(href='#') See All Notifications
+          li.nav-item
+            a.nav-link(data-widget='control-sidebar', data-slide='true', href='#')
+              i.fas.fa-th-large
+      // /.navbar 
+      // Main Sidebar Container 
+      aside.main-sidebar.sidebar-dark-primary.elevation-4
+        // Brand Logo 
+        a.brand-link(href='../../index3.html')
+          img.brand-image.img-circle.elevation-3(src='../../dist/img/AdminLTELogo.png', alt='AdminLTE Logo', style='opacity: .8')
+          span.brand-text.font-weight-light AdminLTE 3
+        // Sidebar 
+        .sidebar
+          // Sidebar user (optional) 
+          .user-panel.mt-3.pb-3.mb-3.d-flex
+            .image
+              img.img-circle.elevation-2(src='../../dist/img/user2-160x160.jpg', alt='User Image')
+            .info
+              a.d-block(href='#') Alexander Pierce
+                        // Sidebar Menu 
+          nav.mt-2
+            ul.nav.nav-pills.nav-sidebar.flex-column(data-widget='treeview', role='menu', data-accordion='false')
+              //                 Add icons to the links using the .nav-icon class
+                               with font-awesome or any other icon font library 
+              li.nav-item.has-treeview.menu-open
+                a.nav-link.active(href='#')
+                  i.nav-icon.fas.fa-tachometer-alt
+                  p
+                    | Dashboard
+                    i.right.fas.fa-angle-left
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-table
+                  p
+                    | Cadastros
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='pages/forms/editors.html')
+                        i.far.fa-circle.nav-icon
+                        p Produtos
+          // /.sidebar-menu 
+        // /.sidebar 
+      // Content Wrapper. Contains page content 
+      .content-wrapper
+        // Content Header (Page header) 
+        section.content-header
+          .container-fluid
+            .row.mb-2
+              .col-sm-6
+                h1 404 Error Page
+              .col-sm-6
+                ol.breadcrumb.float-sm-right
+                  li.breadcrumb-item
+                    a(href='home') Home
+                  li.breadcrumb-item.active 404 Error Page
+          // /.container-fluid 
+        // Main content 
+        section.content
+          .error-page
+            h2.headline.text-warning 404
+            .error-content
+              h3
+                i.fas.fa-exclamation-triangle.text-warning
+                | Oops! Página não encontrada.
+              p
+                | Não conseguimos encontrar o que você estava procurando. Caso queira, 
+                a(href='home') clique aqui
+                |  para voltar a página inicial.
+                // /.input-group 
+            // /.error-content 
+          // /.error-page 
+        // /.content 
+      // /.content-wrapper 
+      footer.main-footer
+        .float-right.d-none.d-sm-block
+          b Version
+          | 3.0.0-rc.1
+        strong
+          | Copyright © 2014-2019
+          a(href='http://adminlte.io') AdminLTE.io
+          | .
+        | All rights reserved.
+      // Control Sidebar 
+      aside.control-sidebar.control-sidebar-dark
+        // Control sidebar content goes here 
+      // /.control-sidebar 
+    // ./wrapper 
+    // jQuery 
+    script(src='../../plugins/jquery/jquery.min.js')
+    // Bootstrap 4 
+    script(src='../../plugins/bootstrap/js/bootstrap.bundle.min.js')
+    // AdminLTE App 
+    script(src='../../dist/js/adminlte.min.js')
+    // AdminLTE for demo purposes 
+    script(src='../../dist/js/demo.js')

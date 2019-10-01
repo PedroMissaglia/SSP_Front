@@ -1,0 +1,1108 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title AdminLTE 3 | Dashboard 2
+    // Font Awesome Icons 
+    link(rel='stylesheet', href='plugins/fontawesome-free/css/all.min.css')
+    // overlayScrollbars 
+    link(rel='stylesheet', href='plugins/overlayScrollbars/css/OverlayScrollbars.min.css')
+    // Theme style 
+    link(rel='stylesheet', href='dist/css/adminlte.min.css')
+    // Google Font: Source Sans Pro 
+    link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700', rel='stylesheet')
+  body.hold-transition.sidebar-mini.layout-fixed.layout-navbar-fixed.layout-footer-fixed
+    .wrapper
+      // Navbar 
+      nav.main-header.navbar.navbar-expand.navbar-white.navbar-light
+        // Left navbar links 
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(data-widget='pushmenu', href='#')
+              i.fas.fa-bars
+          li.nav-item.d-none.d-sm-inline-block
+            a.nav-link(href='index3.html') Home
+          li.nav-item.d-none.d-sm-inline-block
+            a.nav-link(href='#') Contact
+        // SEARCH FORM 
+        form.form-inline.ml-3
+          .input-group.input-group-sm
+            input.form-control.form-control-navbar(type='search', placeholder='Search', aria-label='Search')
+            .input-group-append
+              button.btn.btn-navbar(type='submit')
+                i.fas.fa-search
+        // Right navbar links 
+        ul.navbar-nav.ml-auto
+          // Messages Dropdown Menu 
+          li.nav-item.dropdown
+            a.nav-link(data-toggle='dropdown', href='#')
+              i.far.fa-comments
+              span.badge.badge-danger.navbar-badge 3
+            .dropdown-menu.dropdown-menu-lg.dropdown-menu-right
+              a.dropdown-item(href='#')
+                // Message Start 
+                .media
+                  img.img-size-50.mr-3.img-circle(src='dist/img/user1-128x128.jpg', alt='User Avatar')
+                  .media-body
+                    h3.dropdown-item-title
+                      | Brad Diesel
+                      span.float-right.text-sm.text-danger
+                        i.fas.fa-star
+                    p.text-sm Call me whenever you can...
+                    p.text-sm.text-muted
+                      i.far.fa-clock.mr-1
+                      | 4 Hours Ago
+                // Message End 
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                // Message Start 
+                .media
+                  img.img-size-50.img-circle.mr-3(src='dist/img/user8-128x128.jpg', alt='User Avatar')
+                  .media-body
+                    h3.dropdown-item-title
+                      | John Pierce
+                      span.float-right.text-sm.text-muted
+                        i.fas.fa-star
+                    p.text-sm I got your message bro
+                    p.text-sm.text-muted
+                      i.far.fa-clock.mr-1
+                      | 4 Hours Ago
+                // Message End 
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                // Message Start 
+                .media
+                  img.img-size-50.img-circle.mr-3(src='dist/img/user3-128x128.jpg', alt='User Avatar')
+                  .media-body
+                    h3.dropdown-item-title
+                      | Nora Silvester
+                      span.float-right.text-sm.text-warning
+                        i.fas.fa-star
+                    p.text-sm The subject goes here
+                    p.text-sm.text-muted
+                      i.far.fa-clock.mr-1
+                      | 4 Hours Ago
+                // Message End 
+              .dropdown-divider
+              a.dropdown-item.dropdown-footer(href='#') See All Messages
+          // Notifications Dropdown Menu 
+          li.nav-item.dropdown
+            a.nav-link(data-toggle='dropdown', href='#')
+              i.far.fa-bell
+              span.badge.badge-warning.navbar-badge 15
+            .dropdown-menu.dropdown-menu-lg.dropdown-menu-right
+              span.dropdown-item.dropdown-header 15 Notifications
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                i.fas.fa-envelope.mr-2
+                | 4 new messages
+                span.float-right.text-muted.text-sm 3 mins
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                i.fas.fa-users.mr-2
+                | 8 friend requests
+                span.float-right.text-muted.text-sm 12 hours
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                i.fas.fa-file.mr-2
+                | 3 new reports
+                span.float-right.text-muted.text-sm 2 days
+              .dropdown-divider
+              a.dropdown-item.dropdown-footer(href='#') See All Notifications
+          li.nav-item
+            a.nav-link(data-widget='control-sidebar', data-slide='true', href='#')
+              i.fas.fa-th-large
+      // /.navbar 
+      // Main Sidebar Container 
+      aside.main-sidebar.sidebar-dark-primary.elevation-4
+        // Brand Logo 
+        a.brand-link(href='index3.html')
+          img.brand-image.img-circle.elevation-3(src='dist/img/AdminLTELogo.png', alt='AdminLTE Logo', style='opacity: .8')
+          span.brand-text.font-weight-light AdminLTE 3
+        // Sidebar 
+        .sidebar
+          // Sidebar user panel (optional) 
+          .user-panel.mt-3.pb-3.mb-3.d-flex
+            .image
+              img.img-circle.elevation-2(src='dist/img/user2-160x160.jpg', alt='User Image')
+            .info
+              a.d-block(href='#') Alexander Pierce
+          // Sidebar Menu 
+          nav.mt-2
+            ul.nav.nav-pills.nav-sidebar.flex-column(data-widget='treeview', role='menu', data-accordion='false')
+              //                 Add icons to the links using the .nav-icon class
+                               with font-awesome or any other icon font library 
+              li.nav-item.has-treeview.menu-open
+                a.nav-link.active(href='#')
+                  i.nav-icon.fas.fa-tachometer-alt
+                  p
+                    | Dashboard
+                    i.right.fas.fa-angle-left
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='./index.html')
+                      i.far.fa-circle.nav-icon
+                      p Dashboard v1
+                  li.nav-item
+                    a.nav-link.active(href='./index2.html')
+                      i.far.fa-circle.nav-icon
+                      p Dashboard v2
+                  li.nav-item
+                    a.nav-link(href='./index3.html')
+                      i.far.fa-circle.nav-icon
+                      p Dashboard v3
+              li.nav-item
+                a.nav-link(href='pages/widgets.html')
+                  i.nav-icon.fas.fa-th
+                  p
+                    | Widgets
+                    span.right.badge.badge-danger New
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-copy
+                  p
+                    | Layout Options
+                    i.fas.fa-angle-left.right
+                    span.badge.badge-info.right 6
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='pages/layout/top-nav.html')
+                      i.far.fa-circle.nav-icon
+                      p Top Navigation
+                  li.nav-item
+                    a.nav-link(href='pages/layout/boxed.html')
+                      i.far.fa-circle.nav-icon
+                      p Boxed
+                  li.nav-item
+                    a.nav-link(href='pages/layout/fixed-sidebar.html')
+                      i.far.fa-circle.nav-icon
+                      p Fixed Sidebar
+                  li.nav-item
+                    a.nav-link(href='pages/layout/fixed-topnav.html')
+                      i.far.fa-circle.nav-icon
+                      p Fixed Navbar
+                  li.nav-item
+                    a.nav-link(href='pages/layout/fixed-footer.html')
+                      i.far.fa-circle.nav-icon
+                      p Fixed Footer
+                  li.nav-item
+                    a.nav-link(href='pages/layout/collapsed-sidebar.html')
+                      i.far.fa-circle.nav-icon
+                      p Collapsed Sidebar
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-chart-pie
+                  p
+                    | Charts
+                    i.right.fas.fa-angle-left
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='pages/charts/chartjs.html')
+                      i.far.fa-circle.nav-icon
+                      p ChartJS
+                  li.nav-item
+                    a.nav-link(href='pages/charts/flot.html')
+                      i.far.fa-circle.nav-icon
+                      p Flot
+                  li.nav-item
+                    a.nav-link(href='pages/charts/inline.html')
+                      i.far.fa-circle.nav-icon
+                      p Inline
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-tree
+                  p
+                    | UI Elements
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='pages/UI/general.html')
+                      i.far.fa-circle.nav-icon
+                      p General
+                  li.nav-item
+                    a.nav-link(href='pages/UI/icons.html')
+                      i.far.fa-circle.nav-icon
+                      p Icons
+                  li.nav-item
+                    a.nav-link(href='pages/UI/buttons.html')
+                      i.far.fa-circle.nav-icon
+                      p Buttons
+                  li.nav-item
+                    a.nav-link(href='pages/UI/sliders.html')
+                      i.far.fa-circle.nav-icon
+                      p Sliders
+                  li.nav-item
+                    a.nav-link(href='pages/UI/modals.html')
+                      i.far.fa-circle.nav-icon
+                      p Modals & Alerts
+                  li.nav-item
+                    a.nav-link(href='pages/UI/navbar.html')
+                      i.far.fa-circle.nav-icon
+                      p Navbar & Tabs
+                  li.nav-item
+                    a.nav-link(href='pages/UI/timeline.html')
+                      i.far.fa-circle.nav-icon
+                      p Timeline
+                  li.nav-item
+                    a.nav-link(href='pages/UI/ribbons.html')
+                      i.far.fa-circle.nav-icon
+                      p Ribbons
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-edit
+                  p
+                    | Forms
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='pages/forms/general.html')
+                      i.far.fa-circle.nav-icon
+                      p General Elements
+                  li.nav-item
+                    a.nav-link(href='pages/forms/advanced.html')
+                      i.far.fa-circle.nav-icon
+                      p Advanced Elements
+                  li.nav-item
+                    a.nav-link(href='pages/forms/editors.html')
+                      i.far.fa-circle.nav-icon
+                      p Editors
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-table
+                  p
+                    | Tables
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='pages/tables/simple.html')
+                      i.far.fa-circle.nav-icon
+                      p Simple Tables
+                  li.nav-item
+                    a.nav-link(href='pages/tables/data.html')
+                      i.far.fa-circle.nav-icon
+                      p DataTables
+                  li.nav-item
+                    a.nav-link(href='pages/tables/jsgrid.html')
+                      i.far.fa-circle.nav-icon
+                      p jsGrid
+              li.nav-header EXAMPLES
+              li.nav-item
+                a.nav-link(href='pages/calendar.html')
+                  i.nav-icon.fas.fa-calendar-alt
+                  p
+                    | Calendar
+                    span.badge.badge-info.right 2
+              li.nav-item
+                a.nav-link(href='pages/gallery.html')
+                  i.nav-icon.far.fa-image
+                  p Gallery
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-envelope
+                  p
+                    | Mailbox
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='pages/mailbox/mailbox.html')
+                      i.far.fa-circle.nav-icon
+                      p Inbox
+                  li.nav-item
+                    a.nav-link(href='pages/mailbox/compose.html')
+                      i.far.fa-circle.nav-icon
+                      p Compose
+                  li.nav-item
+                    a.nav-link(href='pages/mailbox/read-mail.html')
+                      i.far.fa-circle.nav-icon
+                      p Read
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-book
+                  p
+                    | Pages
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='pages/examples/invoice.html')
+                      i.far.fa-circle.nav-icon
+                      p Invoice
+                  li.nav-item
+                    a.nav-link(href='pages/examples/profile.html')
+                      i.far.fa-circle.nav-icon
+                      p Profile
+                  li.nav-item
+                    a.nav-link(href='pages/examples/e_commerce.html')
+                      i.far.fa-circle.nav-icon
+                      p E-commerce
+                  li.nav-item
+                    a.nav-link(href='pages/examples/projects.html')
+                      i.far.fa-circle.nav-icon
+                      p Projects
+                  li.nav-item
+                    a.nav-link(href='pages/examples/project_add.html')
+                      i.far.fa-circle.nav-icon
+                      p Project Add
+                  li.nav-item
+                    a.nav-link(href='pages/examples/project_edit.html')
+                      i.far.fa-circle.nav-icon
+                      p Project Edit
+                  li.nav-item
+                    a.nav-link(href='pages/examples/project_detail.html')
+                      i.far.fa-circle.nav-icon
+                      p Project Detail
+                  li.nav-item
+                    a.nav-link(href='pages/examples/contacts.html')
+                      i.far.fa-circle.nav-icon
+                      p Contacts
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-plus-square
+                  p
+                    | Extras
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='pages/examples/login.html')
+                      i.far.fa-circle.nav-icon
+                      p Login
+                  li.nav-item
+                    a.nav-link(href='pages/examples/register.html')
+                      i.far.fa-circle.nav-icon
+                      p Register
+                  li.nav-item
+                    a.nav-link(href='pages/examples/lockscreen.html')
+                      i.far.fa-circle.nav-icon
+                      p Lockscreen
+                  li.nav-item
+                    a.nav-link(href='pages/examples/legacy-user-menu.html')
+                      i.far.fa-circle.nav-icon
+                      p Legacy User Menu
+                  li.nav-item
+                    a.nav-link(href='pages/examples/language-menu.html')
+                      i.far.fa-circle.nav-icon
+                      p Language Menu
+                  li.nav-item
+                    a.nav-link(href='pages/examples/404.html')
+                      i.far.fa-circle.nav-icon
+                      p Error 404
+                  li.nav-item
+                    a.nav-link(href='pages/examples/500.html')
+                      i.far.fa-circle.nav-icon
+                      p Error 500
+                  li.nav-item
+                    a.nav-link(href='pages/examples/blank.html')
+                      i.far.fa-circle.nav-icon
+                      p Blank Page
+                  li.nav-item
+                    a.nav-link(href='starter.html')
+                      i.far.fa-circle.nav-icon
+                      p Starter Page
+              li.nav-header MISCELLANEOUS
+              li.nav-item
+                a.nav-link(href='https://adminlte.io/docs/3.0')
+                  i.nav-icon.fas.fa-file
+                  p Documentation
+              li.nav-header LABELS
+              li.nav-item
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-circle.text-danger
+                  p.text Important
+              li.nav-item
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-circle.text-warning
+                  p Warning
+              li.nav-item
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-circle.text-info
+                  p Informational
+          // /.sidebar-menu 
+        // /.sidebar 
+      // Content Wrapper. Contains page content 
+      .content-wrapper
+        // Content Header (Page header) 
+        .content-header
+          .container-fluid
+            .row.mb-2
+              .col-sm-6
+                h1.m-0.text-dark Dashboard v2
+              // /.col 
+              .col-sm-6
+                ol.breadcrumb.float-sm-right
+                  li.breadcrumb-item
+                    a(href='#') Home
+                  li.breadcrumb-item.active Dashboard v2
+              // /.col 
+            // /.row 
+          // /.container-fluid 
+        // /.content-header 
+        // Main content 
+        section.content
+          .container-fluid
+            // Info boxes 
+            .row
+              .col-12.col-sm-6.col-md-3
+                .info-box
+                  span.info-box-icon.bg-info.elevation-1
+                    i.fas.fa-cog
+                  .info-box-content
+                    span.info-box-text CPU Traffic
+                    span.info-box-number
+                      | 10
+                      small %
+                  // /.info-box-content 
+                // /.info-box 
+              // /.col 
+              .col-12.col-sm-6.col-md-3
+                .info-box.mb-3
+                  span.info-box-icon.bg-danger.elevation-1
+                    i.fas.fa-thumbs-up
+                  .info-box-content
+                    span.info-box-text Likes
+                    span.info-box-number 41,410
+                  // /.info-box-content 
+                // /.info-box 
+              // /.col 
+              // fix for small devices only 
+              .clearfix.hidden-md-up
+              .col-12.col-sm-6.col-md-3
+                .info-box.mb-3
+                  span.info-box-icon.bg-success.elevation-1
+                    i.fas.fa-shopping-cart
+                  .info-box-content
+                    span.info-box-text Sales
+                    span.info-box-number 760
+                  // /.info-box-content 
+                // /.info-box 
+              // /.col 
+              .col-12.col-sm-6.col-md-3
+                .info-box.mb-3
+                  span.info-box-icon.bg-warning.elevation-1
+                    i.fas.fa-users
+                  .info-box-content
+                    span.info-box-text New Members
+                    span.info-box-number 2,000
+                  // /.info-box-content 
+                // /.info-box 
+              // /.col 
+            // /.row 
+            .row
+              .col-md-12
+                .card
+                  .card-header
+                    h5.card-title Monthly Recap Report
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                      .btn-group
+                        button.btn.btn-tool.dropdown-toggle(type='button', data-toggle='dropdown')
+                          i.fas.fa-wrench
+                        .dropdown-menu.dropdown-menu-right(role='menu')
+                          a.dropdown-item(href='#') Action
+                          a.dropdown-item(href='#') Another action
+                          a.dropdown-item(href='#') Something else here
+                          a.dropdown-divider
+                          a.dropdown-item(href='#') Separated link
+                      button.btn.btn-tool(type='button', data-card-widget='remove')
+                        i.fas.fa-times
+                  // /.card-header 
+                  .card-body
+                    .row
+                      .col-md-8
+                        p.text-center
+                          strong Sales: 1 Jan, 2014 - 30 Jul, 2014
+                        .chart
+                          // Sales Chart Canvas 
+                          canvas#salesChart(height='180', style='height: 180px;')
+                        // /.chart-responsive 
+                      // /.col 
+                      .col-md-4
+                        p.text-center
+                          strong Goal Completion
+                        .progress-group
+                          | Add Products to Cart
+                          span.float-right
+                            b 160
+                            | /200
+                          .progress.progress-sm
+                            .progress-bar.bg-primary(style='width: 80%')
+                        // /.progress-group 
+                        .progress-group
+                          | Complete Purchase
+                          span.float-right
+                            b 310
+                            | /400
+                          .progress.progress-sm
+                            .progress-bar.bg-danger(style='width: 75%')
+                        // /.progress-group 
+                        .progress-group
+                          span.progress-text Visit Premium Page
+                          span.float-right
+                            b 480
+                            | /800
+                          .progress.progress-sm
+                            .progress-bar.bg-success(style='width: 60%')
+                        // /.progress-group 
+                        .progress-group
+                          | Send Inquiries
+                          span.float-right
+                            b 250
+                            | /500
+                          .progress.progress-sm
+                            .progress-bar.bg-warning(style='width: 50%')
+                        // /.progress-group 
+                      // /.col 
+                    // /.row 
+                  // ./card-body 
+                  .card-footer
+                    .row
+                      .col-sm-3.col-6
+                        .description-block.border-right
+                          span.description-percentage.text-success
+                            i.fas.fa-caret-up
+                            | 17%
+                          h5.description-header $35,210.43
+                          span.description-text TOTAL REVENUE
+                        // /.description-block 
+                      // /.col 
+                      .col-sm-3.col-6
+                        .description-block.border-right
+                          span.description-percentage.text-warning
+                            i.fas.fa-caret-left
+                            | 0%
+                          h5.description-header $10,390.90
+                          span.description-text TOTAL COST
+                        // /.description-block 
+                      // /.col 
+                      .col-sm-3.col-6
+                        .description-block.border-right
+                          span.description-percentage.text-success
+                            i.fas.fa-caret-up
+                            | 20%
+                          h5.description-header $24,813.53
+                          span.description-text TOTAL PROFIT
+                        // /.description-block 
+                      // /.col 
+                      .col-sm-3.col-6
+                        .description-block
+                          span.description-percentage.text-danger
+                            i.fas.fa-caret-down
+                            | 18%
+                          h5.description-header 1200
+                          span.description-text GOAL COMPLETIONS
+                        // /.description-block 
+                    // /.row 
+                  // /.card-footer 
+                // /.card 
+              // /.col 
+            // /.row 
+            // Main row 
+            .row
+              // Left col 
+              .col-md-8
+                // MAP & BOX PANE 
+                .card
+                  .card-header
+                    h3.card-title Visitors Report
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                      button.btn.btn-tool(type='button', data-card-widget='remove')
+                        i.fas.fa-times
+                  // /.card-header 
+                  .card-body.p-0
+                    .d-md-flex
+                      .p-1.flex-fill(style='overflow: hidden')
+                        // Map will be created here 
+                        #world-map-markers(style='height: 325px; overflow: hidden')
+                          .map
+                      .card-pane-right.bg-success.pt-2.pb-2.pl-4.pr-4
+                        .description-block.mb-4
+                          .sparkbar.pad(data-color='#fff') 90,70,90,70,75,80,70
+                          h5.description-header 8390
+                          span.description-text Visits
+                        // /.description-block 
+                        .description-block.mb-4
+                          .sparkbar.pad(data-color='#fff') 90,50,90,70,61,83,63
+                          h5.description-header 30%
+                          span.description-text Referrals
+                        // /.description-block 
+                        .description-block
+                          .sparkbar.pad(data-color='#fff') 90,50,90,70,61,83,63
+                          h5.description-header 70%
+                          span.description-text Organic
+                        // /.description-block 
+                      // /.card-pane-right 
+                    // /.d-md-flex 
+                  // /.card-body 
+                // /.card 
+                .row
+                  .col-md-6
+                    // DIRECT CHAT 
+                    .card.direct-chat.direct-chat-warning
+                      .card-header
+                        h3.card-title Direct Chat
+                        .card-tools
+                          span.badge.badge-warning(data-toggle='tooltip', title='3 New Messages') 3
+                          button.btn.btn-tool(type='button', data-card-widget='collapse')
+                            i.fas.fa-minus
+                          button.btn.btn-tool(type='button', data-toggle='tooltip', title='Contacts', data-widget='chat-pane-toggle')
+                            i.fas.fa-comments
+                          button.btn.btn-tool(type='button', data-card-widget='remove')
+                            i.fas.fa-times
+                      // /.card-header 
+                      .card-body
+                        // Conversations are loaded here 
+                        .direct-chat-messages
+                          // Message. Default to the left 
+                          .direct-chat-msg
+                            .direct-chat-infos.clearfix
+                              span.direct-chat-name.float-left Alexander Pierce
+                              span.direct-chat-timestamp.float-right 23 Jan 2:00 pm
+                            // /.direct-chat-infos 
+                            |  
+                            img.direct-chat-img(src='dist/img/user1-128x128.jpg', alt='message user image')
+                            // /.direct-chat-img 
+                            .direct-chat-text Is this template really for free? That's unbelievable!
+                            // /.direct-chat-text 
+                          // /.direct-chat-msg 
+                          // Message to the right 
+                          .direct-chat-msg.right
+                            .direct-chat-infos.clearfix
+                              span.direct-chat-name.float-right Sarah Bullock
+                              span.direct-chat-timestamp.float-left 23 Jan 2:05 pm
+                            // /.direct-chat-infos 
+                            |  
+                            img.direct-chat-img(src='dist/img/user3-128x128.jpg', alt='message user image')
+                            // /.direct-chat-img 
+                            .direct-chat-text You better believe it!
+                            // /.direct-chat-text 
+                          // /.direct-chat-msg 
+                          // Message. Default to the left 
+                          .direct-chat-msg
+                            .direct-chat-infos.clearfix
+                              span.direct-chat-name.float-left Alexander Pierce
+                              span.direct-chat-timestamp.float-right 23 Jan 5:37 pm
+                            // /.direct-chat-infos 
+                            |  
+                            img.direct-chat-img(src='dist/img/user1-128x128.jpg', alt='message user image')
+                            // /.direct-chat-img 
+                            .direct-chat-text Working with AdminLTE on a great new app! Wanna join?
+                            // /.direct-chat-text 
+                          // /.direct-chat-msg 
+                          // Message to the right 
+                          .direct-chat-msg.right
+                            .direct-chat-infos.clearfix
+                              span.direct-chat-name.float-right Sarah Bullock
+                              span.direct-chat-timestamp.float-left 23 Jan 6:10 pm
+                            // /.direct-chat-infos 
+                            |  
+                            img.direct-chat-img(src='dist/img/user3-128x128.jpg', alt='message user image')
+                            // /.direct-chat-img 
+                            .direct-chat-text I would love to.
+                            // /.direct-chat-text 
+                          // /.direct-chat-msg 
+                        ///.direct-chat-messages
+                        // Contacts are loaded here 
+                        .direct-chat-contacts
+                          ul.contacts-list
+                            li
+                              a(href='#')
+                                img.contacts-list-img(src='dist/img/user1-128x128.jpg')
+                                .contacts-list-info
+                                  span.contacts-list-name
+                                    | Count Dracula
+                                    small.contacts-list-date.float-right 2/28/2015
+                                  span.contacts-list-msg How have you been? I was...
+                                // /.contacts-list-info 
+                            // End Contact Item 
+                            li
+                              a(href='#')
+                                img.contacts-list-img(src='dist/img/user7-128x128.jpg')
+                                .contacts-list-info
+                                  span.contacts-list-name
+                                    | Sarah Doe
+                                    small.contacts-list-date.float-right 2/23/2015
+                                  span.contacts-list-msg I will be waiting for...
+                                // /.contacts-list-info 
+                            // End Contact Item 
+                            li
+                              a(href='#')
+                                img.contacts-list-img(src='dist/img/user3-128x128.jpg')
+                                .contacts-list-info
+                                  span.contacts-list-name
+                                    | Nadia Jolie
+                                    small.contacts-list-date.float-right 2/20/2015
+                                  span.contacts-list-msg I'll call you back at...
+                                // /.contacts-list-info 
+                            // End Contact Item 
+                            li
+                              a(href='#')
+                                img.contacts-list-img(src='dist/img/user5-128x128.jpg')
+                                .contacts-list-info
+                                  span.contacts-list-name
+                                    | Nora S. Vans
+                                    small.contacts-list-date.float-right 2/10/2015
+                                  span.contacts-list-msg Where is your new...
+                                // /.contacts-list-info 
+                            // End Contact Item 
+                            li
+                              a(href='#')
+                                img.contacts-list-img(src='dist/img/user6-128x128.jpg')
+                                .contacts-list-info
+                                  span.contacts-list-name
+                                    | John K.
+                                    small.contacts-list-date.float-right 1/27/2015
+                                  span.contacts-list-msg Can I take a look at...
+                                // /.contacts-list-info 
+                            // End Contact Item 
+                            li
+                              a(href='#')
+                                img.contacts-list-img(src='dist/img/user8-128x128.jpg')
+                                .contacts-list-info
+                                  span.contacts-list-name
+                                    | Kenneth M.
+                                    small.contacts-list-date.float-right 1/4/2015
+                                  span.contacts-list-msg Never mind I found...
+                                // /.contacts-list-info 
+                            // End Contact Item 
+                          // /.contacts-list 
+                        // /.direct-chat-pane 
+                      // /.card-body 
+                      .card-footer
+                        form(action='#', method='post')
+                          .input-group
+                            input.form-control(type='text', name='message', placeholder='Type Message ...')
+                            span.input-group-append
+                              button.btn.btn-warning(type='button') Send
+                      // /.card-footer
+                    ///.direct-chat 
+                  // /.col 
+                  .col-md-6
+                    // USERS LIST 
+                    .card
+                      .card-header
+                        h3.card-title Latest Members
+                        .card-tools
+                          span.badge.badge-danger 8 New Members
+                          button.btn.btn-tool(type='button', data-card-widget='collapse')
+                            i.fas.fa-minus
+                          button.btn.btn-tool(type='button', data-card-widget='remove')
+                            i.fas.fa-times
+                      // /.card-header 
+                      .card-body.p-0
+                        ul.users-list.clearfix
+                          li
+                            img(src='dist/img/user1-128x128.jpg', alt='User Image')
+                            a.users-list-name(href='#') Alexander Pierce
+                            span.users-list-date Today
+                          li
+                            img(src='dist/img/user8-128x128.jpg', alt='User Image')
+                            a.users-list-name(href='#') Norman
+                            span.users-list-date Yesterday
+                          li
+                            img(src='dist/img/user7-128x128.jpg', alt='User Image')
+                            a.users-list-name(href='#') Jane
+                            span.users-list-date 12 Jan
+                          li
+                            img(src='dist/img/user6-128x128.jpg', alt='User Image')
+                            a.users-list-name(href='#') John
+                            span.users-list-date 12 Jan
+                          li
+                            img(src='dist/img/user2-160x160.jpg', alt='User Image')
+                            a.users-list-name(href='#') Alexander
+                            span.users-list-date 13 Jan
+                          li
+                            img(src='dist/img/user5-128x128.jpg', alt='User Image')
+                            a.users-list-name(href='#') Sarah
+                            span.users-list-date 14 Jan
+                          li
+                            img(src='dist/img/user4-128x128.jpg', alt='User Image')
+                            a.users-list-name(href='#') Nora
+                            span.users-list-date 15 Jan
+                          li
+                            img(src='dist/img/user3-128x128.jpg', alt='User Image')
+                            a.users-list-name(href='#') Nadia
+                            span.users-list-date 15 Jan
+                        // /.users-list 
+                      // /.card-body 
+                      .card-footer.text-center
+                        a(href='javascript::') View All Users
+                      // /.card-footer 
+                    ///.card 
+                  // /.col 
+                // /.row 
+                // TABLE: LATEST ORDERS 
+                .card
+                  .card-header.border-transparent
+                    h3.card-title Latest Orders
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                      button.btn.btn-tool(type='button', data-card-widget='remove')
+                        i.fas.fa-times
+                  // /.card-header 
+                  .card-body.p-0
+                    .table-responsive
+                      table.table.m-0
+                        thead
+                          tr
+                            th Order ID
+                            th Item
+                            th Status
+                            th Popularity
+                        tbody
+                          tr
+                            td
+                              a(href='pages/examples/invoice.html') OR9842
+                            td Call of Duty IV
+                            td
+                              span.badge.badge-success Shipped
+                            td
+                              .sparkbar(data-color='#00a65a', data-height='20') 90,80,90,-70,61,-83,63
+                          tr
+                            td
+                              a(href='pages/examples/invoice.html') OR1848
+                            td Samsung Smart TV
+                            td
+                              span.badge.badge-warning Pending
+                            td
+                              .sparkbar(data-color='#f39c12', data-height='20') 90,80,-90,70,61,-83,68
+                          tr
+                            td
+                              a(href='pages/examples/invoice.html') OR7429
+                            td iPhone 6 Plus
+                            td
+                              span.badge.badge-danger Delivered
+                            td
+                              .sparkbar(data-color='#f56954', data-height='20') 90,-80,90,70,-61,83,63
+                          tr
+                            td
+                              a(href='pages/examples/invoice.html') OR7429
+                            td Samsung Smart TV
+                            td
+                              span.badge.badge-info Processing
+                            td
+                              .sparkbar(data-color='#00c0ef', data-height='20') 90,80,-90,70,-61,83,63
+                          tr
+                            td
+                              a(href='pages/examples/invoice.html') OR1848
+                            td Samsung Smart TV
+                            td
+                              span.badge.badge-warning Pending
+                            td
+                              .sparkbar(data-color='#f39c12', data-height='20') 90,80,-90,70,61,-83,68
+                          tr
+                            td
+                              a(href='pages/examples/invoice.html') OR7429
+                            td iPhone 6 Plus
+                            td
+                              span.badge.badge-danger Delivered
+                            td
+                              .sparkbar(data-color='#f56954', data-height='20') 90,-80,90,70,-61,83,63
+                          tr
+                            td
+                              a(href='pages/examples/invoice.html') OR9842
+                            td Call of Duty IV
+                            td
+                              span.badge.badge-success Shipped
+                            td
+                              .sparkbar(data-color='#00a65a', data-height='20') 90,80,90,-70,61,-83,63
+                    // /.table-responsive 
+                  // /.card-body 
+                  .card-footer.clearfix
+                    a.btn.btn-sm.btn-info.float-left(href='javascript:void(0)') Place New Order
+                    a.btn.btn-sm.btn-secondary.float-right(href='javascript:void(0)') View All Orders
+                  // /.card-footer 
+                // /.card 
+              // /.col 
+              .col-md-4
+                // Info Boxes Style 2 
+                .info-box.mb-3.bg-warning
+                  span.info-box-icon
+                    i.fas.fa-tag
+                  .info-box-content
+                    span.info-box-text Inventory
+                    span.info-box-number 5,200
+                  // /.info-box-content 
+                // /.info-box 
+                .info-box.mb-3.bg-success
+                  span.info-box-icon
+                    i.far.fa-heart
+                  .info-box-content
+                    span.info-box-text Mentions
+                    span.info-box-number 92,050
+                  // /.info-box-content 
+                // /.info-box 
+                .info-box.mb-3.bg-danger
+                  span.info-box-icon
+                    i.fas.fa-cloud-download-alt
+                  .info-box-content
+                    span.info-box-text Downloads
+                    span.info-box-number 114,381
+                  // /.info-box-content 
+                // /.info-box 
+                .info-box.mb-3.bg-info
+                  span.info-box-icon
+                    i.far.fa-comment
+                  .info-box-content
+                    span.info-box-text Direct Messages
+                    span.info-box-number 163,921
+                  // /.info-box-content 
+                // /.info-box 
+                .card
+                  .card-header
+                    h3.card-title Browser Usage
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                      button.btn.btn-tool(type='button', data-card-widget='remove')
+                        i.fas.fa-times
+                  // /.card-header 
+                  .card-body
+                    .row
+                      .col-md-8
+                        .chart-responsive
+                          canvas#pieChart(height='150')
+                        // ./chart-responsive 
+                      // /.col 
+                      .col-md-4
+                        ul.chart-legend.clearfix
+                          li
+                            i.far.fa-circle.text-danger
+                            | Chrome
+                          li
+                            i.far.fa-circle.text-success
+                            | IE
+                          li
+                            i.far.fa-circle.text-warning
+                            | FireFox
+                          li
+                            i.far.fa-circle.text-info
+                            | Safari
+                          li
+                            i.far.fa-circle.text-primary
+                            | Opera
+                          li
+                            i.far.fa-circle.text-secondary
+                            | Navigator
+                      // /.col 
+                    // /.row 
+                  // /.card-body 
+                  .card-footer.bg-white.p-0
+                    ul.nav.nav-pills.flex-column
+                      li.nav-item
+                        a.nav-link(href='#')
+                          | United States of America
+                          span.float-right.text-danger
+                            i.fas.fa-arrow-down.text-sm
+                            | 12%
+                      li.nav-item
+                        a.nav-link(href='#')
+                          | India
+                          span.float-right.text-success
+                            i.fas.fa-arrow-up.text-sm
+                            | 4%
+                      li.nav-item
+                        a.nav-link(href='#')
+                          | China
+                          span.float-right.text-warning
+                            i.fas.fa-arrow-left.text-sm
+                            | 0%
+                  // /.footer 
+                // /.card 
+                // PRODUCT LIST 
+                .card
+                  .card-header
+                    h3.card-title Recently Added Products
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                      button.btn.btn-tool(type='button', data-card-widget='remove')
+                        i.fas.fa-times
+                  // /.card-header 
+                  .card-body.p-0
+                    ul.products-list.product-list-in-card.pl-2.pr-2
+                      li.item
+                        .product-img
+                          img.img-size-50(src='dist/img/default-150x150.png', alt='Product Image')
+                        .product-info
+                          a.product-title(href='javascript:void(0)')
+                            | Samsung TV
+                            span.badge.badge-warning.float-right $1800
+                          span.product-description Samsung 32" 1080p 60Hz LED Smart HDTV.
+                      // /.item 
+                      li.item
+                        .product-img
+                          img.img-size-50(src='dist/img/default-150x150.png', alt='Product Image')
+                        .product-info
+                          a.product-title(href='javascript:void(0)')
+                            | Bicycle
+                            span.badge.badge-info.float-right $700
+                          span.product-description 26" Mongoose Dolomite Men's 7-speed, Navy Blue.
+                      // /.item 
+                      li.item
+                        .product-img
+                          img.img-size-50(src='dist/img/default-150x150.png', alt='Product Image')
+                        .product-info
+                          a.product-title(href='javascript:void(0)')
+                            | Xbox One
+                            span.badge.badge-danger.float-right $350
+                          span.product-description Xbox One Console Bundle with Halo Master Chief Collection.
+                      // /.item 
+                      li.item
+                        .product-img
+                          img.img-size-50(src='dist/img/default-150x150.png', alt='Product Image')
+                        .product-info
+                          a.product-title(href='javascript:void(0)')
+                            | PlayStation 4
+                            span.badge.badge-success.float-right $399
+                          span.product-description PlayStation 4 500GB Console (PS4)
+                      // /.item 
+                  // /.card-body 
+                  .card-footer.text-center
+                    a.uppercase(href='javascript:void(0)') View All Products
+                  // /.card-footer 
+                // /.card 
+              // /.col 
+            // /.row 
+          ///. container-fluid 
+        // /.content 
+      // /.content-wrapper 
+      // Control Sidebar 
+      aside.control-sidebar.control-sidebar-dark
+        // Control sidebar content goes here 
+      // /.control-sidebar 
+      // Main Footer 
+      footer.main-footer
+        strong
+          | Copyright © 2014-2019
+          a(href='http://adminlte.io') AdminLTE.io
+          | .
+        | All rights reserved.
+        .float-right.d-none.d-sm-inline-block
+          b Version
+          | 3.0.0-rc.1
+    // ./wrapper 
+    // REQUIRED SCRIPTS 
+    // jQuery 
+    script(src='plugins/jquery/jquery.min.js')
+    // Bootstrap 
+    script(src='plugins/bootstrap/js/bootstrap.bundle.min.js')
+    // overlayScrollbars 
+    script(src='plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')
+    // AdminLTE App 
+    script(src='dist/js/adminlte.js')
+    // OPTIONAL SCRIPTS 
+    script(src='dist/js/demo.js')
+    // PAGE PLUGINS 
+    // jQuery Mapael 
+    script(src='plugins/jquery-mousewheel/jquery.mousewheel.js')
+    script(src='plugins/raphael/raphael.min.js')
+    script(src='plugins/jquery-mapael/jquery.mapael.min.js')
+    script(src='plugins/jquery-mapael/maps/world_countries.min.js')
+    // ChartJS 
+    script(src='plugins/chart.js/Chart.min.js')
+    // PAGE SCRIPTS 
+    script(src='dist/js/pages/dashboard2.js')

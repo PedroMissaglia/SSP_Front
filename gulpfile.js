@@ -18,7 +18,7 @@ gulp.task('watch', function(){
 
 gulp.task('pug', function() {
     // Backend locales
-    return gulp.src('public/stylesheets/admin-lte/*.html')
+    return gulp.src('public/stylesheets/admin-lte/carousel.html')
     .pipe(html2pug(/* options for html2pug such as { fragment: true } */))
     .pipe(gulp.dest('public/views/admin-lte/pug'));
   });

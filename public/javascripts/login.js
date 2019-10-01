@@ -1,4 +1,4 @@
-var url = 'https://localhost:44308/api';
+var url = 'http://localhost:50929/api';
 
 async function validateLogin() {
     
@@ -6,7 +6,7 @@ async function validateLogin() {
     var y = document.getElementById('2').value;
   
     try {
-        const response = await axios.post( url + '/Users/login',
+        const response = await axios.post( url + '/User/login',
         {email: x,
           password: y});
       console.log(response);
