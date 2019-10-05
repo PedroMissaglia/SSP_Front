@@ -1,0 +1,1217 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title AdminLTE 3 | DataTables
+    // Tell the browser to be responsive to screen width 
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    // Font Awesome 
+    link(rel='stylesheet', href='../../plugins/fontawesome-free/css/all.min.css')
+    // Ionicons 
+    link(rel='stylesheet', href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
+    // DataTables 
+    link(rel='stylesheet', href='../../plugins/datatables-bs4/css/dataTables.bootstrap4.css')
+    // Theme style 
+    link(rel='stylesheet', href='../../dist/css/adminlte.min.css')
+    // Google Font: Source Sans Pro 
+    link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700', rel='stylesheet')
+  body.hold-transition.sidebar-mini
+    .wrapper
+      // Navbar 
+      nav.main-header.navbar.navbar-expand.navbar-white.navbar-light
+        // Left navbar links 
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(data-widget='pushmenu', href='#')
+              i.fas.fa-bars
+          li.nav-item.d-none.d-sm-inline-block
+            a.nav-link(href='../../index3.html') Home
+          li.nav-item.d-none.d-sm-inline-block
+            a.nav-link(href='#') Contact
+        // SEARCH FORM 
+        form.form-inline.ml-3
+          .input-group.input-group-sm
+            input.form-control.form-control-navbar(type='search', placeholder='Search', aria-label='Search')
+            .input-group-append
+              button.btn.btn-navbar(type='submit')
+                i.fas.fa-search
+        // Right navbar links 
+        ul.navbar-nav.ml-auto
+          // Messages Dropdown Menu 
+          li.nav-item.dropdown
+            a.nav-link(data-toggle='dropdown', href='#')
+              i.far.fa-comments
+              span.badge.badge-danger.navbar-badge 3
+            .dropdown-menu.dropdown-menu-lg.dropdown-menu-right
+              a.dropdown-item(href='#')
+                // Message Start 
+                .media
+                  img.img-size-50.mr-3.img-circle(src='../../dist/img/user1-128x128.jpg', alt='User Avatar')
+                  .media-body
+                    h3.dropdown-item-title
+                      | Brad Diesel
+                      span.float-right.text-sm.text-danger
+                        i.fas.fa-star
+                    p.text-sm Call me whenever you can...
+                    p.text-sm.text-muted
+                      i.far.fa-clock.mr-1
+                      | 4 Hours Ago
+                // Message End 
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                // Message Start 
+                .media
+                  img.img-size-50.img-circle.mr-3(src='../../dist/img/user8-128x128.jpg', alt='User Avatar')
+                  .media-body
+                    h3.dropdown-item-title
+                      | John Pierce
+                      span.float-right.text-sm.text-muted
+                        i.fas.fa-star
+                    p.text-sm I got your message bro
+                    p.text-sm.text-muted
+                      i.far.fa-clock.mr-1
+                      | 4 Hours Ago
+                // Message End 
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                // Message Start 
+                .media
+                  img.img-size-50.img-circle.mr-3(src='../../dist/img/user3-128x128.jpg', alt='User Avatar')
+                  .media-body
+                    h3.dropdown-item-title
+                      | Nora Silvester
+                      span.float-right.text-sm.text-warning
+                        i.fas.fa-star
+                    p.text-sm The subject goes here
+                    p.text-sm.text-muted
+                      i.far.fa-clock.mr-1
+                      | 4 Hours Ago
+                // Message End 
+              .dropdown-divider
+              a.dropdown-item.dropdown-footer(href='#') See All Messages
+          // Notifications Dropdown Menu 
+          li.nav-item.dropdown
+            a.nav-link(data-toggle='dropdown', href='#')
+              i.far.fa-bell
+              span.badge.badge-warning.navbar-badge 15
+            .dropdown-menu.dropdown-menu-lg.dropdown-menu-right
+              span.dropdown-item.dropdown-header 15 Notifications
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                i.fas.fa-envelope.mr-2
+                | 4 new messages
+                span.float-right.text-muted.text-sm 3 mins
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                i.fas.fa-users.mr-2
+                | 8 friend requests
+                span.float-right.text-muted.text-sm 12 hours
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                i.fas.fa-file.mr-2
+                | 3 new reports
+                span.float-right.text-muted.text-sm 2 days
+              .dropdown-divider
+              a.dropdown-item.dropdown-footer(href='#') See All Notifications
+          li.nav-item
+            a.nav-link(data-widget='control-sidebar', data-slide='true', href='#')
+              i.fas.fa-th-large
+      // /.navbar 
+      // Main Sidebar Container 
+      aside.main-sidebar.sidebar-dark-primary.elevation-4
+        // Brand Logo 
+        a.brand-link(href='../../index3.html')
+          img.brand-image.img-circle.elevation-3(src='../../dist/img/AdminLTELogo.png', alt='AdminLTE Logo', style='opacity: .8')
+          span.brand-text.font-weight-light AdminLTE 3
+        // Sidebar 
+        .sidebar
+          // Sidebar user (optional) 
+          .user-panel.mt-3.pb-3.mb-3.d-flex
+            .image
+              img.img-circle.elevation-2(src='../../dist/img/user2-160x160.jpg', alt='User Image')
+            .info
+              a.d-block(href='#') Alexander Pierce
+          // Sidebar Menu 
+          nav.mt-2
+            ul.nav.nav-pills.nav-sidebar.flex-column(data-widget='treeview', role='menu', data-accordion='false')
+              //                 Add icons to the links using the .nav-icon class
+                               with font-awesome or any other icon font library 
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-tachometer-alt
+                  p
+                    | Dashboard
+                    i.right.fas.fa-angle-left
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='../../index.html')
+                      i.far.fa-circle.nav-icon
+                      p Dashboard v1
+                  li.nav-item
+                    a.nav-link(href='../../index2.html')
+                      i.far.fa-circle.nav-icon
+                      p Dashboard v2
+                  li.nav-item
+                    a.nav-link(href='../../index3.html')
+                      i.far.fa-circle.nav-icon
+                      p Dashboard v3
+              li.nav-item
+                a.nav-link(href='../widgets.html')
+                  i.nav-icon.fas.fa-th
+                  p
+                    | Widgets
+                    span.right.badge.badge-danger New
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-copy
+                  p
+                    | Layout Options
+                    i.fas.fa-angle-left.right
+                    span.badge.badge-info.right 6
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='../layout/top-nav.html')
+                      i.far.fa-circle.nav-icon
+                      p Top Navigation
+                  li.nav-item
+                    a.nav-link(href='../layout/boxed.html')
+                      i.far.fa-circle.nav-icon
+                      p Boxed
+                  li.nav-item
+                    a.nav-link(href='../layout/fixed-sidebar.html')
+                      i.far.fa-circle.nav-icon
+                      p Fixed Sidebar
+                  li.nav-item
+                    a.nav-link(href='../layout/fixed-topnav.html')
+                      i.far.fa-circle.nav-icon
+                      p Fixed Navbar
+                  li.nav-item
+                    a.nav-link(href='../layout/fixed-footer.html')
+                      i.far.fa-circle.nav-icon
+                      p Fixed Footer
+                  li.nav-item
+                    a.nav-link(href='../layout/collapsed-sidebar.html')
+                      i.far.fa-circle.nav-icon
+                      p Collapsed Sidebar
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-chart-pie
+                  p
+                    | Charts
+                    i.right.fas.fa-angle-left
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='../charts/chartjs.html')
+                      i.far.fa-circle.nav-icon
+                      p ChartJS
+                  li.nav-item
+                    a.nav-link(href='../charts/flot.html')
+                      i.far.fa-circle.nav-icon
+                      p Flot
+                  li.nav-item
+                    a.nav-link(href='../charts/inline.html')
+                      i.far.fa-circle.nav-icon
+                      p Inline
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-tree
+                  p
+                    | UI Elements
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='../UI/general.html')
+                      i.far.fa-circle.nav-icon
+                      p General
+                  li.nav-item
+                    a.nav-link(href='../UI/icons.html')
+                      i.far.fa-circle.nav-icon
+                      p Icons
+                  li.nav-item
+                    a.nav-link(href='../UI/buttons.html')
+                      i.far.fa-circle.nav-icon
+                      p Buttons
+                  li.nav-item
+                    a.nav-link(href='../UI/sliders.html')
+                      i.far.fa-circle.nav-icon
+                      p Sliders
+                  li.nav-item
+                    a.nav-link(href='../UI/modals.html')
+                      i.far.fa-circle.nav-icon
+                      p Modals & Alerts
+                  li.nav-item
+                    a.nav-link(href='../UI/navbar.html')
+                      i.far.fa-circle.nav-icon
+                      p Navbar & Tabs
+                  li.nav-item
+                    a.nav-link(href='../UI/timeline.html')
+                      i.far.fa-circle.nav-icon
+                      p Timeline
+                  li.nav-item
+                    a.nav-link(href='../UI/ribbons.html')
+                      i.far.fa-circle.nav-icon
+                      p Ribbons
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-edit
+                  p
+                    | Forms
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='../forms/general.html')
+                      i.far.fa-circle.nav-icon
+                      p General Elements
+                  li.nav-item
+                    a.nav-link(href='../forms/advanced.html')
+                      i.far.fa-circle.nav-icon
+                      p Advanced Elements
+                  li.nav-item
+                    a.nav-link(href='../forms/editors.html')
+                      i.far.fa-circle.nav-icon
+                      p Editors
+              li.nav-item.has-treeview.menu-open
+                a.nav-link.active(href='#')
+                  i.nav-icon.fas.fa-table
+                  p
+                    | Tables
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='../tables/simple.html')
+                      i.far.fa-circle.nav-icon
+                      p Simple Tables
+                  li.nav-item
+                    a.nav-link.active(href='../tables/data.html')
+                      i.far.fa-circle.nav-icon
+                      p DataTables
+                  li.nav-item
+                    a.nav-link(href='../tables/jsgrid.html')
+                      i.far.fa-circle.nav-icon
+                      p jsGrid
+              li.nav-header EXAMPLES
+              li.nav-item
+                a.nav-link(href='../calendar.html')
+                  i.nav-icon.far.fa-calendar-alt
+                  p
+                    | Calendar
+                    span.badge.badge-info.right 2
+              li.nav-item
+                a.nav-link(href='../gallery.html')
+                  i.nav-icon.far.fa-image
+                  p Gallery
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-envelope
+                  p
+                    | Mailbox
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='../mailbox/mailbox.html')
+                      i.far.fa-circle.nav-icon
+                      p Inbox
+                  li.nav-item
+                    a.nav-link(href='../mailbox/compose.html')
+                      i.far.fa-circle.nav-icon
+                      p Compose
+                  li.nav-item
+                    a.nav-link(href='../mailbox/read-mail.html')
+                      i.far.fa-circle.nav-icon
+                      p Read
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-book
+                  p
+                    | Pages
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='../examples/invoice.html')
+                      i.far.fa-circle.nav-icon
+                      p Invoice
+                  li.nav-item
+                    a.nav-link(href='../examples/profile.html')
+                      i.far.fa-circle.nav-icon
+                      p Profile
+                  li.nav-item
+                    a.nav-link(href='../examples/e_commerce.html')
+                      i.far.fa-circle.nav-icon
+                      p E-commerce
+                  li.nav-item
+                    a.nav-link(href='../examples/projects.html')
+                      i.far.fa-circle.nav-icon
+                      p Projects
+                  li.nav-item
+                    a.nav-link(href='../examples/project_add.html')
+                      i.far.fa-circle.nav-icon
+                      p Project Add
+                  li.nav-item
+                    a.nav-link(href='../examples/project_edit.html')
+                      i.far.fa-circle.nav-icon
+                      p Project Edit
+                  li.nav-item
+                    a.nav-link(href='../examples/project_detail.html')
+                      i.far.fa-circle.nav-icon
+                      p Project Detail
+                  li.nav-item
+                    a.nav-link(href='../examples/contacts.html')
+                      i.far.fa-circle.nav-icon
+                      p Contacts
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-plus-square
+                  p
+                    | Extras
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='../examples/login.html')
+                      i.far.fa-circle.nav-icon
+                      p Login
+                  li.nav-item
+                    a.nav-link(href='../examples/register.html')
+                      i.far.fa-circle.nav-icon
+                      p Register
+                  li.nav-item
+                    a.nav-link(href='../examples/lockscreen.html')
+                      i.far.fa-circle.nav-icon
+                      p Lockscreen
+                  li.nav-item
+                    a.nav-link(href='../examples/legacy-user-menu.html')
+                      i.far.fa-circle.nav-icon
+                      p Legacy User Menu
+                  li.nav-item
+                    a.nav-link(href='../examples/language-menu.html')
+                      i.far.fa-circle.nav-icon
+                      p Language Menu
+                  li.nav-item
+                    a.nav-link(href='../examples/404.html')
+                      i.far.fa-circle.nav-icon
+                      p Error 404
+                  li.nav-item
+                    a.nav-link(href='../examples/500.html')
+                      i.far.fa-circle.nav-icon
+                      p Error 500
+                  li.nav-item
+                    a.nav-link(href='../examples/blank.html')
+                      i.far.fa-circle.nav-icon
+                      p Blank Page
+                  li.nav-item
+                    a.nav-link(href='../../starter.html')
+                      i.far.fa-circle.nav-icon
+                      p Starter Page
+              li.nav-header MISCELLANEOUS
+              li.nav-item
+                a.nav-link(href='https://adminlte.io/docs/3.0')
+                  i.nav-icon.fas.fa-file
+                  p Documentation
+              li.nav-header LABELS
+              li.nav-item
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-circle.text-danger
+                  p.text Important
+              li.nav-item
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-circle.text-warning
+                  p Warning
+              li.nav-item
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-circle.text-info
+                  p Informational
+          // /.sidebar-menu 
+        // /.sidebar 
+      // Content Wrapper. Contains page content 
+      .content-wrapper
+        // Content Header (Page header) 
+        section.content-header
+          .container-fluid
+            .row.mb-2
+              .col-sm-6
+                h1 DataTables
+              .col-sm-6
+                ol.breadcrumb.float-sm-right
+                  li.breadcrumb-item
+                    a(href='#') Home
+                  li.breadcrumb-item.active DataTables
+          // /.container-fluid 
+        // Main content 
+        section.content
+          .row
+            .col-12
+              .card
+                .card-header
+                  h3.card-title DataTable with minimal features & hover style
+                // /.card-header 
+                .card-body
+                  table#example2.table.table-bordered.table-hover
+                    thead
+                      tr
+                        th Rendering engine
+                        th Browser
+                        th Platform(s)
+                        th Engine version
+                        th CSS grade
+                    tbody
+                      tr
+                        td Trident
+                        td Internet Explorer 4.0
+                        td Win 95+
+                        td 4
+                        td X
+                      tr
+                        td Trident
+                        td Internet Explorer 5.0
+                        td Win 95+
+                        td 5
+                        td C
+                      tr
+                        td Trident
+                        td Internet Explorer 5.5
+                        td Win 95+
+                        td 5.5
+                        td A
+                      tr
+                        td Trident
+                        td Internet Explorer 6
+                        td Win 98+
+                        td 6
+                        td A
+                      tr
+                        td Trident
+                        td Internet Explorer 7
+                        td Win XP SP2+
+                        td 7
+                        td A
+                      tr
+                        td Trident
+                        td AOL browser (AOL desktop)
+                        td Win XP
+                        td 6
+                        td A
+                      tr
+                        td Gecko
+                        td Firefox 1.0
+                        td Win 98+ / OSX.2+
+                        td 1.7
+                        td A
+                      tr
+                        td Gecko
+                        td Firefox 1.5
+                        td Win 98+ / OSX.2+
+                        td 1.8
+                        td A
+                      tr
+                        td Gecko
+                        td Firefox 2.0
+                        td Win 98+ / OSX.2+
+                        td 1.8
+                        td A
+                      tr
+                        td Gecko
+                        td Firefox 3.0
+                        td Win 2k+ / OSX.3+
+                        td 1.9
+                        td A
+                      tr
+                        td Gecko
+                        td Camino 1.0
+                        td OSX.2+
+                        td 1.8
+                        td A
+                      tr
+                        td Gecko
+                        td Camino 1.5
+                        td OSX.3+
+                        td 1.8
+                        td A
+                      tr
+                        td Gecko
+                        td Netscape 7.2
+                        td Win 95+ / Mac OS 8.6-9.2
+                        td 1.7
+                        td A
+                      tr
+                        td Gecko
+                        td Netscape Browser 8
+                        td Win 98SE+
+                        td 1.7
+                        td A
+                      tr
+                        td Gecko
+                        td Netscape Navigator 9
+                        td Win 98+ / OSX.2+
+                        td 1.8
+                        td A
+                      tr
+                        td Gecko
+                        td Mozilla 1.0
+                        td Win 95+ / OSX.1+
+                        td 1
+                        td A
+                      tr
+                        td Gecko
+                        td Mozilla 1.1
+                        td Win 95+ / OSX.1+
+                        td 1.1
+                        td A
+                      tr
+                        td Gecko
+                        td Mozilla 1.2
+                        td Win 95+ / OSX.1+
+                        td 1.2
+                        td A
+                      tr
+                        td Gecko
+                        td Mozilla 1.3
+                        td Win 95+ / OSX.1+
+                        td 1.3
+                        td A
+                      tr
+                        td Gecko
+                        td Mozilla 1.4
+                        td Win 95+ / OSX.1+
+                        td 1.4
+                        td A
+                      tr
+                        td Gecko
+                        td Mozilla 1.5
+                        td Win 95+ / OSX.1+
+                        td 1.5
+                        td A
+                      tr
+                        td Gecko
+                        td Mozilla 1.6
+                        td Win 95+ / OSX.1+
+                        td 1.6
+                        td A
+                      tr
+                        td Gecko
+                        td Mozilla 1.7
+                        td Win 98+ / OSX.1+
+                        td 1.7
+                        td A
+                      tr
+                        td Gecko
+                        td Mozilla 1.8
+                        td Win 98+ / OSX.1+
+                        td 1.8
+                        td A
+                      tr
+                        td Gecko
+                        td Seamonkey 1.1
+                        td Win 98+ / OSX.2+
+                        td 1.8
+                        td A
+                      tr
+                        td Gecko
+                        td Epiphany 2.20
+                        td Gnome
+                        td 1.8
+                        td A
+                      tr
+                        td Webkit
+                        td Safari 1.2
+                        td OSX.3
+                        td 125.5
+                        td A
+                      tr
+                        td Webkit
+                        td Safari 1.3
+                        td OSX.3
+                        td 312.8
+                        td A
+                      tr
+                        td Webkit
+                        td Safari 2.0
+                        td OSX.4+
+                        td 419.3
+                        td A
+                      tr
+                        td Webkit
+                        td Safari 3.0
+                        td OSX.4+
+                        td 522.1
+                        td A
+                      tr
+                        td Webkit
+                        td OmniWeb 5.5
+                        td OSX.4+
+                        td 420
+                        td A
+                      tr
+                        td Webkit
+                        td iPod Touch / iPhone
+                        td iPod
+                        td 420.1
+                        td A
+                      tr
+                        td Webkit
+                        td S60
+                        td S60
+                        td 413
+                        td A
+                      tr
+                        td Presto
+                        td Opera 7.0
+                        td Win 95+ / OSX.1+
+                        td -
+                        td A
+                      tr
+                        td Presto
+                        td Opera 7.5
+                        td Win 95+ / OSX.2+
+                        td -
+                        td A
+                      tr
+                        td Presto
+                        td Opera 8.0
+                        td Win 95+ / OSX.2+
+                        td -
+                        td A
+                      tr
+                        td Presto
+                        td Opera 8.5
+                        td Win 95+ / OSX.2+
+                        td -
+                        td A
+                      tr
+                        td Presto
+                        td Opera 9.0
+                        td Win 95+ / OSX.3+
+                        td -
+                        td A
+                      tr
+                        td Presto
+                        td Opera 9.2
+                        td Win 88+ / OSX.3+
+                        td -
+                        td A
+                      tr
+                        td Presto
+                        td Opera 9.5
+                        td Win 88+ / OSX.3+
+                        td -
+                        td A
+                      tr
+                        td Presto
+                        td Opera for Wii
+                        td Wii
+                        td -
+                        td A
+                      tr
+                        td Presto
+                        td Nokia N800
+                        td N800
+                        td -
+                        td A
+                      tr
+                        td Presto
+                        td Nintendo DS browser
+                        td Nintendo DS
+                        td 8.5
+                        td
+                          | C/A
+                          sup 1
+                      tr
+                        td KHTML
+                        td Konqureror 3.1
+                        td KDE 3.1
+                        td 3.1
+                        td C
+                      tr
+                        td KHTML
+                        td Konqureror 3.3
+                        td KDE 3.3
+                        td 3.3
+                        td A
+                      tr
+                        td KHTML
+                        td Konqureror 3.5
+                        td KDE 3.5
+                        td 3.5
+                        td A
+                      tr
+                        td Tasman
+                        td Internet Explorer 4.5
+                        td Mac OS 8-9
+                        td -
+                        td X
+                      tr
+                        td Tasman
+                        td Internet Explorer 5.1
+                        td Mac OS 7.6-9
+                        td 1
+                        td C
+                      tr
+                        td Tasman
+                        td Internet Explorer 5.2
+                        td Mac OS 8-X
+                        td 1
+                        td C
+                      tr
+                        td Misc
+                        td NetFront 3.1
+                        td Embedded devices
+                        td -
+                        td C
+                      tr
+                        td Misc
+                        td NetFront 3.4
+                        td Embedded devices
+                        td -
+                        td A
+                      tr
+                        td Misc
+                        td Dillo 0.8
+                        td Embedded devices
+                        td -
+                        td X
+                      tr
+                        td Misc
+                        td Links
+                        td Text only
+                        td -
+                        td X
+                      tr
+                        td Misc
+                        td Lynx
+                        td Text only
+                        td -
+                        td X
+                      tr
+                        td Misc
+                        td IE Mobile
+                        td Windows Mobile 6
+                        td -
+                        td C
+                      tr
+                        td Misc
+                        td PSP browser
+                        td PSP
+                        td -
+                        td C
+                      tr
+                        td Other browsers
+                        td All others
+                        td -
+                        td -
+                        td U
+                    tfoot
+                      tr
+                        th Rendering engine
+                        th Browser
+                        th Platform(s)
+                        th Engine version
+                        th CSS grade
+                // /.card-body 
+              // /.card 
+              .card
+                .card-header
+                  h3.card-title DataTable with default features
+                // /.card-header 
+                .card-body
+                  table#example1.table.table-bordered.table-striped
+                    thead
+                      tr
+                        th Rendering engine
+                        th Browser
+                        th Platform(s)
+                        th Engine version
+                        th CSS grade
+                    tbody
+                      tr
+                        td Trident
+                        td Internet Explorer 4.0
+                        td Win 95+
+                        td 4
+                        td X
+                      tr
+                        td Trident
+                        td Internet Explorer 5.0
+                        td Win 95+
+                        td 5
+                        td C
+                      tr
+                        td Trident
+                        td Internet Explorer 5.5
+                        td Win 95+
+                        td 5.5
+                        td A
+                      tr
+                        td Trident
+                        td Internet Explorer 6
+                        td Win 98+
+                        td 6
+                        td A
+                      tr
+                        td Trident
+                        td Internet Explorer 7
+                        td Win XP SP2+
+                        td 7
+                        td A
+                      tr
+                        td Trident
+                        td AOL browser (AOL desktop)
+                        td Win XP
+                        td 6
+                        td A
+                      tr
+                        td Gecko
+                        td Firefox 1.0
+                        td Win 98+ / OSX.2+
+                        td 1.7
+                        td A
+                      tr
+                        td Gecko
+                        td Firefox 1.5
+                        td Win 98+ / OSX.2+
+                        td 1.8
+                        td A
+                      tr
+                        td Gecko
+                        td Firefox 2.0
+                        td Win 98+ / OSX.2+
+                        td 1.8
+                        td A
+                      tr
+                        td Gecko
+                        td Firefox 3.0
+                        td Win 2k+ / OSX.3+
+                        td 1.9
+                        td A
+                      tr
+                        td Gecko
+                        td Camino 1.0
+                        td OSX.2+
+                        td 1.8
+                        td A
+                      tr
+                        td Gecko
+                        td Camino 1.5
+                        td OSX.3+
+                        td 1.8
+                        td A
+                      tr
+                        td Gecko
+                        td Netscape 7.2
+                        td Win 95+ / Mac OS 8.6-9.2
+                        td 1.7
+                        td A
+                      tr
+                        td Gecko
+                        td Netscape Browser 8
+                        td Win 98SE+
+                        td 1.7
+                        td A
+                      tr
+                        td Gecko
+                        td Netscape Navigator 9
+                        td Win 98+ / OSX.2+
+                        td 1.8
+                        td A
+                      tr
+                        td Gecko
+                        td Mozilla 1.0
+                        td Win 95+ / OSX.1+
+                        td 1
+                        td A
+                      tr
+                        td Gecko
+                        td Mozilla 1.1
+                        td Win 95+ / OSX.1+
+                        td 1.1
+                        td A
+                      tr
+                        td Gecko
+                        td Mozilla 1.2
+                        td Win 95+ / OSX.1+
+                        td 1.2
+                        td A
+                      tr
+                        td Gecko
+                        td Mozilla 1.3
+                        td Win 95+ / OSX.1+
+                        td 1.3
+                        td A
+                      tr
+                        td Gecko
+                        td Mozilla 1.4
+                        td Win 95+ / OSX.1+
+                        td 1.4
+                        td A
+                      tr
+                        td Gecko
+                        td Mozilla 1.5
+                        td Win 95+ / OSX.1+
+                        td 1.5
+                        td A
+                      tr
+                        td Gecko
+                        td Mozilla 1.6
+                        td Win 95+ / OSX.1+
+                        td 1.6
+                        td A
+                      tr
+                        td Gecko
+                        td Mozilla 1.7
+                        td Win 98+ / OSX.1+
+                        td 1.7
+                        td A
+                      tr
+                        td Gecko
+                        td Mozilla 1.8
+                        td Win 98+ / OSX.1+
+                        td 1.8
+                        td A
+                      tr
+                        td Gecko
+                        td Seamonkey 1.1
+                        td Win 98+ / OSX.2+
+                        td 1.8
+                        td A
+                      tr
+                        td Gecko
+                        td Epiphany 2.20
+                        td Gnome
+                        td 1.8
+                        td A
+                      tr
+                        td Webkit
+                        td Safari 1.2
+                        td OSX.3
+                        td 125.5
+                        td A
+                      tr
+                        td Webkit
+                        td Safari 1.3
+                        td OSX.3
+                        td 312.8
+                        td A
+                      tr
+                        td Webkit
+                        td Safari 2.0
+                        td OSX.4+
+                        td 419.3
+                        td A
+                      tr
+                        td Webkit
+                        td Safari 3.0
+                        td OSX.4+
+                        td 522.1
+                        td A
+                      tr
+                        td Webkit
+                        td OmniWeb 5.5
+                        td OSX.4+
+                        td 420
+                        td A
+                      tr
+                        td Webkit
+                        td iPod Touch / iPhone
+                        td iPod
+                        td 420.1
+                        td A
+                      tr
+                        td Webkit
+                        td S60
+                        td S60
+                        td 413
+                        td A
+                      tr
+                        td Presto
+                        td Opera 7.0
+                        td Win 95+ / OSX.1+
+                        td -
+                        td A
+                      tr
+                        td Presto
+                        td Opera 7.5
+                        td Win 95+ / OSX.2+
+                        td -
+                        td A
+                      tr
+                        td Presto
+                        td Opera 8.0
+                        td Win 95+ / OSX.2+
+                        td -
+                        td A
+                      tr
+                        td Presto
+                        td Opera 8.5
+                        td Win 95+ / OSX.2+
+                        td -
+                        td A
+                      tr
+                        td Presto
+                        td Opera 9.0
+                        td Win 95+ / OSX.3+
+                        td -
+                        td A
+                      tr
+                        td Presto
+                        td Opera 9.2
+                        td Win 88+ / OSX.3+
+                        td -
+                        td A
+                      tr
+                        td Presto
+                        td Opera 9.5
+                        td Win 88+ / OSX.3+
+                        td -
+                        td A
+                      tr
+                        td Presto
+                        td Opera for Wii
+                        td Wii
+                        td -
+                        td A
+                      tr
+                        td Presto
+                        td Nokia N800
+                        td N800
+                        td -
+                        td A
+                      tr
+                        td Presto
+                        td Nintendo DS browser
+                        td Nintendo DS
+                        td 8.5
+                        td
+                          | C/A
+                          sup 1
+                      tr
+                        td KHTML
+                        td Konqureror 3.1
+                        td KDE 3.1
+                        td 3.1
+                        td C
+                      tr
+                        td KHTML
+                        td Konqureror 3.3
+                        td KDE 3.3
+                        td 3.3
+                        td A
+                      tr
+                        td KHTML
+                        td Konqureror 3.5
+                        td KDE 3.5
+                        td 3.5
+                        td A
+                      tr
+                        td Tasman
+                        td Internet Explorer 4.5
+                        td Mac OS 8-9
+                        td -
+                        td X
+                      tr
+                        td Tasman
+                        td Internet Explorer 5.1
+                        td Mac OS 7.6-9
+                        td 1
+                        td C
+                      tr
+                        td Tasman
+                        td Internet Explorer 5.2
+                        td Mac OS 8-X
+                        td 1
+                        td C
+                      tr
+                        td Misc
+                        td NetFront 3.1
+                        td Embedded devices
+                        td -
+                        td C
+                      tr
+                        td Misc
+                        td NetFront 3.4
+                        td Embedded devices
+                        td -
+                        td A
+                      tr
+                        td Misc
+                        td Dillo 0.8
+                        td Embedded devices
+                        td -
+                        td X
+                      tr
+                        td Misc
+                        td Links
+                        td Text only
+                        td -
+                        td X
+                      tr
+                        td Misc
+                        td Lynx
+                        td Text only
+                        td -
+                        td X
+                      tr
+                        td Misc
+                        td IE Mobile
+                        td Windows Mobile 6
+                        td -
+                        td C
+                      tr
+                        td Misc
+                        td PSP browser
+                        td PSP
+                        td -
+                        td C
+                      tr
+                        td Other browsers
+                        td All others
+                        td -
+                        td -
+                        td U
+                    tfoot
+                      tr
+                        th Rendering engine
+                        th Browser
+                        th Platform(s)
+                        th Engine version
+                        th CSS grade
+                // /.card-body 
+              // /.card 
+            // /.col 
+          // /.row 
+        // /.content 
+      // /.content-wrapper 
+      footer.main-footer
+        .float-right.d-none.d-sm-block
+          b Version
+          | 3.0.0-rc.1
+        strong
+          | Copyright © 2014-2019
+          a(href='http://adminlte.io') AdminLTE.io
+          | .
+        | All rights reserved.
+      // Control Sidebar 
+      aside.control-sidebar.control-sidebar-dark
+        // Control sidebar content goes here 
+      // /.control-sidebar 
+    // ./wrapper 
+    // jQuery 
+    script(src='../../plugins/jquery/jquery.min.js')
+    // Bootstrap 4 
+    script(src='../../plugins/bootstrap/js/bootstrap.bundle.min.js')
+    // DataTables 
+    script(src='../../plugins/datatables/jquery.dataTables.js')
+    script(src='../../plugins/datatables-bs4/js/dataTables.bootstrap4.js')
+    // AdminLTE App 
+    script(src='../../dist/js/adminlte.min.js')
+    // AdminLTE for demo purposes 
+    script(src='../../dist/js/demo.js')
+    // page script 
+    script $(function () {
+    $("#example1").DataTable();
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+    });
+  });

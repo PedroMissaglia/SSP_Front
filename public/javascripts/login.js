@@ -21,10 +21,9 @@ async function validateLogin() {
       console.log(error);
       console.log(error.response.status);
       if (error.response.status == '412'){
-        document.getElementById("1").style.borderLeftColor = 'rgba(255, 0, 0, 1)';
-        document.getElementById("1").style.backgroundColor = 'white';
-        document.getElementById("2").style.borderLeftColor = 'rgba(255, 0, 0, 1)';
-        document.getElementById("2").style.backgroundColor = 'white';
+        document.getElementById("1").className = 'form-control is-invalid';
+        document.getElementById("2").className = 'form-control is-invalid';
+
         swal("Ops!", "Verifique seu e-mail e senha.", "error");
       } 
       else if (error.response.status == '422'){
