@@ -7,26 +7,41 @@ block content
         .card.col-mb-4
           .card-body.login-card-body
             h2.login-box-msg Sign Up
-              h3 Super Secret Project
+              h3 Vision
             br
-            form(name ="loginForm" onsubmit="validateForm()")
+            form(name ="RegisterForm" onsubmit="validateForm()"  id="error")
               .input-group.mb-4
                 input.form-control(id="1" name ="nome" type='text', placeholder='Nome' required)
                 .input-group-append
                   .input-group-text.font-size
-                    span.fas.fa-envelope
+                    span.fas.fa-user-circle
               .input-group.mb-4
-                input.form-control(id="2" name ="email" type='email', placeholder='Email' required)
+                input.form-control(id="2" name ="cpf" type='text', placeholder='CPF' onBlur="javascript:ValidarCPF(RegisterForm.cpf);" onKeyPress="javascript:MascaraCPF(RegisterForm.cpf);" maxlength="14" required)
                 .input-group-append
                   .input-group-text.font-size
-                    span.fas.fa-envelope    
+                    span.fas.fa-id-card
               .input-group.mb-4
-                input.form-control(id="3" name="senha" type='password', placeholder='Password' required)
+                input.form-control(id="3" name ="birthdate" type='date', placeholder='Data de nascimento' required)
+                .input-group-append
+                  .input-group-text.font-size
+                    span.fas.fa-calendar-alt
+              .input-group.mb-4
+                input.form-control(id="4" name ="email" type='email', placeholder='Email' required)
+                .input-group-append
+                  .input-group-text.font-size
+                    span.fas.fa-at    
+              .input-group.mb-4
+                input.form-control(id="5" name ="autenticacao" type='password', placeholder="Nº da autenticação" maxlength="8" required)
+                .input-group-append
+                  .input-group-text.font-size
+                    span.fas.fa-key    
+              .input-group.mb-4
+                input.form-control(id="6" name="senha" type='password', placeholder='Password' maxlength="8" required)
                 .input-group-append
                   .input-group-text
                     span.fas.fa-lock
               .input-group.mb-4
-                input.form-control(id="4" name="resenha" type='password', placeholder='Password again' required)
+                input.form-control(id="7" name="resenha" type='password', placeholder='Password again' onBlur="javascript:validarSenha()" maxlength="8" required)
                 .input-group-append
                   .input-group-text
                     span.fas.fa-lock      
