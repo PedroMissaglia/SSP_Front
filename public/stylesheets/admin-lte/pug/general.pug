@@ -1,0 +1,1162 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title AdminLTE 3 | General UI
+    // Tell the browser to be responsive to screen width 
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    // Bootstrap 4 
+    // Font Awesome 
+    link(rel='stylesheet', href='../../plugins/fontawesome-free/css/all.min.css')
+    // Ionicons 
+    link(rel='stylesheet', href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
+    // Theme style 
+    link(rel='stylesheet', href='../../dist/css/adminlte.min.css')
+    // Google Font: Source Sans Pro 
+    link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700', rel='stylesheet')
+    style .color-palette {
+      height: 35px;
+      line-height: 35px;
+      text-align: right;
+      padding-right: .75rem;
+    }
+    
+    .color-palette.disabled {
+      text-align: center;
+      padding-right: 0;
+      display: block;
+    }
+    
+    .color-palette-set {
+      margin-bottom: 15px;
+    }
+
+    .color-palette span {
+      display: none;
+      font-size: 12px;
+    }
+
+    .color-palette:hover span {
+      display: block;
+    }
+
+    .color-palette.disabled span {
+      display: block;
+      text-align: left;
+      padding-left: .75rem;
+    }
+
+    .color-palette-box h4 {
+      position: absolute;
+      left: 1.25rem;
+      margin-top: .75rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 12px;
+      display: block;
+      z-index: 7;
+    }
+  body.hold-transition.sidebar-mini
+    .wrapper
+      // Navbar 
+      nav.main-header.navbar.navbar-expand.navbar-white.navbar-light
+        // Left navbar links 
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(data-widget='pushmenu', href='#')
+              i.fas.fa-bars
+          li.nav-item.d-none.d-sm-inline-block
+            a.nav-link(href='../../index3.html') Home
+          li.nav-item.d-none.d-sm-inline-block
+            a.nav-link(href='#') Contact
+        // SEARCH FORM 
+        form.form-inline.ml-3
+          .input-group.input-group-sm
+            input.form-control.form-control-navbar(type='search', placeholder='Search', aria-label='Search')
+            .input-group-append
+              button.btn.btn-navbar(type='submit')
+                i.fas.fa-search
+        // Right navbar links 
+        ul.navbar-nav.ml-auto
+          // Messages Dropdown Menu 
+          li.nav-item.dropdown
+            a.nav-link(data-toggle='dropdown', href='#')
+              i.far.fa-comments
+              span.badge.badge-danger.navbar-badge 3
+            .dropdown-menu.dropdown-menu-lg.dropdown-menu-right
+              a.dropdown-item(href='#')
+                // Message Start 
+                .media
+                  img.img-size-50.mr-3.img-circle(src='../../dist/img/user1-128x128.jpg', alt='User Avatar')
+                  .media-body
+                    h3.dropdown-item-title
+                      | Brad Diesel
+                      span.float-right.text-sm.text-danger
+                        i.fas.fa-star
+                    p.text-sm Call me whenever you can...
+                    p.text-sm.text-muted
+                      i.far.fa-clock.mr-1
+                      | 4 Hours Ago
+                // Message End 
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                // Message Start 
+                .media
+                  img.img-size-50.img-circle.mr-3(src='../../dist/img/user8-128x128.jpg', alt='User Avatar')
+                  .media-body
+                    h3.dropdown-item-title
+                      | John Pierce
+                      span.float-right.text-sm.text-muted
+                        i.fas.fa-star
+                    p.text-sm I got your message bro
+                    p.text-sm.text-muted
+                      i.far.fa-clock.mr-1
+                      | 4 Hours Ago
+                // Message End 
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                // Message Start 
+                .media
+                  img.img-size-50.img-circle.mr-3(src='../../dist/img/user3-128x128.jpg', alt='User Avatar')
+                  .media-body
+                    h3.dropdown-item-title
+                      | Nora Silvester
+                      span.float-right.text-sm.text-warning
+                        i.fas.fa-star
+                    p.text-sm The subject goes here
+                    p.text-sm.text-muted
+                      i.far.fa-clock.mr-1
+                      | 4 Hours Ago
+                // Message End 
+              .dropdown-divider
+              a.dropdown-item.dropdown-footer(href='#') See All Messages
+          // Notifications Dropdown Menu 
+          li.nav-item.dropdown
+            a.nav-link(data-toggle='dropdown', href='#')
+              i.far.fa-bell
+              span.badge.badge-warning.navbar-badge 15
+            .dropdown-menu.dropdown-menu-lg.dropdown-menu-right
+              span.dropdown-item.dropdown-header 15 Notifications
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                i.fas.fa-envelope.mr-2
+                | 4 new messages
+                span.float-right.text-muted.text-sm 3 mins
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                i.fas.fa-users.mr-2
+                | 8 friend requests
+                span.float-right.text-muted.text-sm 12 hours
+              .dropdown-divider
+              a.dropdown-item(href='#')
+                i.fas.fa-file.mr-2
+                | 3 new reports
+                span.float-right.text-muted.text-sm 2 days
+              .dropdown-divider
+              a.dropdown-item.dropdown-footer(href='#') See All Notifications
+          li.nav-item
+            a.nav-link(data-widget='control-sidebar', data-slide='true', href='#')
+              i.fas.fa-th-large
+      // /.navbar 
+      // Main Sidebar Container 
+      aside.main-sidebar.sidebar-dark-primary.elevation-4
+        // Brand Logo 
+        a.brand-link(href='../../index3.html')
+          img.brand-image.img-circle.elevation-3(src='../../dist/img/AdminLTELogo.png', alt='AdminLTE Logo', style='opacity: .8')
+          span.brand-text.font-weight-light AdminLTE 3
+        // Sidebar 
+        .sidebar
+          // Sidebar user (optional) 
+          .user-panel.mt-3.pb-3.mb-3.d-flex
+            .image
+              img.img-circle.elevation-2(src='../../dist/img/user2-160x160.jpg', alt='User Image')
+            .info
+              a.d-block(href='#') Alexander Pierce
+          // Sidebar Menu 
+          nav.mt-2
+            ul.nav.nav-pills.nav-sidebar.flex-column(data-widget='treeview', role='menu', data-accordion='false')
+              //                 Add icons to the links using the .nav-icon class
+                               with font-awesome or any other icon font library 
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-tachometer-alt
+                  p
+                    | Dashboard
+                    i.right.fas.fa-angle-left
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='../../index.html')
+                      i.far.fa-circle.nav-icon
+                      p Dashboard v1
+                  li.nav-item
+                    a.nav-link(href='../../index2.html')
+                      i.far.fa-circle.nav-icon
+                      p Dashboard v2
+                  li.nav-item
+                    a.nav-link(href='../../index3.html')
+                      i.far.fa-circle.nav-icon
+                      p Dashboard v3
+              li.nav-item
+                a.nav-link(href='../widgets.html')
+                  i.nav-icon.fas.fa-th
+                  p
+                    | Widgets
+                    span.right.badge.badge-danger New
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-copy
+                  p
+                    | Layout Options
+                    i.fas.fa-angle-left.right
+                    span.badge.badge-info.right 6
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='../layout/top-nav.html')
+                      i.far.fa-circle.nav-icon
+                      p Top Navigation
+                  li.nav-item
+                    a.nav-link(href='../layout/boxed.html')
+                      i.far.fa-circle.nav-icon
+                      p Boxed
+                  li.nav-item
+                    a.nav-link(href='../layout/fixed-sidebar.html')
+                      i.far.fa-circle.nav-icon
+                      p Fixed Sidebar
+                  li.nav-item
+                    a.nav-link(href='../layout/fixed-topnav.html')
+                      i.far.fa-circle.nav-icon
+                      p Fixed Navbar
+                  li.nav-item
+                    a.nav-link(href='../layout/fixed-footer.html')
+                      i.far.fa-circle.nav-icon
+                      p Fixed Footer
+                  li.nav-item
+                    a.nav-link(href='../layout/collapsed-sidebar.html')
+                      i.far.fa-circle.nav-icon
+                      p Collapsed Sidebar
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-chart-pie
+                  p
+                    | Charts
+                    i.right.fas.fa-angle-left
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='../charts/chartjs.html')
+                      i.far.fa-circle.nav-icon
+                      p ChartJS
+                  li.nav-item
+                    a.nav-link(href='../charts/flot.html')
+                      i.far.fa-circle.nav-icon
+                      p Flot
+                  li.nav-item
+                    a.nav-link(href='../charts/inline.html')
+                      i.far.fa-circle.nav-icon
+                      p Inline
+              li.nav-item.has-treeview.menu-open
+                a.nav-link.active(href='#')
+                  i.nav-icon.fas.fa-tree
+                  p
+                    | UI Elements
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link.active(href='../UI/general.html')
+                      i.far.fa-circle.nav-icon
+                      p General
+                  li.nav-item
+                    a.nav-link(href='../UI/icons.html')
+                      i.far.fa-circle.nav-icon
+                      p Icons
+                  li.nav-item
+                    a.nav-link(href='../UI/buttons.html')
+                      i.far.fa-circle.nav-icon
+                      p Buttons
+                  li.nav-item
+                    a.nav-link(href='../UI/sliders.html')
+                      i.far.fa-circle.nav-icon
+                      p Sliders
+                  li.nav-item
+                    a.nav-link(href='../UI/modals.html')
+                      i.far.fa-circle.nav-icon
+                      p Modals & Alerts
+                  li.nav-item
+                    a.nav-link(href='../UI/navbar.html')
+                      i.far.fa-circle.nav-icon
+                      p Navbar & Tabs
+                  li.nav-item
+                    a.nav-link(href='../UI/timeline.html')
+                      i.far.fa-circle.nav-icon
+                      p Timeline
+                  li.nav-item
+                    a.nav-link(href='../UI/ribbons.html')
+                      i.far.fa-circle.nav-icon
+                      p Ribbons
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-edit
+                  p
+                    | Forms
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='../forms/general.html')
+                      i.far.fa-circle.nav-icon
+                      p General Elements
+                  li.nav-item
+                    a.nav-link(href='../forms/advanced.html')
+                      i.far.fa-circle.nav-icon
+                      p Advanced Elements
+                  li.nav-item
+                    a.nav-link(href='../forms/editors.html')
+                      i.far.fa-circle.nav-icon
+                      p Editors
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-table
+                  p
+                    | Tables
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='../tables/simple.html')
+                      i.far.fa-circle.nav-icon
+                      p Simple Tables
+                  li.nav-item
+                    a.nav-link(href='../tables/data.html')
+                      i.far.fa-circle.nav-icon
+                      p DataTables
+                  li.nav-item
+                    a.nav-link(href='../tables/jsgrid.html')
+                      i.far.fa-circle.nav-icon
+                      p jsGrid
+              li.nav-header EXAMPLES
+              li.nav-item
+                a.nav-link(href='../calendar.html')
+                  i.nav-icon.far.fa-calendar-alt
+                  p
+                    | Calendar
+                    span.badge.badge-info.right 2
+              li.nav-item
+                a.nav-link(href='../gallery.html')
+                  i.nav-icon.far.fa-image
+                  p Gallery
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-envelope
+                  p
+                    | Mailbox
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='../mailbox/mailbox.html')
+                      i.far.fa-circle.nav-icon
+                      p Inbox
+                  li.nav-item
+                    a.nav-link(href='../mailbox/compose.html')
+                      i.far.fa-circle.nav-icon
+                      p Compose
+                  li.nav-item
+                    a.nav-link(href='../mailbox/read-mail.html')
+                      i.far.fa-circle.nav-icon
+                      p Read
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-book
+                  p
+                    | Pages
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='../examples/invoice.html')
+                      i.far.fa-circle.nav-icon
+                      p Invoice
+                  li.nav-item
+                    a.nav-link(href='../examples/profile.html')
+                      i.far.fa-circle.nav-icon
+                      p Profile
+                  li.nav-item
+                    a.nav-link(href='../examples/e_commerce.html')
+                      i.far.fa-circle.nav-icon
+                      p E-commerce
+                  li.nav-item
+                    a.nav-link(href='../examples/projects.html')
+                      i.far.fa-circle.nav-icon
+                      p Projects
+                  li.nav-item
+                    a.nav-link(href='../examples/project_add.html')
+                      i.far.fa-circle.nav-icon
+                      p Project Add
+                  li.nav-item
+                    a.nav-link(href='../examples/project_edit.html')
+                      i.far.fa-circle.nav-icon
+                      p Project Edit
+                  li.nav-item
+                    a.nav-link(href='../examples/project_detail.html')
+                      i.far.fa-circle.nav-icon
+                      p Project Detail
+                  li.nav-item
+                    a.nav-link(href='../examples/contacts.html')
+                      i.far.fa-circle.nav-icon
+                      p Contacts
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-plus-square
+                  p
+                    | Extras
+                    i.fas.fa-angle-left.right
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='../examples/login.html')
+                      i.far.fa-circle.nav-icon
+                      p Login
+                  li.nav-item
+                    a.nav-link(href='../examples/register.html')
+                      i.far.fa-circle.nav-icon
+                      p Register
+                  li.nav-item
+                    a.nav-link(href='../examples/lockscreen.html')
+                      i.far.fa-circle.nav-icon
+                      p Lockscreen
+                  li.nav-item
+                    a.nav-link(href='../examples/legacy-user-menu.html')
+                      i.far.fa-circle.nav-icon
+                      p Legacy User Menu
+                  li.nav-item
+                    a.nav-link(href='../examples/language-menu.html')
+                      i.far.fa-circle.nav-icon
+                      p Language Menu
+                  li.nav-item
+                    a.nav-link(href='../examples/404.html')
+                      i.far.fa-circle.nav-icon
+                      p Error 404
+                  li.nav-item
+                    a.nav-link(href='../examples/500.html')
+                      i.far.fa-circle.nav-icon
+                      p Error 500
+                  li.nav-item
+                    a.nav-link(href='../examples/blank.html')
+                      i.far.fa-circle.nav-icon
+                      p Blank Page
+                  li.nav-item
+                    a.nav-link(href='../../starter.html')
+                      i.far.fa-circle.nav-icon
+                      p Starter Page
+              li.nav-header MISCELLANEOUS
+              li.nav-item
+                a.nav-link(href='https://adminlte.io/docs/3.0')
+                  i.nav-icon.fas.fa-file
+                  p Documentation
+              li.nav-header LABELS
+              li.nav-item
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-circle.text-danger
+                  p.text Important
+              li.nav-item
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-circle.text-warning
+                  p Warning
+              li.nav-item
+                a.nav-link(href='#')
+                  i.nav-icon.far.fa-circle.text-info
+                  p Informational
+          // /.sidebar-menu 
+        // /.sidebar 
+      // Content Wrapper. Contains page content 
+      .content-wrapper
+        // Content Header (Page header) 
+        section.content-header
+          .container-fluid
+            .row.mb-2
+              .col-sm-6
+                h1 Inline Charts
+              .col-sm-6
+                ol.breadcrumb.float-sm-right
+                  li.breadcrumb-item
+                    a(href='#') Home
+                  li.breadcrumb-item.active Inline Charts
+          // /.container-fluid 
+        // Main content 
+        section.content
+          .container-fluid
+            // COLOR PALETTE 
+            .card.card-default.color-palette-box
+              .card-header
+                h3.card-title
+                  i.fas.fa-tag
+                  | Color Palette
+              .card-body
+                .col-12
+                  h5 Theme Colors
+                // /.col-12 
+                .row
+                  .col-sm-4.col-md-2
+                    h4.text-center Primary
+                    .color-palette-set
+                      .bg-primary.color-palette
+                        span #007bff
+                      .bg-primary.disabled.color-palette
+                        span Disabled
+                  // /.col 
+                  .col-sm-4.col-md-2
+                    h4.text-center Secondary
+                    .color-palette-set
+                      .bg-secondary.color-palette
+                        span #6c757d
+                      .bg-secondary.disabled.color-palette
+                        span Disabled
+                  // /.col 
+                  .col-sm-4.col-md-2
+                    h4.text-center Info
+                    .color-palette-set
+                      .bg-info.color-palette
+                        span #17a2b8
+                      .bg-info.disabled.color-palette
+                        span Disabled
+                  // /.col 
+                  .col-sm-4.col-md-2
+                    h4.text-center Success
+                    .color-palette-set
+                      .bg-success.color-palette
+                        span #28a745
+                      .bg-success.disabled.color-palette
+                        span Disabled
+                  // /.col 
+                  .col-sm-4.col-md-2
+                    h4.text-center.bg-warning Warning
+                    .color-palette-set
+                      .bg-warning.color-palette
+                        span #ffc107
+                      .bg-warning.disabled.color-palette
+                        span Disabled
+                  // /.col 
+                  .col-sm-4.col-md-2
+                    h4.text-center Danger
+                    .color-palette-set
+                      .bg-danger.color-palette
+                        span #dc3545
+                      .bg-danger.disabled.color-palette
+                        span Disabled
+                  // /.col 
+                // /.row 
+                .col-12
+                  h5.mt-3 Black/White Nuances
+                // /.col-12 
+                .row
+                  .col-sm-4.col-md-2
+                    h4.text-center Black
+                    .color-palette-set
+                      .bg-black.color-palette
+                        span #000000
+                      .bg-black.disabled.color-palette
+                        span Disabled
+                  // /.col 
+                  .col-sm-4.col-md-2
+                    h4.text-center Gray Dark
+                    .color-palette-set
+                      .bg-gray-dark.color-palette
+                        span #343a40
+                      .bg-gray-dark.disabled.color-palette
+                        span Disabled
+                  // /.col 
+                  .col-sm-4.col-md-2
+                    h4.text-center Gray
+                    .color-palette-set
+                      .bg-gray.color-palette
+                        span #adb5bd
+                      .bg-gray.disabled.color-palette
+                        span Disabled
+                  // /.col 
+                  .col-sm-4.col-md-2
+                    h4.text-center.bg-light Light
+                    .color-palette-set
+                      .bg-light.color-palette
+                        span #1f2d3d
+                      .bg-light.disabled.color-palette
+                        span Disabled
+                  // /.col 
+                // /.row 
+                .col-12
+                  h5.mt-3 Colors
+                // /.col-12 
+                .row
+                  .col-sm-4.col-md-2
+                    h4.text-center.bg-indigo Indigo
+                    .color-palette-set
+                      .bg-indigo.color-palette
+                        span #6610f2
+                      .bg-indigo.disabled.color-palette
+                        span Disabled
+                  // /.col 
+                  .col-sm-4.col-md-2
+                    h4.text-center.bg-navy Navy
+                    .color-palette-set
+                      .bg-navy.color-palette
+                        span #001f3f
+                      .bg-navy.disabled.color-palette
+                        span Disabled
+                  // /.col 
+                  .col-sm-4.col-md-2
+                    h4.text-center.bg-purple Purple
+                    .color-palette-set
+                      .bg-purple.color-palette
+                        span #605ca8
+                      .bg-purple.disabled.color-palette
+                        span Disabled
+                  // /.col 
+                  .col-sm-4.col-md-2
+                    h4.text-center.bg-fuchsia Fuchsia
+                    .color-palette-set
+                      .bg-fuchsia.color-palette
+                        span #f012be
+                      .bg-fuchsia.disabled.color-palette
+                        span Disabled
+                  // /.col 
+                  .col-sm-4.col-md-2
+                    h4.text-center.bg-pink Pink
+                    .color-palette-set
+                      .bg-pink.color-palette
+                        span #e83e8c
+                      .bg-pink.disabled.color-palette
+                        span Disabled
+                  // /.col 
+                  .col-sm-4.col-md-2
+                    h4.text-center.bg-maroon Maroon
+                    .color-palette-set
+                      .bg-maroon.color-palette
+                        span #d81b60
+                      .bg-maroon.disabled.color-palette
+                        span Disabled
+                  // /.col 
+                  .col-sm-4.col-md-2
+                    h4.text-center.bg-orange Orange
+                    .color-palette-set
+                      .bg-orange.color-palette
+                        span #ff851b
+                      .bg-orange.disabled.color-palette
+                        span Disabled
+                  // /.col 
+                  .col-sm-4.col-md-2
+                    h4.text-center.bg-lime Lime
+                    .color-palette-set
+                      .bg-lime.color-palette
+                        span #01ff70
+                      .bg-lime.disabled.color-palette
+                        span Disabled
+                  // /.col 
+                  .col-sm-4.col-md-2
+                    h4.text-center.bg-teal Teal
+                    .color-palette-set
+                      .bg-teal.color-palette
+                        span #39cccc
+                      .bg-teal.disabled.color-palette
+                        span Disabled
+                  // /.col 
+                  .col-sm-4.col-md-2
+                    h4.text-center.bg-olive Olive
+                    .color-palette-set
+                      .bg-olive.color-palette
+                        span #3d9970
+                      .bg-olive.disabled.color-palette
+                        span Disabled
+                  // /.col 
+                // /.row 
+              // /.card-body 
+            // /.card 
+            // START ALERTS AND CALLOUTS 
+            h5.mt-4.mb-2 Alerts and Callouts
+            .row
+              .col-md-6
+                .card.card-default
+                  .card-header
+                    h3.card-title
+                      i.fas.fa-exclamation-triangle
+                      | Alerts
+                  // /.card-header 
+                  .card-body
+                    .alert.alert-danger.alert-dismissible
+                      button.close(type='button', data-dismiss='alert', aria-hidden='true') ×
+                      h5
+                        i.icon.fas.fa-ban
+                        | Alert!
+                      | Danger alert preview. This alert is dismissable. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
+                    .alert.alert-info.alert-dismissible
+                      button.close(type='button', data-dismiss='alert', aria-hidden='true') ×
+                      h5
+                        i.icon.fas.fa-info
+                        | Alert!
+                      | Info alert preview. This alert is dismissable.
+                    .alert.alert-warning.alert-dismissible
+                      button.close(type='button', data-dismiss='alert', aria-hidden='true') ×
+                      h5
+                        i.icon.fas.fa-exclamation-triangle
+                        | Alert!
+                      | Warning alert preview. This alert is dismissable.
+                    .alert.alert-success.alert-dismissible
+                      button.close(type='button', data-dismiss='alert', aria-hidden='true') ×
+                      h5
+                        i.icon.fas.fa-check
+                        | Alert!
+                      | Success alert preview. This alert is dismissable.
+                  // /.card-body 
+                // /.card 
+              // /.col 
+              .col-md-6
+                .card.card-default
+                  .card-header
+                    h3.card-title
+                      i.fas.fa-bullhorn
+                      | Callouts
+                  // /.card-header 
+                  .card-body
+                    .callout.callout-danger
+                      h5 I am a danger callout!
+                      p There is a problem that we need to fix. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
+                    .callout.callout-info
+                      h5 I am an info callout!
+                      p Follow the steps to continue to payment.
+                    .callout.callout-warning
+                      h5 I am a warning callout!
+                      p This is a yellow callout.
+                    .callout.callout-success
+                      h5 I am a success callout!
+                      p This is a green callout.
+                  // /.card-body 
+                // /.card 
+              // /.col 
+            // /.row 
+            // END ALERTS AND CALLOUTS 
+            h5.mt-4.mb-2 Tabs in Cards
+            .row
+              .col-12
+                // Custom Tabs 
+                .card
+                  .card-header.d-flex.p-0
+                    h3.card-title.p-3 Tabs
+                    ul.nav.nav-pills.ml-auto.p-2
+                      li.nav-item
+                        a.nav-link.active(href='#tab_1', data-toggle='tab') Tab 1
+                      li.nav-item
+                        a.nav-link(href='#tab_2', data-toggle='tab') Tab 2
+                      li.nav-item
+                        a.nav-link(href='#tab_3', data-toggle='tab') Tab 3
+                      li.nav-item.dropdown
+                        a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#')
+                          | Dropdown
+                          span.caret
+                        .dropdown-menu
+                          a.dropdown-item(tabindex='-1', href='#') Action
+                          a.dropdown-item(tabindex='-1', href='#') Another action
+                          a.dropdown-item(tabindex='-1', href='#') Something else here
+                          .divider
+                          a.dropdown-item(tabindex='-1', href='#') Separated link
+                  // /.card-header 
+                  .card-body
+                    .tab-content
+                      .tab-pane.active#tab_1 A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
+                      // /.tab-pane 
+                      .tab-pane#tab_2 The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.
+                      // /.tab-pane 
+                      .tab-pane#tab_3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                      // /.tab-pane 
+                    // /.tab-content 
+                  // /.card-body 
+                // ./card 
+              // /.col 
+            // /.row 
+            // END CUSTOM TABS 
+            // START PROGRESS BARS 
+            h5.mt-4.mb-2 Progress Bars
+            .row
+              .col-md-6
+                .card
+                  .card-header
+                    h3.card-title Progress Bars Different Sizes
+                  // /.card-header 
+                  .card-body
+                    p
+                      code .progress
+                    .progress
+                      .progress-bar.bg-primary.progress-bar-striped(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width: 40%')
+                        span.sr-only 40% Complete (success)
+                    p
+                      code .progress-sm
+                    .progress.progress-sm.active
+                      .progress-bar.bg-success.progress-bar-striped(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%')
+                        span.sr-only 20% Complete
+                    p
+                      code .progress-xs
+                    .progress.progress-xs
+                      .progress-bar.bg-warning.progress-bar-striped(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%')
+                        span.sr-only 60% Complete (warning)
+                    p
+                      code .progress-xxs
+                    .progress.progress-xxs
+                      .progress-bar.progress-bar-danger.progress-bar-striped(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%')
+                        span.sr-only 60% Complete (warning)
+                  // /.card-body 
+                // /.card 
+              // /.col (left) 
+              .col-md-6
+                .card
+                  .card-header
+                    h3.card-title Progress bars
+                  // /.card-header 
+                  .card-body
+                    .progress.mb-3
+                      .progress-bar.bg-success(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width: 40%')
+                        span.sr-only 40% Complete (success)
+                    .progress.mb-3
+                      .progress-bar.bg-info(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%')
+                        span.sr-only 20% Complete
+                    .progress.mb-3
+                      .progress-bar.bg-warning(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%')
+                        span.sr-only 60% Complete (warning)
+                    .progress.mb-3
+                      .progress-bar.bg-danger(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
+                        span.sr-only 80% Complete
+                  // /.card-body 
+                // /.card 
+              // /.col (right) 
+            // /.row 
+            .row
+              .col-md-6
+                .card
+                  .card-header
+                    h3.card-title Vertical Progress Bars Different Sizes
+                  // /.card-header 
+                  .card-body.text-center
+                    p
+                      | By adding the class
+                      code .vertical
+                      | and
+                      code .progress-sm
+                      | ,
+                      code .progress-xs
+                      | or
+                      code .progress-xxs
+                      | we achieve:
+                    .progress.vertical.active
+                      .progress-bar.bg-primary.progress-bar-striped(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='height: 40%')
+                        span.sr-only 40%
+                    .progress.vertical.progress-sm
+                      .progress-bar.bg-success(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='height: 100%')
+                        span.sr-only 100%
+                    .progress.vertical.progress-xs
+                      .progress-bar.bg-warning.progress-bar-striped(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='height: 60%')
+                        span.sr-only 60%
+                    .progress.vertical.progress-xxs
+                      .progress-bar.bg-info.progress-bar-striped(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='height: 60%')
+                        span.sr-only 60%
+                  // /.card-body 
+                // /.card 
+              // /.col (left) 
+              .col-md-6
+                .card
+                  .card-header
+                    h3.card-title Vertical Progress bars
+                  // /.card-header 
+                  .card-body.text-center
+                    p
+                      | By adding the class
+                      code .vertical
+                      | we achieve:
+                    .progress.vertical
+                      .progress-bar.bg-success(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='height: 40%')
+                        span.sr-only 40%
+                    .progress.vertical
+                      .progress-bar.bg-info(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='height: 20%')
+                        span.sr-only 20%
+                    .progress.vertical
+                      .progress-bar.bg-warning(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='height: 60%')
+                        span.sr-only 60%
+                    .progress.vertical
+                      .progress-bar.bg-danger(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='height: 80%')
+                        span.sr-only 80%
+                  // /.card-body 
+                // /.card 
+              // /.col (right) 
+            // /.row 
+            // END PROGRESS BARS 
+            // START ACCORDION & CAROUSEL
+            h5.mt-4.mb-2 Bootstrap Accordion & Carousel
+            .row
+              .col-md-6
+                .card
+                  .card-header
+                    h3.card-title Collapsible Accordion
+                  // /.card-header 
+                  .card-body
+                    #accordion
+                      // we are adding the .class so bootstrap.js collapse plugin detects it 
+                      .card.card-primary
+                        .card-header
+                          h4.card-title
+                            a(data-toggle='collapse', data-parent='#accordion', href='#collapseOne') Collapsible Group Item #1
+                        #collapseOne.panel-collapse.collapse.in
+                          .card-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      .card.card-danger
+                        .card-header
+                          h4.card-title
+                            a(data-toggle='collapse', data-parent='#accordion', href='#collapseTwo') Collapsible Group Danger
+                        #collapseTwo.panel-collapse.collapse
+                          .card-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      .card.card-success
+                        .card-header
+                          h4.card-title
+                            a(data-toggle='collapse', data-parent='#accordion', href='#collapseThree') Collapsible Group Success
+                        #collapseThree.panel-collapse.collapse
+                          .card-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  // /.card-body 
+                // /.card 
+              // /.col 
+              .col-md-6
+                .card
+                  .card-header
+                    h3.card-title Carousel
+                  // /.card-header 
+                  .card-body
+                    #carouselExampleIndicators.carousel.slide(data-ride='carousel')
+                      ol.carousel-indicators
+                        li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+                        li(data-target='#carouselExampleIndicators', data-slide-to='1')
+                        li(data-target='#carouselExampleIndicators', data-slide-to='2')
+                      .carousel-inner
+                        .carousel-item.active
+                          img.d-block.w-100(src='https://placehold.it/900x500/39CCCC/ffffff&text=I+Love+Bootstrap', alt='First slide')
+                        .carousel-item
+                          img.d-block.w-100(src='https://placehold.it/900x500/3c8dbc/ffffff&text=I+Love+Bootstrap', alt='Second slide')
+                        .carousel-item
+                          img.d-block.w-100(src='https://placehold.it/900x500/f39c12/ffffff&text=I+Love+Bootstrap', alt='Third slide')
+                      a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
+                        span.carousel-control-prev-icon(aria-hidden='true')
+                        span.sr-only Previous
+                      a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+                        span.carousel-control-next-icon(aria-hidden='true')
+                        span.sr-only Next
+                  // /.card-body 
+                // /.card 
+              // /.col 
+            // /.row 
+            // END ACCORDION & CAROUSEL
+            // START TYPOGRAPHY 
+            h5.mt-4.mb-2 Typography
+            .row
+              .col-md-6
+                .card
+                  .card-header
+                    h3.card-title
+                      i.fas.fa-text-width
+                      | Headlines
+                  // /.card-header 
+                  .card-body
+                    h1 h1. Bootstrap heading
+                    h2 h2. Bootstrap heading
+                    h3 h3. Bootstrap heading
+                    h4 h4. Bootstrap heading
+                    h5 h5. Bootstrap heading
+                    h6 h6. Bootstrap heading
+                  // /.card-body 
+                // /.card 
+              // ./col 
+              .col-md-6
+                .card
+                  .card-header
+                    h3.card-title
+                      i.fas.fa-text-width
+                      | Text Emphasis
+                  // /.card-header 
+                  .card-body
+                    p.lead Lead to emphasize importance
+                    p.text-success Text green to emphasize success
+                    p.text-info Text aqua to emphasize info
+                    p.text-primary Text light blue to emphasize info (2)
+                    p.text-danger Text red to emphasize danger
+                    p.text-warning Text yellow to emphasize warning
+                    p.text-muted Text muted to emphasize general
+                  // /.card-body 
+                // /.card 
+              // ./col 
+            // /.row 
+            .row
+              .col-md-6
+                .card
+                  .card-header
+                    h3.card-title
+                      i.fas.fa-text-width
+                      | Primary Block Quotes
+                  // /.card-header 
+                  .card-body
+                    blockquote
+                      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                      small
+                        | Someone famous in
+                        cite(title='Source Title') Source Title
+                  // /.card-body 
+                // /.card 
+              // ./col 
+              .col-md-6
+                .card
+                  .card-header
+                    h3.card-title
+                      i.fas.fa-text-width
+                      | Secondary Block Quotes
+                  // /.card-header 
+                  .card-body.clearfix
+                    blockquote.quote-secondary
+                      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                      small
+                        | Someone famous in
+                        cite(title='Source Title') Source Title
+                  // /.card-body 
+                // /.card 
+              // ./col 
+            // /.row 
+            .row
+              .col-md-4
+                .card
+                  .card-header
+                    h3.card-title
+                      i.fas.fa-text-width
+                      | Unordered List
+                  // /.card-header 
+                  .card-body
+                    ul
+                      li Lorem ipsum dolor sit amet
+                      li Consectetur adipiscing elit
+                      li Integer molestie lorem at massa
+                      li Facilisis in pretium nisl aliquet
+                      li
+                        | Nulla volutpat aliquam velit
+                        ul
+                          li Phasellus iaculis neque
+                          li Purus sodales ultricies
+                          li Vestibulum laoreet porttitor sem
+                          li Ac tristique libero volutpat at
+                      li Faucibus porta lacus fringilla vel
+                      li Aenean sit amet erat nunc
+                      li Eget porttitor lorem
+                  // /.card-body 
+                // /.card 
+              // ./col 
+              .col-md-4
+                .card
+                  .card-header
+                    h3.card-title
+                      i.fas.fa-text-width
+                      | Ordered Lists
+                  // /.card-header 
+                  .card-body
+                    ol
+                      li Lorem ipsum dolor sit amet
+                      li Consectetur adipiscing elit
+                      li Integer molestie lorem at massa
+                      li Facilisis in pretium nisl aliquet
+                      li
+                        | Nulla volutpat aliquam velit
+                        ol
+                          li Phasellus iaculis neque
+                          li Purus sodales ultricies
+                          li Vestibulum laoreet porttitor sem
+                          li Ac tristique libero volutpat at
+                      li Faucibus porta lacus fringilla vel
+                      li Aenean sit amet erat nunc
+                      li Eget porttitor lorem
+                  // /.card-body 
+                // /.card 
+              // ./col 
+              .col-md-4
+                .card
+                  .card-header
+                    h3.card-title
+                      i.fas.fa-text-width
+                      | Unstyled List
+                  // /.card-header 
+                  .card-body
+                    ul.list-unstyled
+                      li Lorem ipsum dolor sit amet
+                      li Consectetur adipiscing elit
+                      li Integer molestie lorem at massa
+                      li Facilisis in pretium nisl aliquet
+                      li
+                        | Nulla volutpat aliquam velit
+                        ul
+                          li Phasellus iaculis neque
+                          li Purus sodales ultricies
+                          li Vestibulum laoreet porttitor sem
+                          li Ac tristique libero volutpat at
+                      li Faucibus porta lacus fringilla vel
+                      li Aenean sit amet erat nunc
+                      li Eget porttitor lorem
+                  // /.card-body 
+                // /.card 
+              // ./col 
+            // /.row 
+            .row
+              .col-md-6
+                .card
+                  .card-header
+                    h3.card-title
+                      i.fas.fa-text-width
+                      | Description
+                  // /.card-header 
+                  .card-body
+                    dl
+                      dt Description lists
+                      dd A description list is perfect for defining terms.
+                      dt Euismod
+                      dd Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
+                      dd Donec id elit non mi porta gravida at eget metus.
+                      dt Malesuada porta
+                      dd Etiam porta sem malesuada magna mollis euismod.
+                  // /.card-body 
+                // /.card 
+              // ./col 
+              .col-md-6
+                .card
+                  .card-header
+                    h3.card-title
+                      i.fas.fa-text-width
+                      | Description Horizontal
+                  // /.card-header 
+                  .card-body
+                    dl.dl-horizontal
+                      dt Description lists
+                      dd A description list is perfect for defining terms.
+                      dt Euismod
+                      dd Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
+                      dd Donec id elit non mi porta gravida at eget metus.
+                      dt Malesuada porta
+                      dd Etiam porta sem malesuada magna mollis euismod.
+                      dt Felis euismod semper eget lacinia
+                      dd Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                  // /.card-body 
+                // /.card 
+              // ./col 
+            // /.row 
+            // END TYPOGRAPHY 
+          // /.container-fluid 
+        // /.content 
+      // /.content-wrapper 
+      footer.main-footer
+        .float-right.d-none.d-sm-block
+          b Version
+          | 3.0.0-rc.1
+        strong
+          | Copyright © 2014-2019
+          a(href='http://adminlte.io') AdminLTE.io
+          | .
+        | All rights reserved.
+      // Control Sidebar 
+      aside.control-sidebar.control-sidebar-dark
+        // Control sidebar content goes here 
+      // /.control-sidebar 
+    // ./wrapper 
+    // jQuery 
+    script(src='../../plugins/jquery/jquery.min.js')
+    // Bootstrap 4 
+    script(src='../../plugins/bootstrap/js/bootstrap.bundle.min.js')
+    // AdminLTE App 
+    script(src='../../dist/js/adminlte.min.js')
+    // AdminLTE for demo purposes 
+    script(src='../../dist/js/demo.js')

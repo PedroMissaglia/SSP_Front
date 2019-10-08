@@ -14,20 +14,39 @@ block content
                 input.form-control(id="1" name ="email" type='email', placeholder='Email' required)
                 .input-group-append
                   .input-group-text.font-size
-                    span.fas.fa-envelope
-              br      
+                    span.fas.fa-envelope    
               .input-group.mb-4
                 input.form-control(id="2" name="senha" type='password', placeholder='Password' required)
                 .input-group-append(id="4")
                   .input-group-text
                     span.fas.fa-lock
-              br   
+              .form-check
+                input.form-check-input(type='checkbox' onclick="showPassword()")
+                label.form-check-label() Mostrar senha       
+              br
               .row               
                 .col-4
                   button.btn.btn-primary.a(type="submit") Login
                 // /.col
-            br 
+            br
             p.mb-0
               a.text-center(href='register') Não tenho um cadastro
+            p.mb-0
+              a.text-center(href='register' data-toggle='modal', data-target='#mymodal') Esqueci minha senha
+            div(class="modal open" id="mymodal" style="display:none" aria-hidden="true")
+              div(class="modal-dialog")
+                div(class="modal-content")
+                  div(class="modal-header")
+                    h4(class="modal-title") Esqueci minha senha 
+                  div(class="modal-body")
+                    form
+                      div(class="form-group" action="javascript:sendPasswordEmail()")
+                        .input-group.mb-4                        
+                          small(id="descHelp" class="form-text text-muted") Para mandarmos sua senha, será necessário informar o e-mail cadastro no sign in.
+                          input.form-control(id="modal1" name ="email" type='email', placeholder='Email cadastrado' required)
+                          .input-group-append
+                            .input-group-text.font-size
+                              span.fas.fa-envelope               
+                    button(type="button" class="btn btn-primary" type="submit") Enviar         
             div(id="particles-js")  
   canvas(class="background")

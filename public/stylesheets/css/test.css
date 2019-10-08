@@ -20,6 +20,24 @@ input.form-control{
     font-size: 15px;
     
 }
+small#descHelp.form-text.text-muted{
+
+    font-size: 15px;
+    height: 60px;
+
+}
+
+.modal.show .modal-dialog {
+    padding-top: 250px;
+
+}
+
+input.form-group{
+    height: 34.5px;
+    width: 116px;
+    font-size: 15px;
+    
+}
 button.btn.btn-primary.a{
     font-size: 20px;
     margin-left: 190px;
@@ -27,7 +45,6 @@ button.btn.btn-primary.a{
     padding-left: 100px;
     margin-left: 100px;
 }
-
 div.icheck-primary{
     width: 150px;
 }
@@ -69,6 +86,12 @@ a.text-center{
     font-size: 15px;
 }
 
+.form-check{
+
+    margin-left: -300px;
+    font-size: 15px;
+}
+
 .background {
     position: absolute;
     top: 0;
@@ -77,9 +100,12 @@ a.text-center{
     right: 0;
     z-index: -1;
     background-image: url('https://projetarconsultoria.com/wp-content/uploads/2018/07/videoblocks-abstract-background-dot-circle-with-connection-for-futuristic-network-cyber_h2znh8ueef_thumbnail-full01.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+    position: fixed; 
+    min-width: 100%;
+    min-height: 100%;
+
+
+
   }
   carousel-inner{  
     width: 400px;

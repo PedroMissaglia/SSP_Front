@@ -3,8 +3,8 @@ window.onload = function() {
     selector: '.background',
     color: '#4285f4',
     connectParticles: true,
-    speed: 0.5,
-    maxParticles: 50
+    speed: 1,
+    maxParticles: 100
   });
 
 } 
