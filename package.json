@@ -23,7 +23,7 @@
     "pug": "2.0.0-beta11",
     "sass": "^1.23.0-module.beta.1",
     "sweetalert": "^2.1.2",
-    "sweetalert2": "^8.17.1"
+    "sweetalert2": "^8.18.1"
   },
   "devDependencies": {
     "gulp-html2pug": "^1.2.1",
