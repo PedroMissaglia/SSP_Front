@@ -116,12 +116,12 @@ block content
             .image
               img.img-circle.elevation-2(src='stylesheets/admin-lte/dist/img/user2-160x160.jpg', alt='User Image')
             .info
-              a.d-block(href='#') Pedro Missaglia
+              a.d-block(href='profile') Pedro Missaglia
           // Sidebar Menu 
           nav.mt-2
             ul.nav.nav-pills.nav-sidebar.flex-column(data-widget='treeview', role='menu', data-accordion='false')
               //                 Add icons to the links using the .nav-icon class
-                               with font-awesome or any other icon font library 
+                            with font-awesome or any other icon font library 
               li.nav-item.has-treeview.menu-open
                 a.nav-link.active(href='#')
                   i.nav-icon.fas.fa-tachometer-alt
@@ -388,9 +388,10 @@ block content
                       .tab-pane#settings
                         form.form-horizontal
                           .form-group
-                            label.col-sm-2.control-label(for='inputName') Name
-                            .col-sm-10
-                              input.form-control#inputName(type='email', placeholder='Name')
+                            input.form-control(id="1" name ="nome" type='text', placeholder='Nome' required)
+							.input-group-append
+								.input-group-text.font-size
+						span.fas.fa-id-card
                           .form-group
                             label.col-sm-2.control-label(for='inputEmail') Email
                             .col-sm-10
@@ -431,7 +432,7 @@ block content
           b Version
           | 3.0.0-rc.1
         strong
-          | Copyright © 2014-2019
+          | Copyright Â© 2014-2019
           a(href='http://adminlte.io') AdminLTE.io
           | .
         | All rights reserved.
