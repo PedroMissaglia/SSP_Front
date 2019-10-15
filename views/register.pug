@@ -9,14 +9,14 @@ block content
             h2.login-box-msg Sign Up
               h3 Vision
             br
-            form(name ="RegisterForm" onsubmit="validateForm()"  id="error")
+            form(name ="RegisterForm" action="javascript:validateForm()"  id="error")
               .input-group.mb-4
                 input.form-control(id="1" name ="nome" type='text', placeholder='Nome' required)
                 .input-group-append
                   .input-group-text.font-size
                     span.fas.fa-user-circle
               .input-group.mb-4
-                input.form-control(id="2" name ="cpf" type='text', placeholder='CPF' onBlur="javascript:ValidarCPF(RegisterForm.cpf);" onKeyPress="javascript:MascaraCPF(RegisterForm.cpf);" maxlength="14" required)
+                input.form-control(id="2" name ="cpf" type='text', placeholder='CPF' onBlur="javascript:ValidarCPF(RegisterForm.cpf)" onKeyPress="javascript:MascaraCPF(RegisterForm.cpf)" maxlength="14" required)
                 .input-group-append
                   .input-group-text.font-size
                     span.fas.fa-id-card
@@ -31,7 +31,7 @@ block content
                   .input-group-text.font-size
                     span.fas.fa-at    
               .input-group.mb-4
-                input.form-control(id="5" name ="autenticacao" type='password', placeholder="Nº do Token" maxlength="14" required)
+                input.form-control(id="5" name ="autenticacao" type='text', placeholder="Número do Token" maxlength="40" required)
                 .input-group-append
                   .input-group-text.font-size
                     span.fas.fa-key    

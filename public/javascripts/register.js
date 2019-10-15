@@ -2,6 +2,7 @@ var url = 'http://localhost:50929/api';
 
 async function validateForm() {
 
+	console.log('a');
 	var nome = document.getElementById('1').value;
 	var cpf = document.getElementById('2').value;
 	var birthdate = document.getElementById('3').value;
@@ -10,13 +11,13 @@ async function validateForm() {
 	var senha = document.getElementById('6').value;
 
 	try {
-		const response = await axios.post(url + '/Users/singup',
+		const response = await axios.post(url + '/Users/signup',
 			{
 				name: nome,
 				cpf: cpf,
 				birthdate: birthdate,
 				email: email,
-				autenticacao: autenticacao,
+				tokenId: autenticacao,
 				password: senha
 
 			});
@@ -75,7 +76,7 @@ function ValidarCPF(Objcpf) {
 
 	var digitoGerado = (soma1 * 10) + soma2;
 	if (digitoGerado != digitoDigitado){
-		alert("Ops!","CPF Invalido!", "error");
+		swal("Ops!","CPF Invalido!", "error");
 	}
 }
 
@@ -130,7 +131,7 @@ var senha = document.getElementById('6').value;
 var resenha = document.getElementById('7').value;
 
 	if (senha != resenha){
-		alert("Ops!","SENHAS DIFERENTES!\\nFAVOR DIGITAR SENHAS IGUAIS", "error");
+		swal("Ops!","SENHAS DIFERENTES!\\nFAVOR DIGITAR SENHAS IGUAIS", "error");
 	}
 }
 
