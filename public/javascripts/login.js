@@ -15,7 +15,10 @@ async function validateLogin() {
 
       if (response.status == '200'){
         console.log('Logado');
+        document.cookie = "id = " + response.data.id;
         window.location.href = '/home';
+        console.log(response.status);
+
       }
     } catch (error) {
 

@@ -19,6 +19,11 @@ router.get('/profile', function(req, res, next) {
   res.render('profile', { title: 'Express' });
 });
 
+router.get('/newpassword', function(req, res, next) {
+  res.render('newpassword', { title: 'Express' });
+});
+
+
 router.get('/404', function(req, res, next) {
   res.render('404', { title: 'Express' });
 });
