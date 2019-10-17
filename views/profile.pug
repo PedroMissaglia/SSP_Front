@@ -223,7 +223,7 @@ block content
                       li.nav-item
                         a.nav-link(href='#timeline', data-toggle='tab') Timeline
                       li.nav-item
-                        a.nav-link(href='#settings', data-toggle='tab') Settings
+                        a.nav-link(href='#Editprofile', data-toggle='tab') Edit profile
                   // /.card-header 
                   .card-body
                     .tab-content
@@ -385,34 +385,39 @@ block content
                           div
                             i.far.fa-clock.bg-gray
                       // /.tab-pane 
-                      .tab-pane#settings
+                      .tab-pane#Editprofile
                         form.form-horizontal
                           .form-group
-                            input.form-control(id="1" name ="nome" type='text', placeholder='Nome' required)
-                          .form-group
+                            label.col-sm-2.control-label(for='inputName') Nome
+                            .input-group.mb-3
+                              input.form-control(type='text', placeholder='Nome')
+                              .input-group-append
+                                span.input-group-text
+                                  i.fas.fa-user-circle
+                            label.col-sm-2.control-label(for='inputCPF') CPF
+                            .input-group.mb-3
+                              input.form-control(type='text', placeholder='CPF')
+                              .input-group-append
+                                span.input-group-text
+                                  i.fas.fa-id-card
+                            label.col-sm-4.control-label(for='inputDate') Data de nascimento
+                            .input-group.mb-3
+                              input.form-control(type='date', placeholder='Data de nascimento')
+                              .input-group-append
+                                span.input-group-text
+                                  i.fas.fa-calendar-alt
                             label.col-sm-2.control-label(for='inputEmail') Email
-                            .col-sm-10
-                              input.form-control#inputEmail(type='email', placeholder='Email')
-                          .form-group
-                            label.col-sm-2.control-label(for='inputName2') Name
-                            .col-sm-10
-                              input.form-control#inputName2(type='text', placeholder='Name')
-                          .form-group
-                            label.col-sm-2.control-label(for='inputExperience') Experience
-                            .col-sm-10
-                              textarea.form-control#inputExperience(placeholder='Experience')
-                          .form-group
-                            label.col-sm-2.control-label(for='inputSkills') Skills
-                            .col-sm-10
-                              input.form-control#inputSkills(type='text', placeholder='Skills')
-                          .form-group
-                            .col-sm-offset-2.col-sm-10
-                              .checkbox
-                                label
-                                  input(type='checkbox')
-                                  |  I agree to the
-                                  a(href='#') terms and conditions
-                          .form-group
+                            .input-group.mb-3
+                              input.form-control(type='email', placeholder='Email')
+                              .input-group-append
+                                span.input-group-text
+                                  i.fas.fa-envelope
+                            label.col-sm-4.control-label(for='inputToken') Número do Token
+                            .input-group.mb-3
+                              input.form-control(type='text', placeholder='Número do Token')
+                              .input-group-append
+                                span.input-group-text
+                                  i.fas.fa-key
                             .col-sm-offset-2.col-sm-10
                               button.btn.btn-danger(type='submit') Submit
                       // /.tab-pane 
