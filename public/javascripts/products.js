@@ -2,8 +2,8 @@ var urlProtheus = 'http://localhost:1243/rest/teste';
 
 async function generateTable() {
  
-    var username = 'user';
-    var password = 'password';
+    var username = 'admin';
+    var password = '';
     var basicAuth = 'Basic ' + btoa(username + ':' + password);
     
     try {
