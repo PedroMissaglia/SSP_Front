@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var axios = require('axios');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -28,8 +29,29 @@ router.get('/404', function(req, res, next) {
   res.render('404', { title: 'Express' });
 });
 
-router.get('/products', function(req, res, next) {
-  res.render('products', { title: 'Express' });
+router.get('/products', async function(req, res, next) {
+
+  var urlProtheus = 'http://localhost:1243/rest/teste/products';
+  var basicAuth = 'Basic YWRtaW46IA==';
+  var Jsondata;
+  let products = [];
+  try {
+      const response = 
+      await axios.get( urlProtheus,
+        {headers: {'Authorization': basicAuth}}
+      );
+      console.log(response);
+      Jsondata = response.data;
+      console.log(Jsondata);
+      console.log(response.status);
+    if (response.status == '200'){
+      products = Jsondata.products    
+
+    }
+  } catch (error) {
+    console.log('Erro');
+  }
+  res.render('products', { title: 'Express', products: products });
 });
 
 module.exports = router;

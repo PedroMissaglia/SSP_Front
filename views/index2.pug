@@ -35,21 +35,14 @@ block content
                                with font-awesome or any other icon font library 
               li.nav-item.has-treeview.menu-open
                 a.nav-link.active(href='#')
-                  i.nav-icon.fas.fa-tachometer-alt
+                  i.nav-icon.fas.fa-chart-line
                   p
                     | Dashboard
-                    i.right.fas.fa-angle-left
               li.nav-item.has-treeview
-                a.nav-link(href='#')
+                a.nav-link(href='products')
                   i.nav-icon.fas.fa-table
                   p
-                    | Cadastros
-                    i.fas.fa-angle-left.right
-                ul.nav.nav-treeview
-                  li.nav-item
-                    a.nav-link(href='products')
-                        i.far.fa-circle.nav-icon
-                        p Produtos
+                    | Produto
           // /.sidebar-menu 
         // /.sidebar 
       // Content Wrapper. Contains page content 
@@ -78,7 +71,7 @@ block content
               .col-md-12
                 .card
                   .card-header
-                    h5.card-title Mental mensal de vendas
+                    h5.card-title Meta mensal de vendas
                     .card-tools
                       button.btn.btn-tool(type='button', data-card-widget='collapse')
                         i.fas.fa-minus
@@ -362,7 +355,7 @@ block content
       // Main Footer 
       footer.main-footer
         strong
-          | Management 
+          | Vision 
         | All rights reserved.
         .float-right.d-none.d-sm-inline-block
           b Version 
@@ -370,25 +363,6 @@ block content
     // ./wrapper 
     // REQUIRED SCRIPTS 
     // jQuery 
-    script(src='stylesheets/admin-lte/plugins/jquery/jquery.min.js')
-    // Bootstrap 
-    script(src='stylesheets/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js')
-    // overlayScrollbars 
-    script(src='stylesheets/admin-lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')
-    // AdminLTE App 
-    script(src='stylesheets/admin-lte/dist/js/adminlte.js')
-    // OPTIONAL SCRIPTS 
-    script(src='stylesheets/admin-lte/dist/js/demo.js')
-    // PAGE PLUGINS 
-    // jQuery Mapael 
-    script(src='stylesheets/admin-lte/plugins/jquery-mousewheel/jquery.mousewheel.js')
-    script(src='stylesheets/admin-lte/plugins/raphael/raphael.min.js')
-    script(src='stylesheets/admin-lte/plugins/jquery-mapael/jquery.mapael.min.js')
-    script(src='stylesheets/admin-lte/plugins/jquery-mapael/maps/world_countries.min.js')
-    // ChartJS 
-    script(src='stylesheets/admin-lte/plugins/chart.js/Chart.min.js')
-    // PAGE SCRIPTS 
-    script(src='stylesheets/admin-lte/dist/js/pages/dashboard2.js')
     script.
      var a = nameUserProfile();
      document.getElementById("nameUser").innerHTML = a;
