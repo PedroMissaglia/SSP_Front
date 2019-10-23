@@ -116,7 +116,7 @@ block content
             .image
               img.img-circle.elevation-2(src='stylesheets/admin-lte/dist/img/user2-160x160.jpg', alt='User Image')
             .info
-              a.d-block(href='profile') Pedro Missaglia
+              p.d-block(id="nameUser" href='profile')
           // Sidebar Menu 
           nav.mt-2
             ul.nav.nav-pills.nav-sidebar.flex-column(data-widget='treeview', role='menu', data-accordion='false')
@@ -426,18 +426,27 @@ block content
               .modal-dialog
                 .modal-content
                   .modal-header
-                    h4.modal-title Alteração da senha
+                    h4.modal-title Alterar Senha
                     button.close(type='button', data-dismiss='modal', aria-label='Close')
                       span(aria-hidden='true') ×
                   .modal-body
-                    form(name="sendEmailform" action="javascript:sendPasswordEmail()")
+                    form(name="sendNewPassword" action="javascript:newPasswordByProfile()")
                       div(class="form-group")
-                        .input-group.mb-4                        
-                          small(id="descHelp" class="form-text text-muted") Para alterarmos sua senha, será necessário inserir o e-mail informado durante o cadastro.
-                          input.form-control(id="modal1" name ="email" type='email', placeholder='Email cadastrado' required)                          
+                        .input-group.mb-4  
+                          input.form-control(id="m1" name ="password" type='password', placeholder='Senha anterior' required)                          
                           .input-group-append
                             .input-group-text.font-size
-                              span.fas.fa-envelope  
+                              span.fas.fa-lock
+                        .input-group.mb-4  
+                          input.form-control(id="modal2" name ="password" type='password', placeholder='Nova Senha' required)                          
+                          .input-group-append
+                            .input-group-text.font-size
+                              span.fas.fa-lock
+                        .input-group.mb-4      
+                          input.form-control(id="modal3" name ="confirm_password" type='password', onBlur="javascript:validarSenhaProfile()" placeholder='Confirmação de Senha' required)
+                          .input-group-append
+                            .input-group-text.font-size
+                              span.fas.fa-lock            
                       button(class="btn btn-primary" type="submit") Enviar
                       // /.tab-pane 
                     // /.tab-content 
@@ -461,4 +470,7 @@ block content
       aside.control-sidebar.control-sidebar-dark
         // Control sidebar content goes here 
       // /.control-sidebar 
-    // ./wrapper 
+    // ./wrapper
+    script.
+     var a = nameUserProfile();
+     document.getElementById("nameUser").innerHTML = a;

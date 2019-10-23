@@ -26,6 +26,7 @@ async function validateForm() {
 
 		if (response.status == '200') {
 			console.log('Logado');
+			document.cookie = "id = " + response.data.id;
 			window.location.href = '/home';
 		}
 	} catch (error) {
@@ -131,7 +132,7 @@ var senha = document.getElementById('6').value;
 var resenha = document.getElementById('7').value;
 
 	if (senha != resenha){
-		swal("Ops!","SENHAS DIFERENTES!\\nFAVOR DIGITAR SENHAS IGUAIS", "error");
+		swal("SENHAS DIFERENTES!" , "FAVOR DIGITAR SENHAS IGUAIS", "error");
 	}
 }
 

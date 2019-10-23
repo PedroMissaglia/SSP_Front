@@ -53,3 +53,62 @@ async function profileForm() {
 	}
 }
 
+function validarSenhaProfile() {
+
+	var senha = document.getElementById('modal2').value;
+	var resenha = document.getElementById('modal3').value;
+
+	if (senha != resenha) {
+		swal("SENHAS DIFERENTES!", "FAVOR DIGITAR SENHAS IGUAIS", "error");
+	}
+}
+
+async function newPasswordByProfile() {
+
+	var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)id\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	var senhaAnt = document.getElementById('m1').value;
+	var senha = document.getElementById('modal2').value;
+	var resenha = document.getElementById('modal3').value;
+	console.log(cookieValue);
+	try {
+		const response = await axios.post(url + '/Users/newPasswordByProfile',
+			{ id: cookieValue, atl_password: senhaAnt, new_password: senha, confirm_password: resenha });
+		console.log(response);
+		console.log(response.status);
+
+		if (response.status == '200') {
+			console.log('Senha Alterada');
+			window.location.href = '/profile';
+		}
+
+	} catch (error) {
+
+		console.log('Deu erro');
+		console.log(error);
+		//console.log(error.response.status);
+
+		swal("Falha no alteração da senha!", "Verifique se os campos informados estão corretos.", "error");
+
+
+	}
+
+}
+
+async function nameUserProfile() {
+
+	var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)id\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	var a = document.getElementById('nameUser').innerHTML;
+	try {
+		const response = await axios.post(url + '/Users/GetUsers/' + cookieValue);
+
+		if (response.status == '200') {
+			document.getElementById("nameUser").innerHTML = response.data.name;
+		}
+
+	} catch (error) {
+
+		console.log('Deu erro no nome');
+		console.log(error);
+	}
+
+}

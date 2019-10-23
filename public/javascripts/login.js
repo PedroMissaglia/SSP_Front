@@ -1,4 +1,4 @@
-url = 'http://localhost:50929/api';
+var url = 'http://localhost:50929/api';
 
 async function validateLogin() {
      
@@ -15,7 +15,7 @@ async function validateLogin() {
 
       if (response.status == '200'){
         console.log('Logado');
-        document.cookie = "id = " + response.data.id;
+		document.cookie = "id = " + response.data.id;
         window.location.href = '/home';
         console.log(response.status);
 
@@ -51,16 +51,26 @@ async function sendPasswordEmail() {
   var x = document.getElementById('modal1').value;
 
   try {
-      const response = await axios.post( url + '/Users/forgotPassword',
-      {email: x});
-    console.log(response);
-    console.log(response.status);
 
-    if (response.status == '200'){
-      console.log('Envio realizado com sucesso');
-      $('#modal-default').modal('hide');
-      swal("Pronto!", "Enviamos o e-mail com sucesso.", "success");
-    }
+		const response1 = await axios.post(url + '/Users/getIdUser',
+			{ email: x });				
+		console.log(response1);
+		console.log(response1.status);
+
+		if (response1.status == '200') {
+			document.cookie = "id = " + response1.data.id;
+				const response = await axios.post( url + '/Users/forgotPassword',
+				{email: x});
+			console.log(response);
+			console.log(response.status);
+			
+			if (response.status == '200'){
+				console.log('Envio realizado com sucesso');
+				$('#modal-default').modal('hide');
+				swal("Pronto!", "Enviamos o e-mail com sucesso.", "success");
+			}
+		}
+			
   } catch (error) {
     $('#modal-default').modal('hide');
     swal("Ops!", "Parece que não conseguimos enviar o e-mail.", "error");
