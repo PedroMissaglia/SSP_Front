@@ -35,6 +35,7 @@ router.get('/products', async function(req, res, next) {
   var basicAuth = 'Basic YWRtaW46IA==';
   var Jsondata;
   let products = [];
+  var i;
   try {
       const response = 
       await axios.get( urlProtheus,
@@ -45,13 +46,19 @@ router.get('/products', async function(req, res, next) {
       console.log(Jsondata);
       console.log(response.status);
     if (response.status == '200'){
-      products = Jsondata.products    
+      products = Jsondata.products
 
+      /*for(i = 0; i< products.length; i++){
+        if(products[i].address_control == 'N'){
+          products[i].address_control = 'aaaaa'
+        }
+      }*/
     }
   } catch (error) {
     console.log('Erro');
   }
   res.render('products', { title: 'Express', products: products });
 });
+
 
 module.exports = router;

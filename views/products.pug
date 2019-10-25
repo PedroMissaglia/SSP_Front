@@ -39,7 +39,7 @@ block content
                   i.nav-icon.fas.fa-chart-line
                   p
                     | Dashboard
-              li.nav-item.has-treeview.menu-open
+              li.nav-item.has-treeview.menu-open 
                 a.nav-link.active(href='#')
                   i.nav-icon.fas.fa-box-open
                   p
@@ -89,11 +89,10 @@ block content
                             th #{objeto.description}
                             th #{objeto.value}
                             th #{objeto.quantity}                                                        
-                            th(onload='checkmark()') #{objeto.address_control}
-                            th(onload='checkmark()') #{objeto.batch_control}
+                            th(class='checkmark') #{objeto.address_control}
+                            th(class='checkmark') #{objeto.batch_control}
                             th #{objeto.unity_mesure}
-                            th #{objeto.warehouse}
-
+                            th #{objeto.warehouse}                                                        
       footer.main-footer
         .float-right.d-none.d-sm-block
           b Version 1.0
@@ -101,25 +100,3 @@ block content
           a Vision
       // Control Sidebar 
       aside.control-sidebar.control-sidebar-dark
-    // ./wrapper 
-    // REQUIRED SCRIPTS 
-    // jQuery 
-    script(src='stylesheets/admin-lte/plugins/jquery/jquery.min.js')
-    // Bootstrap 
-    script(src='stylesheets/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js')
-    // overlayScrollbars 
-    script(src='stylesheets/admin-lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')
-    // AdminLTE App 
-    script(src='stylesheets/admin-lte/dist/js/adminlte.js')
-    // OPTIONAL SCRIPTS 
-    script(src='stylesheets/admin-lte/dist/js/demo.js')
-    // PAGE PLUGINS 
-    // jQuery Mapael 
-    script(src='stylesheets/admin-lte/plugins/jquery-mousewheel/jquery.mousewheel.js')
-    script(src='stylesheets/admin-lte/plugins/raphael/raphael.min.js')
-    script(src='stylesheets/admin-lte/plugins/jquery-mapael/jquery.mapael.min.js')
-    script(src='stylesheets/admin-lte/plugins/jquery-mapael/maps/world_countries.min.js')
-    // ChartJS 
-    script(src='stylesheets/admin-lte/plugins/chart.js/Chart.min.js')
-    // PAGE SCRIPTS 
-    script(src='stylesheets/admin-lte/dist/js/pages/dashboard2.js')      
