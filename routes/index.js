@@ -44,12 +44,12 @@ router.get('/purchases', async function(req, res, next) {
       console.log(Jsondata);
       console.log(response.status);
     if (response.status == '200'){
-      products = Jsondata.products
+      purchases = Jsondata.purchases
     }
   } catch (error) {
     console.log('Erro');
   }
-  res.render('purchases', { title: 'Express' });
+  res.render('purchases', { title: 'Express', purchases: purchases });
 });
 
 router.get('/products', async function(req, res, next) {

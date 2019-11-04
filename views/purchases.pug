@@ -58,7 +58,7 @@ block content
           .container-fluid
             .row.mb-2
               .col-sm-6
-                h1 Consulta de Pedidos de Compra
+                h1 Pedidos de Compras
           // /.container-fluid 
         // Main content 
         section.content
@@ -67,7 +67,7 @@ block content
               .col-12
                 .card
                   .card-header
-                    h3.card-title Lista de Pedidos de Compra Pendentes para Aprovação
+                    h3.card-title Pedidos de Compras Pendentes
                     .card-tools
                       .input-group.input-group-sm(style='width: 150px;')
                         input.form-control.float-right(type='text', name='table_search', placeholder='Search')
@@ -85,7 +85,15 @@ block content
                           th Total                                                    
                           th Custo Padrão
                           th Data do Pedido
-                      tbody                                                     
+                      tbody  
+                        each objeto in purchases
+                          tr
+                            th #{objeto.code}
+                            th #{objeto.normal_price}
+                            th #{objeto.price}
+                            th #{objeto.quantity}                                                        
+                            th #{objeto.total}   
+                            th #{objeto.date}                                              
       footer.main-footer
         .float-right.d-none.d-sm-block
           b Version 1.0
