@@ -29,6 +29,29 @@ router.get('/404', function(req, res, next) {
   res.render('404', { title: 'Express' });
 });
 
+router.get('/purchases', function(req, res, next) {
+  var urlProtheus = 'http://localhost:1243/rest/teste/purchases';
+  var basicAuth = 'Basic YWRtaW46IA==';
+  var Jsondata;
+  let purchases = [];
+  try {
+      const response = 
+      await axios.get( urlProtheus,
+        {headers: {'Authorization': basicAuth}}
+      );
+      console.log(response);
+      Jsondata = response.data;
+      console.log(Jsondata);
+      console.log(response.status);
+    if (response.status == '200'){
+      products = Jsondata.products
+    }
+  } catch (error) {
+    console.log('Erro');
+  }
+  res.render('purchases', { title: 'Express' });
+});
+
 router.get('/products', async function(req, res, next) {
 
   var urlProtheus = 'http://localhost:1243/rest/teste/products';
