@@ -80,19 +80,19 @@ block content
                       thead
                         tr
                           th Código
-                          th Quantidade de Pedido
-                          th Custo Unitário
-                          th Total                                                    
-                          th Custo Padrão
+                          th Preço Padrão
+                          th Preço do Pedido
+                          th Quantidade                                                    
+                          th Total
                           th Data do Pedido
                       tbody  
                         each objeto in purchases
                           tr
                             th #{objeto.code}
-                            th #{objeto.normal_price}
-                            th #{objeto.price}
+                            th R$ #{objeto.normal_price}
+                            th R$ #{objeto.price}
                             th #{objeto.quantity}                                                        
-                            th #{objeto.total}   
+                            th R$ #{objeto.total}   
                             th #{objeto.date}                                              
       footer.main-footer
         .float-right.d-none.d-sm-block

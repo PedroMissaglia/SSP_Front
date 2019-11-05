@@ -78,20 +78,14 @@ block content
                           th Descrição
                           th Custo
                           th Saldo                                                    
-                          th Controle de Endereço
-                          th Controle de Lote
-                          th Unidade de Medida
                           th Armazém
                       tbody(onclick='modalopen()')
                         each objeto in products
                           tr
                             th #{objeto.code}
                             th #{objeto.description}
-                            th #{objeto.value}
+                            th R$ #{objeto.value}
                             th #{objeto.quantity}                                                        
-                            th(class='checkmark') #{objeto.address_control}
-                            th(class='checkmark') #{objeto.batch_control}
-                            th #{objeto.unity_mesure}
                             th #{objeto.warehouse}                                                        
       footer.main-footer
         .float-right.d-none.d-sm-block
