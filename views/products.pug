@@ -59,14 +59,14 @@ block content
         section.content
           .container-fluid                     
             .row
-              each objeto in products
+              each objeto in top3
                 .col-lg-4.col-6
                   .small-box.bg-success(style="width: 350px;")
                     .inner
-                      h3 #{top3[0].description}
-                      h6 #{top3[0].code}
-                      h6 R$ #{top3[0].revenues}
-                      h6 Resta em Estoque: #{top3[0].quantity_remaining}
+                      h3 #{objeto.description}
+                      h6 #{objeto.code}
+                      h6 R$ #{objeto.revenues}
+                      h6 Resta em Estoque: #{objeto.quantity_remaining}
                     .icon
                       i 1º
                     a.small-box-footer(href='#')
