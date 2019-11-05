@@ -53,36 +53,51 @@ block content
           .container-fluid
             .row.mb-2
               .col-sm-6
-                h1 Consulta de Produtos
+                h1 Produtos mais vendidos
           // /.container-fluid 
         // Main content 
         section.content
           .container-fluid                     
             .row
-              .col-lg-3.col-6
-                .small-box.bg-info
+              .col-lg-4.col-6
+                .small-box.bg-success(style="width: 350px;")
                   .inner
-                    h3 150
-                    p New Orders
+                    h3 #{top3[0].description}
+                    h6 #{top3[0].code}
+                    h6 R$ #{top3[0].revenues}
+                    h6 Resta em Estoque: #{top3[0].quantity_remaining}
                   .icon
-                    i.ion.ion-bag
+                    i 1º
                   a.small-box-footer(href='#')
                     | More info
                     i.fas.fa-arrow-circle-right
-              .col-lg-3.col-6
-                .small-box.bg-info
+              .col-lg-4.col-6
+                .small-box.bg-info(style="width: 350px;")
                   .inner
-                    h3 150
-                    p New Orders
-                    p Teste
+                    h3 #{top3[1].description}
+                    h6 #{top3[1].code}
+                    h6 R$ #{top3[1].revenues}
+                    h6 Resta em Estoque: #{top3[1].quantity_remaining}
                   .icon
-                    i.ion.ion-bag
+                    i 2º
                   a.small-box-footer(href='#')
                     | More info
-                    i.fas.fa-arrow-circle-right    
+                    i.fas.fa-arrow-circle-right
+              .col-lg-4.col-6
+                .small-box.bg-warning(style="width: 350px;")
+                  .inner
+                    h3 #{top3[2].description}
+                    h6 #{top3[2].code}
+                    h6 R$ #{top3[2].revenues}
+                    h6 Resta em Estoque: #{top3[2].quantity_remaining}
+                  .icon
+                    i 3º
+                  a.small-box-footer(href='#')
+                    | More info
+                    i.fas.fa-arrow-circle-right          
             .row
               .col-12
-                .card(style='width: 700px;')
+                .card(style='width: 500px;')
                   .card-header
                     h3.card-title Lista de Produtos Cadastrados
                   // /.card-header 

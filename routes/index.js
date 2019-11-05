@@ -30,19 +30,16 @@ router.get('/404', function(req, res, next) {
 });
 
 router.get('/purchases', async function(req, res, next) {
-  var urlProtheus = 'http://localhost:1243/rest/teste/purchases';
+  var urlProtheusPurchases = 'http://localhost:1243/rest/teste/purchases';
   var basicAuth = 'Basic YWRtaW46IA==';
   var Jsondata;
   let purchases = [];
   try {
       const response = 
-      await axios.get( urlProtheus,
+      await axios.get( urlProtheusPurchases,
         {headers: {'Authorization': basicAuth}}
       );
-      console.log(response);
       Jsondata = response.data;
-      console.log(Jsondata);
-      console.log(response.status);
     if (response.status == '200'){
       purchases = Jsondata.purchases
     }
@@ -54,33 +51,39 @@ router.get('/purchases', async function(req, res, next) {
 
 router.get('/products', async function(req, res, next) {
 
-  var urlProtheus = 'http://localhost:1243/rest/teste/products';
+  var urlProtheusProducts = 'http://localhost:1243/rest/teste/products';
+  var urlProtheusTop3 = 'http://localhost:1243/rest/teste/top3';
   var basicAuth = 'Basic YWRtaW46IA==';
   var Jsondata;
   let products = [];
-  var i;
+  let top3 = [];
   try {
       const response = 
-      await axios.get( urlProtheus,
+      await axios.get( urlProtheusProducts,
         {headers: {'Authorization': basicAuth}}
       );
-      console.log(response);
       Jsondata = response.data;
-      console.log(Jsondata);
-      console.log(response.status);
     if (response.status == '200'){
       products = Jsondata.products
-
-      /*for(i = 0; i< products.length; i++){
-        if(products[i].address_control == 'N'){
-          products[i].address_control = 'aaaaa'
-        }
-      }*/
     }
   } catch (error) {
     console.log('Erro');
   }
-  res.render('products', { title: 'Express', products: products });
+
+  try {
+    const response = 
+    await axios.get( urlProtheusTop3,
+      {headers: {'Authorization': basicAuth}}
+    );
+    Jsondata = response.data;
+  if (response.status == '200'){
+    top3 = Jsondata.products
+    console.log(top3);
+  }
+} catch (error) {
+  console.log('Erro');
+}
+  res.render('products', { title: 'Express', products: products, top3: top3 });
 });
 
 
