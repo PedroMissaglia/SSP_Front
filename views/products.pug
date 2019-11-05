@@ -61,14 +61,14 @@ block content
             .row
               each objeto in top3
                 .col-lg-4.col-6
-                  .small-box.bg-success(style="width: 350px;")
+                  .small-box.bg-info(style="width: 350px;")
                     .inner
                       h3 #{objeto.description}
                       h6 #{objeto.code}
                       h6 R$ #{objeto.revenues}
                       h6 Resta em Estoque: #{objeto.quantity_remaining}
                     .icon
-                      i 1º
+                      i #{objeto.position}º
                     a.small-box-footer(href='#')
                       | More info
                       i.fas.fa-arrow-circle-right          
