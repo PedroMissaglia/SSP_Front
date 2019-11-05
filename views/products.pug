@@ -60,32 +60,24 @@ block content
           .container-fluid                     
             .row
               .col-12
-                .card
+                .card(style='width: 700px;')
                   .card-header
                     h3.card-title Lista de Produtos Cadastrados
-                    .card-tools
-                      .input-group.input-group-sm(style='width: 150px;')
-                        input.form-control.float-right(type='text', name='table_search', placeholder='Search')
-                        .input-group-append
-                          button.btn.btn-default(type='submit')
-                            i.fas.fa-search
                   // /.card-header 
-                  .card-body.table-responsive.p-0(style='height: 300px;')
+                  .card-body.table-responsive.p-0(style='height: 300px')
                     table.table.table-head-fixed
                       thead
                         tr
                           th Código
                           th Descrição
-                          th Custo
                           th Saldo                                                    
                           th Armazém
                       tbody(onclick='modalopen()')
                         each objeto in products
                           tr
                             th #{objeto.code}
+                              span.badge.badge-info.float-right R$ #{objeto.value}
                             th #{objeto.description}
-                            th R$ #{objeto.value} 
-                              span.badge.badge-warning.float-right $1800
                             th #{objeto.quantity}                                                        
                             th #{objeto.warehouse}                                                        
       footer.main-footer
