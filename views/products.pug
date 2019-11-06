@@ -81,16 +81,16 @@ block content
                     canvas#donutChart(style='height:413; min-height:400px')
               .col-md-6
                 .card(style='width: 528px;')
-                  .card-header
+                  .card-header.border-0
                     h3.card-title Produtos
                   // /.card-header 
                   .card-body.table-responsive.p-0
-                    table.table.table-head-fixed(style='height:413; min-height:400px')
+                    table.table.table-striped.table-valign-middle(style='height:413; min-height:400px')
                       thead
                         tr
-                          th.b Código
-                          th.b Saldo                                                    
-                          th.b Armazém
+                          th(style="font-weight: bold;") Código
+                          th(style="font-weight: bold;") Saldo                                                    
+                          th(style="font-weight: bold;") Armazém
                       tbody
                         each objeto in products
                           tr
