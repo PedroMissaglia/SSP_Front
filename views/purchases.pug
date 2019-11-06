@@ -83,6 +83,7 @@ block content
                         each objeto in purchases
                           tr
                             th #{objeto.code}
+                              span(class=`badge badge-${objeto.status} float-right`) #{objeto.analysis}
                             th R$ #{objeto.normal_price}
                             th R$ #{objeto.price}
                             th #{objeto.quantity}                                                        

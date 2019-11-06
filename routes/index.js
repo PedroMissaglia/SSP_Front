@@ -51,12 +51,15 @@ router.get('/purchases', async function(req, res, next) {
 
 router.get('/products', async function(req, res, next) {
 
-  var urlProtheusProducts = 'http://localhost:1243/rest/teste/products';
-  var urlProtheusTop3 = 'http://localhost:1243/rest/teste/top3';
+  var address = 'http://localhost:1243/rest/teste';
+  var urlProtheusProducts = address + '/products';
+  var urlProtheusTop3 = address + '/top3';
+  var urlProtheusLotValidity = address + '/lotValidity';
   var basicAuth = 'Basic YWRtaW46IA==';
   var Jsondata;
   let products = [];
   let top3 = [];
+  let lotValidity = [];
   try {
       const response = 
       await axios.get( urlProtheusProducts,
@@ -80,10 +83,24 @@ router.get('/products', async function(req, res, next) {
     top3 = Jsondata.products
     console.log(top3);
   }
-} catch (error) {
+  } catch (error) {
   console.log('Erro');
-}
-  res.render('products', { title: 'Express', products: products, top3: top3 });
+  }
+
+  try {
+    const response = 
+    await axios.get( urlProtheusLotValidity,
+      {headers: {'Authorization': basicAuth}}
+    );
+    Jsondata = response.data;
+  if (response.status == '200'){
+    lotValidity = Jsondata.products
+    console.log(lotValidity);
+  }
+  } catch (error) {
+  console.log('Erro');
+  }
+  res.render('products', { title: 'Express', products: products, top3: top3, lotValidity: lotValidity });
 });
 
 

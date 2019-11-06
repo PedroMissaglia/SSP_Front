@@ -38,12 +38,17 @@ block content
                 a.nav-link(href='home')
                   i.nav-icon.fas.fa-chart-line
                   p
-                    | Dashboard
+                    | Home
               li.nav-item.has-treeview.menu-open 
                 a.nav-link.active(href='#')
                   i.nav-icon.fas.fa-box-open
                   p
-                    | Estoque   
+                    | Estoque  
+              li.nav-item.has-treeview
+                a.nav-link(href='purchases')
+                  i.nav-icon.fas.fa-shopping-bag
+                  p
+                    | Compras         
         // /.sidebar-menu 
         // /.sidebar 
       // Content Wrapper. Contains page content 
@@ -61,7 +66,7 @@ block content
             .row
               each objeto in top3
                 .col-lg-4.col-6
-                  .small-box.bg-info(style="width: 350px;")
+                  .small-box.bg-info
                     .inner
                       h3 #{objeto.description}
                       h6 #{objeto.code}
@@ -71,18 +76,16 @@ block content
                       i #{objeto.position}º
                     a.small-box-footer(href='#')
                       | More info
-                      i.fas.fa-arrow-circle-right          
+                      i.fas.fa-arrow-circle-right   
             .row
-              .col-md-6            
-                .card.card-info(style='width: 528px;')
-                  .card-header
-                    h3.card-title Donut Chart
-                  .card-body
-                    canvas#donutChart(style='height:413; min-height:400px')
-              .col-md-6
-                .card(style='width: 528px;')
+              .col-lg-6
+                .card
                   .card-header.border-0
+                    .d-flex.justify-content-between
                     h3.card-title Produtos
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
                   // /.card-header 
                   .card-body.table-responsive.p-0
                     table.table.table-striped.table-valign-middle(style='height:413; min-height:400px')
@@ -95,11 +98,37 @@ block content
                         each objeto in products
                           tr
                             th #{objeto.code}
-                              span.badge.badge-info.float-right R$ #{objeto.value}
+                              span.badge.badge-success.float-right R$ #{objeto.value}
                               br
                               span #{objeto.description}
                             th #{objeto.quantity}                                                        
-                            th #{objeto.warehouse}                                              
+                            th #{objeto.warehouse}
+              .col-lg-6
+                .card
+                  .card-header.border-0
+                    .d-flex.justify-content-between                 
+                    h3.card-title Lotes Expirando
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                  .card-body.table-responsive.p-0
+                    table.table.table-striped.table-valign-middle(style='height:413; min-height:400px')
+                      thead
+                        tr
+                          th(style="font-weight: bold;") Produto
+                          th(style="font-weight: bold;") Lote                                                    
+                          th(style="font-weight: bold;") Dias Restantes
+                      tbody
+                        each objeto in lotValidity
+                          tr
+                            th #{objeto.code}
+                              br
+                              span #{objeto.description}
+                            th #{objeto.lot}     
+                              span.badge.badge-warning.float-right Vencendo  
+                              br
+                              span Quantidade: #{objeto.quantity}                                                                               
+                            th.float-center #{objeto.remaining_days}                                              
       footer.main-footer
         .float-right.d-none.d-sm-block
           b Version 1.0
