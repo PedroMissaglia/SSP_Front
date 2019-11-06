@@ -1,34 +1,52 @@
-$(function () {
-  //-------------
-  //- DONUT CHART -
-  //-------------
-  // Get context with jQuery - using jQuery's .get() method.
-  var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
-  var donutData        = {
-    labels: [
-        'Chrome', 
-        'IE',
-        'FireFox', 
-        'Safari', 
-        'Opera', 
-        'Navigator', 
-    ],
-    datasets: [
-      {
-        data: [700,500,400,600,300,100],
-        backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
-      }
-    ]
+$(async function () {
+  
+  var address = 'http://localhost:1243/rest/teste';
+  var urlProtheusCompEst = address + '/getCompEstoque';
+  let compEstoque = [];
+  var basicAuth = 'Basic YWRtaW46IA==';
+  var Jsondata;
+  var mylabel = [];
+  var mydata = [];
+
+  try {
+    const response = 
+    await axios.get( urlProtheusCompEst,
+      {headers: {'Authorization': basicAuth}}
+    );
+    Jsondata = response.data;
+  if (response.status == '200'){
+    compEstoque = Jsondata.products
+
+    console.log(compEstoque);
+    
+    var mydatasets = [];
+
+    for(var j = 0; j < compEstoque.length; j++) {
+      mylabel.push(compEstoque[j].description)
+      mydata.push(compEstoque[j].quantity)
+    }
+
+    var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
+    var donutData        = {
+      labels: mylabel,
+      datasets: [
+        {
+          data: mydata,
+          backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
+        }
+      ]
+    }
+    var donutOptions     = {
+      maintainAspectRatio : false,
+      responsive : true,
+    }
+    var donutChart = new Chart(donutChartCanvas, {
+      type: 'doughnut',
+      data: donutData,
+      options: donutOptions      
+    })
   }
-  var donutOptions     = {
-    maintainAspectRatio : false,
-    responsive : true,
+  }catch (error) {
+  console.log('Erro');
   }
-  //Create pie or douhnut chart
-  // You can switch between pie and douhnut using the method below.
-  var donutChart = new Chart(donutChartCanvas, {
-    type: 'doughnut',
-    data: donutData,
-    options: donutOptions      
-  })
 })    

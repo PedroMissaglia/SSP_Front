@@ -76,7 +76,17 @@ block content
                       i #{objeto.position}º
                     a.small-box-footer(href='#')
                       | More info
-                      i.fas.fa-arrow-circle-right   
+                      i.fas.fa-arrow-circle-right
+            .row
+              .col-lg-6  
+                .card
+                    .card-header
+                      h3.card-title Composição do Estoque
+                      .card-tools
+                        button.btn.btn-tool(type='button', data-card-widget='collapse')
+                          i.fas.fa-minus
+                    .card-body
+                      canvas#donutChart(style='height:230px; min-height:230px')                         
             .row
               .col-lg-6
                 .card
@@ -128,7 +138,7 @@ block content
                               span.badge.badge-warning.float-right Vencendo  
                               br
                               span Quantidade: #{objeto.quantity}                                                                               
-                            th.float-center #{objeto.remaining_days}                                              
+                            th.float-center #{objeto.remaining_days}                                                          
       footer.main-footer
         .float-right.d-none.d-sm-block
           b Version 1.0
