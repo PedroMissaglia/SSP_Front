@@ -77,6 +77,9 @@ block content
                 .card(style='width: 500px;')
                   .card-header
                     h3.card-title Lista de Produtos Cadastrados
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
                   // /.card-header 
                   .card-body.table-responsive.p-0(style='height: 300px')
                     table.table.table-head-fixed
@@ -93,7 +96,16 @@ block content
                               span.badge.badge-info.float-right R$ #{objeto.value}
                             th #{objeto.description}
                             th #{objeto.quantity}                                                        
-                            th #{objeto.warehouse}                                                        
+                            th #{objeto.warehouse}
+                .card.card-info(style='width: 500px;')
+                  .card-header
+                    h3.card-title Donut Chart
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                  .card-body
+                    canvas#donutChart(style='height:230px; min-height:230px')
+                // /.card                                                   
       footer.main-footer
         .float-right.d-none.d-sm-block
           b Version 1.0
