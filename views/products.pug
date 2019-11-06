@@ -65,7 +65,7 @@ block content
                     .inner
                       h3 #{objeto.description}
                       h6 #{objeto.code}
-                      h6 R$ #{objeto.revenues}
+                      h6 Receita Bruta: R$ #{objeto.revenues}
                       h6 Resta em Estoque: #{objeto.quantity_remaining}
                     .icon
                       i #{objeto.position}º
@@ -82,22 +82,22 @@ block content
               .col-md-6
                 .card(style='width: 528px;')
                   .card-header
-                    h3.card-title Lista de Produtos Cadastrados
+                    h3.card-title Produtos
                   // /.card-header 
                   .card-body.table-responsive.p-0
                     table.table.table-head-fixed(style='height:413; min-height:400px')
                       thead
                         tr
-                          th Código
-                          th Descrição
-                          th Saldo                                                    
-                          th Armazém
+                          th.b Código
+                          th.b Saldo                                                    
+                          th.b Armazém
                       tbody
                         each objeto in products
                           tr
                             th #{objeto.code}
                               span.badge.badge-info.float-right R$ #{objeto.value}
-                            th #{objeto.description}
+                              br
+                              span #{objeto.description}
                             th #{objeto.quantity}                                                        
                             th #{objeto.warehouse}                                              
       footer.main-footer
