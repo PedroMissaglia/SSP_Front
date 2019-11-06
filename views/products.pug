@@ -74,31 +74,25 @@ block content
                       i.fas.fa-arrow-circle-right          
             .row
               .col-md-6            
-                .card.card-info(style='width: 550px;')
+                .card.card-info(style='width: 528px;')
                   .card-header
                     h3.card-title Donut Chart
-                    .card-tools
-                      button.btn.btn-tool(type='button', data-card-widget='collapse')
-                        i.fas.fa-minus
                   .card-body
-                    canvas#donutChart(style='height:300; min-height:300px')
+                    canvas#donutChart(style='height:413; min-height:400px')
               .col-md-6
-                .card(style='height:300; min-height:300px; width: 700px; min-width: 400px;')
+                .card(style='width: 528px;')
                   .card-header
                     h3.card-title Lista de Produtos Cadastrados
-                    .card-tools
-                      button.btn.btn-tool(type='button', data-card-widget='collapse')
-                        i.fas.fa-minus
                   // /.card-header 
                   .card-body.table-responsive.p-0
-                    table.table.table-head-fixed
+                    table.table.table-head-fixed(style='height:413; min-height:400px')
                       thead
                         tr
                           th Código
                           th Descrição
                           th Saldo                                                    
                           th Armazém
-                      tbody(onclick='modalopen()')
+                      tbody
                         each objeto in products
                           tr
                             th #{objeto.code}
