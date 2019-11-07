@@ -50,3 +50,21 @@ $(async function () {
   console.log('Erro');
   }
 })    
+
+$(function () {
+  $("#example1").DataTable({
+    "paging": true,
+    "lengthChange": false,
+    "autoWidth": false,
+    "info": false
+  });
+});
+
+$(function () {
+  $("#example2").DataTable({
+    "paging": true,
+    "lengthChange": false,
+    "autoWidth": false,
+    "info": false
+  });
+});
