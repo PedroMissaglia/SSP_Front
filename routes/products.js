@@ -8,13 +8,13 @@ router.get('/', async function(req, res, next) {
     var urlProtheusProducts = address + '/products';
     var urlProtheusTop3 = address + '/top3';
     var urlProtheusLotValidity = address + '/lotValidity';
-    var urlProtheusCompEst = address + '/getCompEstoque';
+    var urlProtheusSaldoSeg = address + '/saldoSeguranca';
     var basicAuth = 'Basic YWRtaW46IA==';
     var Jsondata;
     let products = [];
     let top3 = [];
     let lotValidity = [];
-    let compEstoque = [];
+    let saldoSeguranca = [];
 
     try {
         const response = 
@@ -57,7 +57,24 @@ router.get('/', async function(req, res, next) {
     console.log('Erro');
     }
 
-    res.render('products', { title: 'Express', products: products, top3: top3, lotValidity: lotValidity });
+    try {
+      const response = 
+      await axios.get( urlProtheusSaldoSeg,
+        {headers: {'Authorization': basicAuth}}
+      );
+      Jsondata = response.data;
+    if (response.status == '200'){
+      saldoSeguranca = Jsondata.products
+    }
+    } catch (error) {
+    console.log('Erro');
+    }
+
+    res.render('products', { title: 'Express',
+     products: products,
+     top3: top3,
+     lotValidity: lotValidity,
+     saldoSeguranca: saldoSeguranca });
   });
   
   
