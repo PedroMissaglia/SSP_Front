@@ -16,6 +16,7 @@ router.get('/', async function(req, res, next) {
     let lotValidity = [];
     let saldoSeguranca = [];
 
+    //Lista de Produtos
     try {
         const response = 
         await axios.get( urlProtheusProducts,
@@ -26,9 +27,10 @@ router.get('/', async function(req, res, next) {
         products = Jsondata.products
       }
     } catch (error) {
-      console.log('Erro');
+      console.log('Falha ao listar os produtos.');
     }
   
+    //Lista de Top 3
     try {
       const response = 
       await axios.get( urlProtheusTop3,
@@ -40,9 +42,10 @@ router.get('/', async function(req, res, next) {
       console.log(top3);
     }
     } catch (error) {
-    console.log('Erro');
+    console.log('Falha ao listar os top 3 produtos.');
     }
   
+    //Lista de Produtos com data de validade expirando
     try {
       const response = 
       await axios.get( urlProtheusLotValidity,
@@ -54,9 +57,10 @@ router.get('/', async function(req, res, next) {
       console.log(lotValidity);
     }
     } catch (error) {
-    console.log('Erro');
+    console.log('Falha ao listar os produtos com data de validade expirando.');
     }
 
+    //Produtos com Saldo em estado de segurança
     try {
       const response = 
       await axios.get( urlProtheusSaldoSeg,
@@ -67,7 +71,7 @@ router.get('/', async function(req, res, next) {
       saldoSeguranca = Jsondata.products
     }
     } catch (error) {
-    console.log('Erro');
+    console.log('Falha ao listar os produtos com saldo em estado de segurança.');
     }
 
     res.render('products', { title: 'Express',

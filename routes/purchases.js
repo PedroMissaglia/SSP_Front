@@ -17,7 +17,7 @@ router.get('/', async function(req, res, next) {
         purchases = Jsondata.purchases
       }
     } catch (error) {
-      console.log('Erro');
+      console.log('Falha ao listar os pedidos de compras.');
     }
     res.render('purchases', { title: 'Express', purchases: purchases });
   });
