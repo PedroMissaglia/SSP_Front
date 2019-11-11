@@ -22,7 +22,7 @@ router.get('/', async function(req, res, next) {
         purchases = Jsondata.purchases
       }
     } catch (error) {
-      console.log('Erro');
+      console.log('Falha ao listar os pedidos de compras.');
     }
 
     try {
