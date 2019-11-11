@@ -3,10 +3,15 @@ var router = express.Router();
 var axios = require('axios');
 
 router.get('/', async function(req, res, next) {
-    var urlProtheusPurchases = 'http://localhost:1243/rest/teste/purchases';
+    
+    var address = 'http://localhost:1243/rest/teste';
+    var urlProtheusPurchases = address + '/purchases';
+    var urlProtheusSaldoSeg = address + '/saldoSeguranca';
     var basicAuth = 'Basic YWRtaW46IA==';
     var Jsondata;
     let purchases = [];
+    let saldoSeguranca = [];
+
     try {
         const response = 
         await axios.get( urlProtheusPurchases,
@@ -19,7 +24,23 @@ router.get('/', async function(req, res, next) {
     } catch (error) {
       console.log('Erro');
     }
-    res.render('purchases', { title: 'Express', purchases: purchases });
+
+    try {
+      const response = 
+      await axios.get( urlProtheusSaldoSeg,
+        {headers: {'Authorization': basicAuth}}
+      );
+      Jsondata = response.data;
+    if (response.status == '200'){
+      saldoSeguranca = Jsondata.products
+    }
+    } catch (error) {
+    console.log('Erro');
+    }
+
+    res.render('purchases', { title: 'Express',
+     purchases: purchases,
+    saldoSeguranca: saldoSeguranca });
   });
   
   

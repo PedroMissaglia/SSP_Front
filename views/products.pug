@@ -14,7 +14,10 @@ block content
           li.nav-item.d-none.d-sm-inline-block
             a.nav-link(href='home') Home
           li.nav-item.d-none.d-sm-inline-block
-            a.nav-link(href='profile') Contact 
+            a.nav-link(href='profile') Contact
+        ul.navbar-nav.ml-auto
+          li.nav-item
+            a.nav-link.fas.fa-sign-out-alt(href='/')  
       // Main Sidebar Container 
       aside.main-sidebar.sidebar-light-primary.elevation-4
         // Brand Logo 
@@ -135,7 +138,7 @@ block content
                 .card
                   .card-header.border-0
                     .d-flex.justify-content-between                 
-                    h3.card-title Lotes Expirando
+                    h3.card-title Data de Validade do Lote
                     .card-tools
                       button.btn.btn-tool(type='button', data-card-widget='collapse')
                         i.fas.fa-minus
@@ -153,7 +156,7 @@ block content
                               br
                               span #{objeto.description}
                             th #{objeto.lot}     
-                              span.badge.badge-warning.float-right Vencendo  
+                              span(class=`badge badge-${objeto.status_color}` style="float-right") #{objeto.status}  
                               br
                               span Quantidade: #{objeto.quantity}                                                                               
                             th.float-center #{objeto.remaining_days}                                                        

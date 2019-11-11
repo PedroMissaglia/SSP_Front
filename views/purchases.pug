@@ -14,7 +14,10 @@ block content
           li.nav-item.d-none.d-sm-inline-block
             a.nav-link(href='home') Home
           li.nav-item.d-none.d-sm-inline-block
-            a.nav-link(href='profile') Contact 
+            a.nav-link(href='profile') Contact
+        ul.navbar-nav.ml-auto
+          li.nav-item
+            a.nav-link.fas.fa-sign-out-alt(href='/')   
       // Main Sidebar Container 
       aside.main-sidebar.sidebar-light-primary.elevation-4
         // Brand Logo 
@@ -67,18 +70,17 @@ block content
               .col-12
                 .card
                   .card-header
-                    h3.card-title Pedidos de Compras
+                    h3.card-title Compras realizadas
                   // /.card-header 
                   .card-body.table-responsive.p-0
                     table.table.table-head-fixed
                       thead.text-center
                         tr
-                          th Código
-                          th Análise
-                          th Preço do Pedido
-                          th Quantidade                                                    
-                          th Total
-                          th Data do Pedido
+                          th(style="font-weight: bold;") Código
+                          th(style="font-weight: bold;") Análise
+                          th(style="font-weight: bold;") Preço Unitário
+                          th(style="font-weight: bold;") Quantidade                                                    
+                          th(style="font-weight: bold;") Data do Pedido
                       tbody.text-center
                         each objeto in purchases
                           tr
@@ -87,8 +89,36 @@ block content
                               span(class=`badge badge-${objeto.status}`) #{objeto.analysis}
                             th R$ #{objeto.price}
                             th #{objeto.quantity}                                                        
-                            th R$ #{objeto.total}   
-                            th #{objeto.date}                                              
+                            th #{objeto.date}
+              .col-md-6
+                .card
+                  .card-header
+                    h3.card-title Sugestões de Compras
+                  // /.card-header 
+                  .card-body.table-responsive.p-0
+                    table.table.table-head-fixed
+                      thead.text-center
+                        tr
+                          th(style="font-weight: bold;") Produto
+                          th(style="font-weight: bold;") Preço Sugerido
+                      tbody.text-center
+                        each objeto in saldoSeguranca
+                          tr
+                            th #{objeto.code}
+                              br
+                              span #{objeto.description}
+                            th R$ #{objeto.price}
+              .col-md-6
+                .card.card-danger
+                  .card-header
+                    h3.card-title Pie Chart
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
+                      button.btn.btn-tool(type='button', data-card-widget='remove')
+                        i.fas.fa-times
+                  .card-body
+                    canvas#pieChart(style='height:230px; min-height:230px')                                                                                                       
       footer.main-footer
         .float-right.d-none.d-sm-block
           b Version 1.0
