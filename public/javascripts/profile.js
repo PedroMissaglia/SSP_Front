@@ -112,3 +112,29 @@ async function nameUserProfile() {
 	}
 
 }
+
+async function loadUserProfile() {
+
+	var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)id\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	var data;
+	var data2;
+	try {
+		const response = await axios.post(url + '/Users/GetUsers/' + cookieValue);
+
+		if (response.status == '200') {
+
+			data = response.data.birthdate
+			data2 = data.replace(/(\d*)-(\d*)-(\d*).*/, '$1-$2-$3');
+			document.getElementById('1').setAttribute("placeholder", response.data.name);
+			document.getElementById('2').setAttribute("placeholder", response.data.cpf);
+			document.getElementById('3').setAttribute("value", data2);
+			document.getElementById('4').setAttribute("placeholder", response.data.email);
+		}
+
+	} catch (error) {
+
+		console.log('Deu erro');
+		console.log(error);
+	}
+
+}

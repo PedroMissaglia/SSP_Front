@@ -221,7 +221,7 @@ block content
                       li.nav-item
                         a.nav-link(href='#timeline', data-toggle='tab') Timeline
                       li.nav-item
-                        a.nav-link(href='#Editprofile', data-toggle='tab') Edit profile
+                        a.nav-link(href='#Editprofile', onclick="loadUserProfile()" data-toggle='tab') Edit profile
                   // /.card-header 
                   .card-body
                     .tab-content
@@ -417,7 +417,7 @@ block content
                                 span.input-group-text
                                   i.fas.fa-key
                             .col-sm-offset-2.col-sm-10
-                              button.btn.btn-primary(type='submit') Confirmar
+                              button.btn.btn-primary(type='submit') Alterar
                         p.mb-2
                           a.text-center(href='register' data-toggle='modal', data-target='#modal-default') Trocar minha senha
             .modal.fade#modal-default
