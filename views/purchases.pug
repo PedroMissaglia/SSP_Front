@@ -66,7 +66,6 @@ block content
           .container-fluid
             .row.mb-2
               .col-sm-6
-                h1 Compras
           // /.container-fluid 
         // Main content 
         section.content
@@ -76,6 +75,9 @@ block content
                 .card
                   .card-header
                     h3.card-title Compras realizadas
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
                   // /.card-header 
                   .card-body.table-responsive.p-0
                     table.table.table-head-fixed
@@ -99,7 +101,9 @@ block content
                 .card
                   .card-header
                     h3.card-title Sugestões de Compras
-                  // /.card-header 
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus
                   .card-body.table-responsive.p-0
                     table.table.table-head-fixed
                       thead.text-center
@@ -120,8 +124,6 @@ block content
                     .card-tools
                       button.btn.btn-tool(type='button', data-card-widget='collapse')
                         i.fas.fa-minus
-                      button.btn.btn-tool(type='button', data-card-widget='remove')
-                        i.fas.fa-times
                   .card-body
                     canvas#pieChart(style='height:230px; min-height:230px')                                                                                                       
       footer.main-footer

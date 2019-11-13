@@ -82,9 +82,6 @@ block content
                       h6 Resta em Estoque: #{objeto.quantity_remaining}
                     .icon
                       i #{objeto.position}º
-                    a.small-box-footer(href='#')
-                      | More info
-                      i.fas.fa-arrow-circle-right
             .row
               .col-lg-6  
                 .card
@@ -134,7 +131,6 @@ block content
                         each objeto in products
                           tr
                             th #{objeto.code}
-                              span.badge.badge-success.float-right R$ #{objeto.value}
                               br
                               span #{objeto.description}
                             th #{objeto.quantity}                                                        
@@ -152,7 +148,8 @@ block content
                       thead.text-center
                         tr
                           th(style="font-weight: bold;") Produto
-                          th(style="font-weight: bold;") Lote                                                    
+                          th(style="font-weight: bold;") Lote
+                          th(style="font-weight: bold;") Status
                           th(style="font-weight: bold;") Dias Restantes
                       tbody.text-center
                         each objeto in lotValidity
@@ -160,10 +157,11 @@ block content
                             th #{objeto.code}
                               br
                               span #{objeto.description}
-                            th #{objeto.lot}     
-                              span(class=`badge badge-${objeto.status_color}` style="float-right") #{objeto.status}  
+                            th #{objeto.lot}       
                               br
-                              span Quantidade: #{objeto.quantity}                                                                               
+                              span Quantidade: #{objeto.quantity}
+                            th
+                              span(class=`badge badge-${objeto.status_color}` style="float-right") #{objeto.status}                                                                                 
                             th.float-center #{objeto.remaining_days}                                                        
       footer.main-footer
         .float-right.d-none.d-sm-block
