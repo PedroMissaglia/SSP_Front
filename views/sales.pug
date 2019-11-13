@@ -47,16 +47,16 @@ block content
                   i.nav-icon.fas.fa-box-open
                   p
                     | Estoque
-              li.nav-item.has-treeview.menu-open 
-                a.nav-link.active(href='purchases')
+              li.nav-item.has-treeview
+                a.nav-link(href='purchases')
                   i.nav-icon.fas.fa-shopping-bag
                   p
                     | Compras
-              li.nav-item.has-treeview
-                a.nav-link(href='sales')
+              li.nav-item.has-treeview.menu-open 
+                a.nav-link.active(href='sales')
                   i.nav-icon.fas.fa-cash-register
                   p
-                    | Vendas               
+                    | Vendas                     
         // /.sidebar-menu 
         // /.sidebar 
       // Content Wrapper. Contains page content 
@@ -66,7 +66,7 @@ block content
           .container-fluid
             .row.mb-2
               .col-sm-6
-                h1 Compras
+                h1 Vendas
           // /.container-fluid 
         // Main content 
         section.content
@@ -75,55 +75,28 @@ block content
               .col-12
                 .card
                   .card-header
-                    h3.card-title Compras realizadas
-                  // /.card-header 
+                    h3.card-title Análise das Vendas
+                    .card-tools
+                      button.btn.btn-tool(type='button', data-card-widget='collapse')
+                        i.fas.fa-minus 
                   .card-body.table-responsive.p-0
                     table.table.table-head-fixed
                       thead.text-center
                         tr
                           th(style="font-weight: bold;") Código
-                          th(style="font-weight: bold;") Análise
-                          th(style="font-weight: bold;") Preço Unitário
-                          th(style="font-weight: bold;") Quantidade                                                    
-                          th(style="font-weight: bold;") Data do Pedido
-                      tbody.text-center
-                        each objeto in purchases
-                          tr
-                            th #{objeto.code}
-                            th
-                              span(class=`badge badge-${objeto.status}`) #{objeto.analysis}
-                            th R$ #{objeto.price}
-                            th #{objeto.quantity}                                                        
-                            th #{objeto.date}
-              .col-md-6
-                .card
-                  .card-header
-                    h3.card-title Sugestões de Compras
-                  // /.card-header 
-                  .card-body.table-responsive.p-0
-                    table.table.table-head-fixed
-                      thead.text-center
-                        tr
                           th(style="font-weight: bold;") Produto
-                          th(style="font-weight: bold;") Preço Sugerido
+                          th(style="font-weight: bold;") Análise
+                          th(style="font-weight: bold;") Valor
                       tbody.text-center
-                        each objeto in saldoSeguranca
+                        each objeto in lucroVenda
                           tr
+                            th #{objeto.number}
                             th #{objeto.code}
                               br
                               span #{objeto.description}
-                            th R$ #{objeto.price}
-              .col-md-6
-                .card.card-danger
-                  .card-header
-                    h3.card-title Pie Chart
-                    .card-tools
-                      button.btn.btn-tool(type='button', data-card-widget='collapse')
-                        i.fas.fa-minus
-                      button.btn.btn-tool(type='button', data-card-widget='remove')
-                        i.fas.fa-times
-                  .card-body
-                    canvas#pieChart(style='height:230px; min-height:230px')                                                                                                       
+                            th
+                              span(class=`badge badge-${objeto.profit_status}`) #{objeto.profit_message} 
+                            th R$ #{objeto.profit}                                                                                                  
       footer.main-footer
         .float-right.d-none.d-sm-block
           b Version 1.0
