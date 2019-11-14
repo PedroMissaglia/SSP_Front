@@ -72,16 +72,14 @@ block content
           .container-fluid                     
             .row
               .col-md-6
-                h3 Clientes mais rentáveis
                 each objeto in clientesValor 
-                  .info-box.mb-3.bg-info
-                    span.info-box-icon
-                      i.fas.fa-user
-                    .info-box-content
-                      span.info-box-text Código: #{objeto.code}
-                        span.info-box-text Nome: #{objeto.name}
-                      span.info-box-text Valor: R$ #{objeto.amount}
-                                .card.card-success
+                    .info-box.mb-3.bg-info
+                      span.info-box-icon
+                        i.fas.fa-user
+                      .info-box-content
+                        span.info-box-text Código: #{objeto.code}
+                          span.info-box-text Nome: #{objeto.name}
+                        span.info-box-text Valor: R$ #{objeto.amount}
               .col-md-6
                 .card
                   .card-header
