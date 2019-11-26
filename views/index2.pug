@@ -1,8 +1,7 @@
-
 extends layout
 
 block content
-  body.hold-transition.sidebar-mini.layout-fixed
+  body.hold-transition.sidebar-mini
     .wrapper
       // Navbar 
       nav.main-header.navbar.navbar-expand.navbar-primary.navbar-dark.border-0
@@ -12,13 +11,12 @@ block content
             a.nav-link(data-widget='pushmenu', href='#')
               i.fas.fa-bars
           li.nav-item.d-none.d-sm-inline-block
-            a.nav-link(href='home') Home
+            a.nav-link(href='#') Home
           li.nav-item.d-none.d-sm-inline-block
-            a.nav-link(href='profile') Contact
+            a.nav-link(href='profile') Perfil
         ul.navbar-nav.ml-auto
           li.nav-item
             a.nav-link.fas.fa-sign-out-alt(href='/')  
-      // Main Sidebar Container 
       aside.main-sidebar.sidebar-light-primary.elevation-4
         // Brand Logo 
         a.brand-link.navbar-primary(href='home')
@@ -35,8 +33,6 @@ block content
           // Sidebar Menu 
           nav.mt-2
             ul.nav.nav-pills.nav-sidebar.flex-column(data-widget='treeview', role='menu', data-accordion='false')
-              //                 Add icons to the links using the .nav-icon class
-                               with font-awesome or any other icon font library 
               li.nav-item.has-treeview
                 a.nav-link(href='home')
                   i.nav-icon.fas.fa-chart-line
@@ -72,7 +68,7 @@ block content
             // Small boxes (Stat box) 
             .row
               // Left col 
-              section.col-lg-6.connectedSortable
+              section.col-lg-12.connectedSortable
                 // Custom tabs (Charts with tabs)
                 .card.card-warning
                   .card-header
@@ -185,27 +181,3 @@ block content
           a Vision
       // Control Sidebar 
       aside.control-sidebar.control-sidebar-dark
-        // Control sidebar content goes here 
-      // /.control-sidebar 
-    // ./wrapper 
-    script(src='stylesheets/admin-lte/plugins/jquery-ui/jquery-ui.min.js')
-    // Resolve conflict in jQuery UI tooltip with Bootstrap tooltip 
-    script $.widget.bridge('uibutton', $.ui.button)
-    // Bootstrap 4 
-    script(src='stylesheets/admin-lte/plugins/jqvmap/jquery.vmap.min.js')
-    script(src='stylesheets/admin-lte/plugins/jqvmap/maps/jquery.vmap.world.js')
-    // jQuery Knob Chart 
-    script(src='stylesheets/admin-lte/plugins/jquery-knob/jquery.knob.min.js')
-    // AdminLTE App 
-    script(src='stylesheets/admin-lte/dist//js/adminlte.js')
-    // AdminLTE dashboard demo (This is only for demo purposes) 
-    script(src='stylesheets/admin-lte/dist//js/pages/dashboard.js')
-    // AdminLTE for demo purposes 
-    script(src='stylesheets/admin-lte/dist//js/demo.js')
-    // Tell the browser to be responsive to screen width 
-    // Tempusdominus Bbootstrap 4 
-    link(rel='stylesheet', href='stylesheets/admin-lte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')
-    // iCheck 
-    link(rel='stylesheet', href='stylesheets/admin-lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css')
-    // JQVMap 
-    link(rel='stylesheet', href='stylesheets/admin-lte/dist//css/adminlte.min.css')
