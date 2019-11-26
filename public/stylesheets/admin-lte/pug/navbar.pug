@@ -377,6 +377,14 @@ html
                       i.far.fa-circle.nav-icon
                       p Register
                   li.nav-item
+                    a.nav-link(href='..examples/forgot-password.html')
+                      i.far.fa-circle.nav-icon
+                      p Forgot Password
+                  li.nav-item
+                    a.nav-link(href='..examples/recover-password.html')
+                      i.far.fa-circle.nav-icon
+                      p Recover Password
+                  li.nav-item
                     a.nav-link(href='../examples/lockscreen.html')
                       i.far.fa-circle.nav-icon
                       p Lockscreen
@@ -397,6 +405,10 @@ html
                       i.far.fa-circle.nav-icon
                       p Error 500
                   li.nav-item
+                    a.nav-link(href='../examples/pace.html')
+                      i.far.fa-circle.nav-icon
+                      p Pace
+                  li.nav-item
                     a.nav-link(href='../examples/blank.html')
                       i.far.fa-circle.nav-icon
                       p Blank Page
@@ -409,6 +421,49 @@ html
                 a.nav-link(href='https://adminlte.io/docs/3.0')
                   i.nav-icon.fas.fa-file
                   p Documentation
+              li.nav-header MULTI LEVEL EXAMPLE
+              li.nav-item
+                a.nav-link(href='#')
+                  i.fas.fa-circle.nav-icon
+                  p Level 1
+              li.nav-item.has-treeview
+                a.nav-link(href='#')
+                  i.nav-icon.fas.fa-circle
+                  p
+                    | Level 1
+                    i.right.fas.fa-angle-left
+                ul.nav.nav-treeview
+                  li.nav-item
+                    a.nav-link(href='#')
+                      i.far.fa-circle.nav-icon
+                      p Level 2
+                  li.nav-item.has-treeview
+                    a.nav-link(href='#')
+                      i.far.fa-circle.nav-icon
+                      p
+                        | Level 2
+                        i.right.fas.fa-angle-left
+                    ul.nav.nav-treeview
+                      li.nav-item
+                        a.nav-link(href='#')
+                          i.far.fa-dot-circle.nav-icon
+                          p Level 3
+                      li.nav-item
+                        a.nav-link(href='#')
+                          i.far.fa-dot-circle.nav-icon
+                          p Level 3
+                      li.nav-item
+                        a.nav-link(href='#')
+                          i.far.fa-dot-circle.nav-icon
+                          p Level 3
+                  li.nav-item
+                    a.nav-link(href='#')
+                      i.far.fa-circle.nav-icon
+                      p Level 2
+              li.nav-item
+                a.nav-link(href='#')
+                  i.fas.fa-circle.nav-icon
+                  p Level 1
               li.nav-header LABELS
               li.nav-item
                 a.nav-link(href='#')
@@ -451,67 +506,207 @@ html
                       i.fas.fa-edit
                       | Navbar Examples
                   .card-body
-                    h4 Default Navbar
-                    nav.navbar.navbar-expand.navbar-white.navbar-light
-                      // Left navbar links 
-                      ul.navbar-nav
-                        li.nav-item
-                          a.nav-link(data-widget='pushmenu', href='#')
-                            i.fas.fa-bars
-                        li.nav-item.d-none.d-sm-inline-block
-                          a.nav-link(href='../../index3.html') Home
-                        li.nav-item.d-none.d-sm-inline-block
-                          a.nav-link(href='#') Contact
-                      // SEARCH FORM 
-                      form.form-inline.ml-3
-                        .input-group.input-group-sm
-                          input.form-control.form-control-navbar(type='search', placeholder='Search', aria-label='Search')
-                          .input-group-append
-                            button.btn.btn-navbar(type='submit')
-                              i.fas.fa-search
-                    h4.mt-4
-                      | Primary Navbar
-                      small (navbar-primary navbar-dark)
-                    nav.navbar.navbar-expand.navbar-primary.navbar-dark
-                      // Left navbar links 
-                      ul.navbar-nav
-                        li.nav-item
-                          a.nav-link(data-widget='pushmenu', href='#')
-                            i.fas.fa-bars
-                        li.nav-item.d-none.d-sm-inline-block
-                          a.nav-link(href='../../index3.html') Home
-                        li.nav-item.d-none.d-sm-inline-block
-                          a.nav-link(href='#') Contact
-                      // SEARCH FORM 
-                      form.form-inline.ml-3
-                        .input-group.input-group-sm
-                          input.form-control.form-control-navbar(type='search', placeholder='Search', aria-label='Search')
-                          .input-group-append
-                            button.btn.btn-navbar(type='submit')
-                              i.fas.fa-search
-                    h4.mt-4
-                      | Orange Navbar
-                      small (navbar-orange navbar-light)
-                    nav.navbar.navbar-expand.navbar-orange.navbar-light
-                      // Left navbar links 
-                      ul.navbar-nav
-                        li.nav-item
-                          a.nav-link(data-widget='pushmenu', href='#')
-                            i.fas.fa-bars
-                        li.nav-item.d-none.d-sm-inline-block
-                          a.nav-link(href='../../index3.html') Home
-                        li.nav-item.d-none.d-sm-inline-block
-                          a.nav-link(href='#') Contact
-                      // SEARCH FORM 
-                      form.form-inline.ml-3
-                        .input-group.input-group-sm
-                          input.form-control.form-control-navbar(type='search', placeholder='Search', aria-label='Search')
-                          .input-group-append
-                            button.btn.btn-navbar(type='submit')
-                              i.fas.fa-search
+                    .row
+                      .col-12.col-md-6
+                        h4
+                          | Default Navbar
+                          small (navbar-light)
+                        nav.navbar.navbar-expand.navbar-light
+                          // Left navbar links 
+                          ul.navbar-nav
+                            li.nav-item
+                              a.nav-link(data-widget='pushmenu', href='#')
+                                i.fas.fa-bars
+                            li.nav-item.d-none.d-sm-inline-block
+                              a.nav-link(href='#') Home
+                            li.nav-item.d-none.d-sm-inline-block
+                              a.nav-link(href='#') Contact
+                          // SEARCH FORM 
+                          form.form-inline.ml-3
+                            .input-group.input-group-sm
+                              input.form-control.form-control-navbar(type='search', placeholder='Search', aria-label='Search')
+                              .input-group-append
+                                button.btn.btn-navbar(type='submit')
+                                  i.fas.fa-search
+                      .col-12.col-md-6
+                        h4
+                          | Default Navbar
+                          small (navbar-white navbar-light)
+                        nav.navbar.navbar-expand.navbar-white.navbar-light
+                          // Left navbar links 
+                          ul.navbar-nav
+                            li.nav-item
+                              a.nav-link(data-widget='pushmenu', href='#')
+                                i.fas.fa-bars
+                            li.nav-item.d-none.d-sm-inline-block
+                              a.nav-link(href='#') Home
+                            li.nav-item.d-none.d-sm-inline-block
+                              a.nav-link(href='#') Contact
+                          // SEARCH FORM 
+                          form.form-inline.ml-3
+                            .input-group.input-group-sm
+                              input.form-control.form-control-navbar(type='search', placeholder='Search', aria-label='Search')
+                              .input-group-append
+                                button.btn.btn-navbar(type='submit')
+                                  i.fas.fa-search
+                    .row
+                      .col-12.col-md-6
+                        h4.mt-4
+                          | Primary Navbar
+                          small
+                            b recommended
+                            | (navbar-primary navbar-dark)
+                        nav.navbar.navbar-expand.navbar-primary.navbar-dark
+                          // Left navbar links 
+                          ul.navbar-nav
+                            li.nav-item
+                              a.nav-link(data-widget='pushmenu', href='#')
+                                i.fas.fa-bars
+                            li.nav-item.d-none.d-sm-inline-block
+                              a.nav-link(href='#') Home
+                            li.nav-item.d-none.d-sm-inline-block
+                              a.nav-link(href='#') Contact
+                          // SEARCH FORM 
+                          form.form-inline.ml-3
+                            .input-group.input-group-sm
+                              input.form-control.form-control-navbar(type='search', placeholder='Search', aria-label='Search')
+                              .input-group-append
+                                button.btn.btn-navbar(type='submit')
+                                  i.fas.fa-search
+                      .col-12.col-md-6
+                        h4.mt-4
+                          | Primary Navbar
+                          small (navbar-primary navbar-light)
+                        nav.navbar.navbar-expand.navbar-primary.navbar-light
+                          // Left navbar links 
+                          ul.navbar-nav
+                            li.nav-item
+                              a.nav-link(data-widget='pushmenu', href='#')
+                                i.fas.fa-bars
+                            li.nav-item.d-none.d-sm-inline-block
+                              a.nav-link(href='#') Home
+                            li.nav-item.d-none.d-sm-inline-block
+                              a.nav-link(href='#') Contact
+                          // SEARCH FORM 
+                          form.form-inline.ml-3
+                            .input-group.input-group-sm
+                              input.form-control.form-control-navbar(type='search', placeholder='Search', aria-label='Search')
+                              .input-group-append
+                                button.btn.btn-navbar(type='submit')
+                                  i.fas.fa-search
+                    .row
+                      .col-12.col-md-6
+                        h4.mt-4
+                          | Orange Navbar
+                          small
+                            b recommended
+                            | (navbar-orange navbar-light)
+                        nav.navbar.navbar-expand.navbar-orange.navbar-light
+                          // Left navbar links 
+                          ul.navbar-nav
+                            li.nav-item
+                              a.nav-link(data-widget='pushmenu', href='#')
+                                i.fas.fa-bars
+                            li.nav-item.d-none.d-sm-inline-block
+                              a.nav-link(href='#') Home
+                            li.nav-item.d-none.d-sm-inline-block
+                              a.nav-link(href='#') Contact
+                          // SEARCH FORM 
+                          form.form-inline.ml-3
+                            .input-group.input-group-sm
+                              input.form-control.form-control-navbar(type='search', placeholder='Search', aria-label='Search')
+                              .input-group-append
+                                button.btn.btn-navbar(type='submit')
+                                  i.fas.fa-search
+                      .col-12.col-md-6
+                        h4.mt-4
+                          | Orange Navbar
+                          small (navbar-orange navbar-dark)
+                        nav.navbar.navbar-expand.navbar-orange.navbar-dark
+                          // Left navbar links 
+                          ul.navbar-nav
+                            li.nav-item
+                              a.nav-link(data-widget='pushmenu', href='#')
+                                i.fas.fa-bars
+                            li.nav-item.d-none.d-sm-inline-block
+                              a.nav-link(href='#') Home
+                            li.nav-item.d-none.d-sm-inline-block
+                              a.nav-link(href='#') Contact
+                          // SEARCH FORM 
+                          form.form-inline.ml-3
+                            .input-group.input-group-sm
+                              input.form-control.form-control-navbar(type='search', placeholder='Search', aria-label='Search')
+                              .input-group-append
+                                button.btn.btn-navbar(type='submit')
+                                  i.fas.fa-search
                   // /.card 
               // /.col 
             // ./row 
+            .row
+              .col-12
+                h4
+                  | Nav Tabs inside Card Header
+                  small card-tabs / card-outline-tabs
+            // ./row 
+            .row
+              .col-12.col-sm-6.col-lg-4
+                .card.card-primary.card-tabs
+                  .card-header.p-0.pt-1
+                    ul.nav.nav-tabs#custom-tabs-one-tab(role='tablist')
+                      li.nav-item
+                        a.nav-link.active#custom-tabs-one-home-tab(data-toggle='pill', href='#custom-tabs-one-home', role='tab', aria-controls='custom-tabs-one-home', aria-selected='true') Home
+                      li.nav-item
+                        a.nav-link#custom-tabs-one-profile-tab(data-toggle='pill', href='#custom-tabs-one-profile', role='tab', aria-controls='custom-tabs-one-profile', aria-selected='false') Profile
+                      li.nav-item
+                        a.nav-link#custom-tabs-one-messages-tab(data-toggle='pill', href='#custom-tabs-one-messages', role='tab', aria-controls='custom-tabs-one-messages', aria-selected='false') Messages
+                      li.nav-item
+                        a.nav-link#custom-tabs-one-settings-tab(data-toggle='pill', href='#custom-tabs-one-settings', role='tab', aria-controls='custom-tabs-one-settings', aria-selected='false') Settings
+                  .card-body
+                    .tab-content#custom-tabs-one-tabContent
+                      .tab-pane.fade.show.active#custom-tabs-one-home(role='tabpanel', aria-labelledby='custom-tabs-one-home-tab') Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non magna feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper ornare ligula. Proin pellentesque tincidunt nisi, vitae ullamcorper felis aliquam id. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin id orci eu lectus blandit suscipit. Phasellus porta, ante et varius ornare, sem enim sollicitudin eros, at commodo leo est vitae lacus. Etiam ut porta sem. Proin porttitor porta nisl, id tempor risus rhoncus quis. In in quam a nibh cursus pulvinar non consequat neque. Mauris lacus elit, condimentum ac condimentum at, semper vitae lectus. Cras lacinia erat eget sapien porta consectetur.
+                      .tab-pane.fade#custom-tabs-one-profile(role='tabpanel', aria-labelledby='custom-tabs-one-profile-tab') Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, nisi a luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus. Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc euismod pellentesque diam.
+                      .tab-pane.fade#custom-tabs-one-messages(role='tabpanel', aria-labelledby='custom-tabs-one-messages-tab') Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris. Phasellus volutpat augue id mi placerat mollis. Vivamus faucibus eu massa eget condimentum. Fusce nec hendrerit sem, ac tristique nulla. Integer vestibulum orci odio. Cras nec augue ipsum. Suspendisse ut velit condimentum, mattis urna a, malesuada nunc. Curabitur eleifend facilisis velit finibus tristique. Nam vulputate, eros non luctus efficitur, ipsum odio volutpat massa, sit amet sollicitudin est libero sed ipsum. Nulla lacinia, ex vitae gravida fermentum, lectus ipsum gravida arcu, id fermentum metus arcu vel metus. Curabitur eget sem eu risus tincidunt eleifend ac ornare magna.
+                      .tab-pane.fade#custom-tabs-one-settings(role='tabpanel', aria-labelledby='custom-tabs-one-settings-tab') Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam. Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst. Praesent imperdiet accumsan ex sit amet facilisis.
+                  // /.card 
+              .col-12.col-sm-6.col-lg-4
+                .card.card-primary.card-outline.card-tabs
+                  .card-header.p-0.pt-1.border-bottom-0
+                    ul.nav.nav-tabs#custom-tabs-two-tab(role='tablist')
+                      li.nav-item
+                        a.nav-link.active#custom-tabs-two-home-tab(data-toggle='pill', href='#custom-tabs-two-home', role='tab', aria-controls='custom-tabs-two-home', aria-selected='true') Home
+                      li.nav-item
+                        a.nav-link#custom-tabs-two-profile-tab(data-toggle='pill', href='#custom-tabs-two-profile', role='tab', aria-controls='custom-tabs-two-profile', aria-selected='false') Profile
+                      li.nav-item
+                        a.nav-link#custom-tabs-two-messages-tab(data-toggle='pill', href='#custom-tabs-two-messages', role='tab', aria-controls='custom-tabs-two-messages', aria-selected='false') Messages
+                      li.nav-item
+                        a.nav-link#custom-tabs-two-settings-tab(data-toggle='pill', href='#custom-tabs-two-settings', role='tab', aria-controls='custom-tabs-two-settings', aria-selected='false') Settings
+                  .card-body
+                    .tab-content#custom-tabs-two-tabContent
+                      .tab-pane.fade.show.active#custom-tabs-two-home(role='tabpanel', aria-labelledby='custom-tabs-two-home-tab') Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non magna feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper ornare ligula. Proin pellentesque tincidunt nisi, vitae ullamcorper felis aliquam id. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin id orci eu lectus blandit suscipit. Phasellus porta, ante et varius ornare, sem enim sollicitudin eros, at commodo leo est vitae lacus. Etiam ut porta sem. Proin porttitor porta nisl, id tempor risus rhoncus quis. In in quam a nibh cursus pulvinar non consequat neque. Mauris lacus elit, condimentum ac condimentum at, semper vitae lectus. Cras lacinia erat eget sapien porta consectetur.
+                      .tab-pane.fade#custom-tabs-two-profile(role='tabpanel', aria-labelledby='custom-tabs-two-profile-tab') Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, nisi a luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus. Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc euismod pellentesque diam.
+                      .tab-pane.fade#custom-tabs-two-messages(role='tabpanel', aria-labelledby='custom-tabs-two-messages-tab') Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris. Phasellus volutpat augue id mi placerat mollis. Vivamus faucibus eu massa eget condimentum. Fusce nec hendrerit sem, ac tristique nulla. Integer vestibulum orci odio. Cras nec augue ipsum. Suspendisse ut velit condimentum, mattis urna a, malesuada nunc. Curabitur eleifend facilisis velit finibus tristique. Nam vulputate, eros non luctus efficitur, ipsum odio volutpat massa, sit amet sollicitudin est libero sed ipsum. Nulla lacinia, ex vitae gravida fermentum, lectus ipsum gravida arcu, id fermentum metus arcu vel metus. Curabitur eget sem eu risus tincidunt eleifend ac ornare magna.
+                      .tab-pane.fade#custom-tabs-two-settings(role='tabpanel', aria-labelledby='custom-tabs-two-settings-tab') Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam. Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst. Praesent imperdiet accumsan ex sit amet facilisis.
+                  // /.card 
+              .col-12.col-sm-6.col-lg-4
+                .card.card-primary.card-outline.card-outline-tabs
+                  .card-header.p-0.border-bottom-0
+                    ul.nav.nav-tabs#custom-tabs-three-tab(role='tablist')
+                      li.nav-item
+                        a.nav-link.active#custom-tabs-three-home-tab(data-toggle='pill', href='#custom-tabs-three-home', role='tab', aria-controls='custom-tabs-three-home', aria-selected='true') Home
+                      li.nav-item
+                        a.nav-link#custom-tabs-three-profile-tab(data-toggle='pill', href='#custom-tabs-three-profile', role='tab', aria-controls='custom-tabs-three-profile', aria-selected='false') Profile
+                      li.nav-item
+                        a.nav-link#custom-tabs-three-messages-tab(data-toggle='pill', href='#custom-tabs-three-messages', role='tab', aria-controls='custom-tabs-three-messages', aria-selected='false') Messages
+                      li.nav-item
+                        a.nav-link#custom-tabs-three-settings-tab(data-toggle='pill', href='#custom-tabs-three-settings', role='tab', aria-controls='custom-tabs-three-settings', aria-selected='false') Settings
+                  .card-body
+                    .tab-content#custom-tabs-three-tabContent
+                      .tab-pane.fade.show.active#custom-tabs-three-home(role='tabpanel', aria-labelledby='custom-tabs-three-home-tab') Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non magna feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper ornare ligula. Proin pellentesque tincidunt nisi, vitae ullamcorper felis aliquam id. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin id orci eu lectus blandit suscipit. Phasellus porta, ante et varius ornare, sem enim sollicitudin eros, at commodo leo est vitae lacus. Etiam ut porta sem. Proin porttitor porta nisl, id tempor risus rhoncus quis. In in quam a nibh cursus pulvinar non consequat neque. Mauris lacus elit, condimentum ac condimentum at, semper vitae lectus. Cras lacinia erat eget sapien porta consectetur.
+                      .tab-pane.fade#custom-tabs-three-profile(role='tabpanel', aria-labelledby='custom-tabs-three-profile-tab') Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, nisi a luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus. Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc euismod pellentesque diam.
+                      .tab-pane.fade#custom-tabs-three-messages(role='tabpanel', aria-labelledby='custom-tabs-three-messages-tab') Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris. Phasellus volutpat augue id mi placerat mollis. Vivamus faucibus eu massa eget condimentum. Fusce nec hendrerit sem, ac tristique nulla. Integer vestibulum orci odio. Cras nec augue ipsum. Suspendisse ut velit condimentum, mattis urna a, malesuada nunc. Curabitur eleifend facilisis velit finibus tristique. Nam vulputate, eros non luctus efficitur, ipsum odio volutpat massa, sit amet sollicitudin est libero sed ipsum. Nulla lacinia, ex vitae gravida fermentum, lectus ipsum gravida arcu, id fermentum metus arcu vel metus. Curabitur eget sem eu risus tincidunt eleifend ac ornare magna.
+                      .tab-pane.fade#custom-tabs-three-settings(role='tabpanel', aria-labelledby='custom-tabs-three-settings-tab') Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam. Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst. Praesent imperdiet accumsan ex sit amet facilisis.
+                  // /.card 
+            // /.row 
             .card.card-primary.card-outline
               .card-header
                 h3.card-title
@@ -537,17 +732,17 @@ html
                   small (nav-tabs-right)
                 .row
                   .col-7.col-sm-9
-                    .tab-content#vert-tabs-tabContent
-                      .tab-pane.fade.show.active#vert-tabs-home(role='tabpanel', aria-labelledby='vert-tabs-home-tab') Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non magna feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper ornare ligula. Proin pellentesque tincidunt nisi, vitae ullamcorper felis aliquam id. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin id orci eu lectus blandit suscipit. Phasellus porta, ante et varius ornare, sem enim sollicitudin eros, at commodo leo est vitae lacus. Etiam ut porta sem. Proin porttitor porta nisl, id tempor risus rhoncus quis. In in quam a nibh cursus pulvinar non consequat neque. Mauris lacus elit, condimentum ac condimentum at, semper vitae lectus. Cras lacinia erat eget sapien porta consectetur.
-                      .tab-pane.fade#vert-tabs-profile(role='tabpanel', aria-labelledby='vert-tabs-profile-tab') Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, nisi a luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus. Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc euismod pellentesque diam.
-                      .tab-pane.fade#vert-tabs-messages(role='tabpanel', aria-labelledby='vert-tabs-messages-tab') Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris. Phasellus volutpat augue id mi placerat mollis. Vivamus faucibus eu massa eget condimentum. Fusce nec hendrerit sem, ac tristique nulla. Integer vestibulum orci odio. Cras nec augue ipsum. Suspendisse ut velit condimentum, mattis urna a, malesuada nunc. Curabitur eleifend facilisis velit finibus tristique. Nam vulputate, eros non luctus efficitur, ipsum odio volutpat massa, sit amet sollicitudin est libero sed ipsum. Nulla lacinia, ex vitae gravida fermentum, lectus ipsum gravida arcu, id fermentum metus arcu vel metus. Curabitur eget sem eu risus tincidunt eleifend ac ornare magna.
-                      .tab-pane.fade#vert-tabs-settings(role='tabpanel', aria-labelledby='vert-tabs-settings-tab') Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam. Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst. Praesent imperdiet accumsan ex sit amet facilisis.
+                    .tab-content#vert-tabs-right-tabContent
+                      .tab-pane.fade.show.active#vert-tabs-right-home(role='tabpanel', aria-labelledby='vert-tabs-right-home-tab') Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non magna feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper ornare ligula. Proin pellentesque tincidunt nisi, vitae ullamcorper felis aliquam id. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin id orci eu lectus blandit suscipit. Phasellus porta, ante et varius ornare, sem enim sollicitudin eros, at commodo leo est vitae lacus. Etiam ut porta sem. Proin porttitor porta nisl, id tempor risus rhoncus quis. In in quam a nibh cursus pulvinar non consequat neque. Mauris lacus elit, condimentum ac condimentum at, semper vitae lectus. Cras lacinia erat eget sapien porta consectetur.
+                      .tab-pane.fade#vert-tabs-right-profile(role='tabpanel', aria-labelledby='vert-tabs-right-profile-tab') Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, nisi a luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus. Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc euismod pellentesque diam.
+                      .tab-pane.fade#vert-tabs-right-messages(role='tabpanel', aria-labelledby='vert-tabs-right-messages-tab') Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris. Phasellus volutpat augue id mi placerat mollis. Vivamus faucibus eu massa eget condimentum. Fusce nec hendrerit sem, ac tristique nulla. Integer vestibulum orci odio. Cras nec augue ipsum. Suspendisse ut velit condimentum, mattis urna a, malesuada nunc. Curabitur eleifend facilisis velit finibus tristique. Nam vulputate, eros non luctus efficitur, ipsum odio volutpat massa, sit amet sollicitudin est libero sed ipsum. Nulla lacinia, ex vitae gravida fermentum, lectus ipsum gravida arcu, id fermentum metus arcu vel metus. Curabitur eget sem eu risus tincidunt eleifend ac ornare magna.
+                      .tab-pane.fade#vert-tabs-right-settings(role='tabpanel', aria-labelledby='vert-tabs-right-settings-tab') Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam. Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst. Praesent imperdiet accumsan ex sit amet facilisis.
                   .col-5.col-sm-3
-                    .nav.flex-column.nav-tabs.nav-tabs-right.h-100#vert-tabs-tab(role='tablist', aria-orientation='vertical')
-                      a.nav-link.active#vert-tabs-home-tab(data-toggle='pill', href='#vert-tabs-home', role='tab', aria-controls='vert-tabs-home', aria-selected='true') Home
-                      a.nav-link#vert-tabs-profile-tab(data-toggle='pill', href='#vert-tabs-profile', role='tab', aria-controls='vert-tabs-profile', aria-selected='false') Profile
-                      a.nav-link#vert-tabs-messages-tab(data-toggle='pill', href='#vert-tabs-messages', role='tab', aria-controls='vert-tabs-messages', aria-selected='false') Messages
-                      a.nav-link#vert-tabs-settings-tab(data-toggle='pill', href='#vert-tabs-settings', role='tab', aria-controls='vert-tabs-settings', aria-selected='false') Settings
+                    .nav.flex-column.nav-tabs.nav-tabs-right.h-100#vert-tabs-right-tab(role='tablist', aria-orientation='vertical')
+                      a.nav-link.active#vert-tabs-right-home-tab(data-toggle='pill', href='#vert-tabs-right-home', role='tab', aria-controls='vert-tabs-right-home', aria-selected='true') Home
+                      a.nav-link#vert-tabs-right-profile-tab(data-toggle='pill', href='#vert-tabs-right-profile', role='tab', aria-controls='vert-tabs-right-profile', aria-selected='false') Profile
+                      a.nav-link#vert-tabs-right-messages-tab(data-toggle='pill', href='#vert-tabs-right-messages', role='tab', aria-controls='vert-tabs-right-messages', aria-selected='false') Messages
+                      a.nav-link#vert-tabs-right-settings-tab(data-toggle='pill', href='#vert-tabs-right-settings', role='tab', aria-controls='vert-tabs-right-settings', aria-selected='false') Settings
               // /.card 
             // /.card 
             .card.card-primary.card-outline
@@ -598,7 +793,7 @@ html
       footer.main-footer
         .float-right.d-none.d-sm-block
           b Version
-          | 3.0.0-rc.1
+          | 3.0.0
         strong
           | Copyright © 2014-2019
           a(href='http://adminlte.io') AdminLTE.io

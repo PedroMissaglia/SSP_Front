@@ -73,7 +73,7 @@ block content
                 .card.card-warning
                   .card-header
                     h3.card-title
-                      i.ion.ion-clipboard.mr-1
+                      i.fas.fa-tasks.mr-1
                       | Tarefas pendentes
                     .card-tools
                       ul.pagination.pagination-sm
@@ -84,8 +84,7 @@ block content
                       li
                         // drag handle 
                         span.handle
-                          i.fas.fa-ellipsis-v
-                          i.fas.fa-ellipsis-v
+                          i.fas.fa-map-pin
                         // checkbox 
                         .icheck-primary.d-inline.ml-2
                           input#todoCheck1(type='checkbox', name='todo1')
@@ -102,8 +101,7 @@ block content
                           i.fas.fa-trash
                       li
                         span.handle
-                          i.fas.fa-ellipsis-v
-                          i.fas.fa-ellipsis-v
+                          i.fas.fa-map-pin
                         .icheck-primary.d-inline.ml-2
                           input#todoCheck2(type='checkbox', name='todo2', checked='')
                           label(for='todoCheck2')
@@ -116,8 +114,7 @@ block content
                           i.fas.fa-trash
                       li
                         span.handle
-                          i.fas.fa-ellipsis-v
-                          i.fas.fa-ellipsis-v
+                          i.fas.fa-map-pin
                         .icheck-primary.d-inline.ml-2
                           input#todoCheck3(type='checkbox', name='todo3')
                           label(for='todoCheck3')
@@ -130,8 +127,7 @@ block content
                           i.fas.fa-trash
                       li
                         span.handle
-                          i.fas.fa-ellipsis-v
-                          i.fas.fa-ellipsis-v
+                          i.fas.fa-map-pin
                         .icheck-primary.d-inline.ml-2
                           input#todoCheck4(type='checkbox', name='todo4')
                           label(for='todoCheck4')
@@ -144,8 +140,7 @@ block content
                           i.fas.fa-trash
                       li
                         span.handle
-                          i.fas.fa-ellipsis-v
-                          i.fas.fa-ellipsis-v
+                          i.fas.fa-map-pin
                         .icheck-primary.d-inline.ml-2
                           input#todoCheck5(type='checkbox', name='todo5')
                           label(for='todoCheck5')
@@ -158,8 +153,7 @@ block content
                           i.fas.fa-trash
                       li
                         span.handle
-                          i.fas.fa-ellipsis-v
-                          i.fas.fa-ellipsis-v
+                          i.fas.fa-map-pin
                         .icheck-primary.d-inline.ml-2
                           input#todoCheck6(type='checkbox', name='todo6')
                           label(for='todoCheck6')
@@ -172,8 +166,32 @@ block content
                           i.fas.fa-trash
                   // /.card-body 
                   .card-footer
-                    button.btn.btn-info.float-right(type='button')
+                    button.btn.btn-info.float-right(type='button', data-toggle='modal', data-target='#modal-default')
                       i.fas.fa-plus
+      .modal.fade#modal-default
+        .modal-dialog
+          .modal-content
+            .modal-header
+              h4.modal-title Adicionar tarefa
+              button.close(type='button', data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true') ×
+            .modal-body
+              form(name="sendEmailform" action="javascript:sendPasswordEmail()")
+                div(class="form-group")
+                  .input-group.mb-4                        
+                    input.form-control(id="task1" name ="task_name" type='text', placeholder='Título da Tarefa' required)                          
+                    .input-group-append
+                      .input-group-text.font-size
+                        span.fas.fa-bookmark  
+                  .input-group.mb-4  
+                    .tab
+                      .button(class="tablinks" onclick="") A  
+                        input.form-control(id="task2" name ="task_date" type='time', placeholder='' required)                          
+                        .input-group-append
+                          .input-group-text.font-size
+                            span.fas.fa-clock                    
+                button(class="btn btn-primary" type="submit") Pronto   
+
       footer.main-footer
         .float-right.d-none.d-sm-block
           b Version 1.0
@@ -181,3 +199,4 @@ block content
           a Vision
       // Control Sidebar 
       aside.control-sidebar.control-sidebar-dark
+  
