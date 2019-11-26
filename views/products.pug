@@ -81,7 +81,33 @@ block content
                       h6 Receita Bruta: R$ #{objeto.revenues}
                       h6 Resta em Estoque: #{objeto.quantity_remaining}
                     .icon
-                      i #{objeto.position}º
+                      i #{objeto.position}º          
+            section.col-lg-12.connectedSortable
+              .card.collapsed-card.card-info
+                .card-header.border-0
+                  .d-flex.justify-content-between                 
+                  h3.card-title Mais informações
+                  .card-tools
+                    button.btn.btn-tool(type='button', data-card-widget='collapse')
+                      i.fas.fa-plus
+                .card-body.table-responsive.p-0
+                  table#example2.table.table-bordered.table-striped
+                    thead.text-center
+                      tr
+                        th(style="font-weight: bold;") Produto
+                        th(style="font-weight: bold;") Posição
+                        th(style="font-weight: bold;") Quantidade Restante
+                        th(style="font-weight: bold;") Renda Bruta
+                    tbody.text-center
+                      each objeto in topTodos
+                        tr
+                          th #{objeto.code}
+                            br
+                            span #{objeto.description}
+                          th 
+                            span(class=`badge badge-info` style="float-right") #{objeto.position}     
+                          th #{objeto.quantity_remaining}
+                          th R$ #{objeto.revenues}             
             .row
               section.col-lg-6.connectedSortable
                 .card
@@ -161,7 +187,7 @@ block content
                             span Quantidade: #{objeto.quantity}
                           th
                             span(class=`badge badge-${objeto.status_color}` style="float-right") #{objeto.status}                                                                                 
-                          th.float-center #{objeto.remaining_days}                                                        
+                          th.float-center #{objeto.remaining_days}                                                                                                                                                                               
       footer.main-footer
         .float-right.d-none.d-sm-block
           b Version 1.0

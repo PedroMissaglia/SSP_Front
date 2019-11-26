@@ -9,12 +9,14 @@ router.get('/', async function(req, res, next) {
     var urlProtheusTop3 = address + '/top3';
     var urlProtheusLotValidity = address + '/lotValidity';
     var urlProtheusSaldoSeg = address + '/saldoSeguranca';
+    var urlProtheusTopTodos = address + '/topTodos';
     var basicAuth = 'Basic YWRtaW46IA==';
     var Jsondata;
     let products = [];
     let top3 = [];
     let lotValidity = [];
     let saldoSeguranca = [];
+    let topTodos = [];
 
     //Lista de Produtos
     try {
@@ -74,6 +76,20 @@ router.get('/', async function(req, res, next) {
     console.log('Falha ao listar os produtos com saldo em estado de segurança.');
     }
 
+    //Curva A,B,C de todos
+    try {
+      const response = 
+      await axios.get( urlProtheusTopTodos,
+        {headers: {'Authorization': basicAuth}}
+      );
+      Jsondata = response.data;
+    if (response.status == '200'){
+      topTodos = Jsondata.products
+    }
+    } catch (error) {
+    console.log('Falha ao listar os produtos com saldo em estado de segurança.');
+    }
+
     var url = 'http://localhost:50929/api/';
     var cookieValue = req.cookies.id;
     var user = [];
@@ -95,7 +111,8 @@ router.get('/', async function(req, res, next) {
      top3: top3,
      lotValidity: lotValidity,
      saldoSeguranca: saldoSeguranca,
-     user: user });
+     user: user,
+     topTodos: topTodos});
   });
   
   
