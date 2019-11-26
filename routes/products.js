@@ -74,11 +74,28 @@ router.get('/', async function(req, res, next) {
     console.log('Falha ao listar os produtos com saldo em estado de segurança.');
     }
 
+    var url = 'http://localhost:50929/api/';
+    var cookieValue = req.cookies.id;
+    var user = [];
+    try {
+      const response = await axios.get(url + '/Users/GetUsers/' + cookieValue);
+  
+    if (response.status == '200'){
+    
+      user = response.data;	
+        console.log(user);
+    
+    }
+    }catch (error) {
+    console.log('Erro');
+      }
+
     res.render('products', { title: 'Express',
      products: products,
      top3: top3,
      lotValidity: lotValidity,
-     saldoSeguranca: saldoSeguranca });
+     saldoSeguranca: saldoSeguranca,
+     user: user });
   });
   
   
