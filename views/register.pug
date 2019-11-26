@@ -5,9 +5,10 @@ block content
       .login-logo
         .card.col-mb-4
           .card-body.login-card-body
-            h2.login-box-msg Vision
-              h3 Cadastro
+            img.img-circle.elevation-3(src='stylesheets/admin-lte/dist/img/logo.png', alt='Vision Logo')
             br
+            br
+            h3 Vision
             form(name ="RegisterForm" action="javascript:validateForm()"  id="error")
               .input-group.mb-4
                 input.form-control(id="1" name ="nome" type='text', placeholder='Nome' required)
@@ -35,22 +36,20 @@ block content
                   .input-group-text.font-size
                     span.fas.fa-key    
               .input-group.mb-4
-                input.form-control(id="6" name="senha" type='password', placeholder='Password' maxlength="8" required)
+                input.form-control(id="6" name="senha" type='password', placeholder='Senha' maxlength="8" required)
                 .input-group-append
                   .input-group-text
                     span.fas.fa-lock
               .input-group.mb-4
-                input.form-control(id="7" name="resenha" type='password', placeholder='Password again' onBlur="javascript:validarSenha()" maxlength="8" required)
+                input.form-control(id="7" name="resenha" type='password', placeholder='Confirmação da Senha' onBlur="javascript:validarSenha()" maxlength="8" required)
                 .input-group-append
                   .input-group-text
-                    span.fas.fa-lock      
-              br      
+                    span.fas.fa-lock           
               .row               
                 .col-4
-                  button.align-center.btn.btn-primary.a(type="submit" style= 'margin-left: 70px;') Registre-se
-              br    
+                  button.align-center.btn.btn-primary.a(type="submit") Feito!
             p.mb-0
-              a.text-center(href='/') Já tenho um cadastro
+              a.text-center(href='/'  style= 'margin-left: 15px;') Já tenho um cadastro
             div(id="particles-js")
   script(src='javascripts/index.js')                  
   canvas(class="background")

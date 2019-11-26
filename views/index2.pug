@@ -20,8 +20,8 @@ block content
       aside.main-sidebar.sidebar-light-primary.elevation-4
         // Brand Logo 
         a.brand-link.navbar-primary(href='home')
-          img.brand-image.img-circle.elevation-3(src='stylesheets/admin-lte/dist/img/AdminLTELogo.png', alt='AdminLTE Logo', style='opacity: .8')
-          span.brand-text.font-weight-light Vision
+          img.brand-image.img-circle.elevation-3(src='stylesheets/admin-lte/dist/img/logo.png', alt='Vision Logo')
+          span.brand-text.font Vision
         // Sidebar 
         .sidebar
           // Sidebar user (optional) 
@@ -35,7 +35,7 @@ block content
             ul.nav.nav-pills.nav-sidebar.flex-column(data-widget='treeview', role='menu', data-accordion='false')
               li.nav-item.has-treeview
                 a.nav-link(href='home')
-                  i.nav-icon.fas.fa-chart-line
+                  i.nav-icon.fas.fa-home
                   p
                     | Home
               li.nav-item.has-treeview
@@ -172,7 +172,7 @@ block content
         .modal-dialog
           .modal-content
             .modal-header
-              h4.modal-title Adicionar tarefa
+              h4.modal-title Nova tarefa
               button.close(type='button', data-dismiss='modal', aria-label='Close')
                 span(aria-hidden='true') ×
             .modal-body
@@ -184,12 +184,15 @@ block content
                       .input-group-text.font-size
                         span.fas.fa-bookmark  
                   .input-group.mb-4  
-                    .tab
-                      .button(class="tablinks" onclick="") A  
-                        input.form-control(id="task2" name ="task_date" type='time', placeholder='' required)                          
-                        .input-group-append
-                          .input-group-text.font-size
-                            span.fas.fa-clock                    
+                    input.form-control(id="task2" name ="task_date" type='month', placeholder='' required)                          
+                    .input-group-append
+                      .input-group-text.font-size
+                        span.fas.fa-calendar
+                  .input-group.mb-4  
+                    input.form-control(id="task2" name ="task_date" type='time', placeholder='' required)                          
+                    .input-group-append
+                      .input-group-text.font-size
+                        span.fas.fa-clock                            
                 button(class="btn btn-primary" type="submit") Pronto   
 
       footer.main-footer

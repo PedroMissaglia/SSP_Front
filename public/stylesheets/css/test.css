@@ -103,7 +103,7 @@ a.text-center{
     left: 0;
     right: 0;
     z-index: -1;
-    background-image: url('https://projetarconsultoria.com/wp-content/uploads/2018/07/videoblocks-abstract-background-dot-circle-with-connection-for-futuristic-network-cyber_h2znh8ueef_thumbnail-full01.png');
+    /*background-image: url('https://projetarconsultoria.com/wp-content/uploads/2018/07/videoblocks-abstract-background-dot-circle-with-connection-for-futuristic-network-cyber_h2znh8ueef_thumbnail-full01.png');*/
     position: fixed; 
     min-width: 100%;
     min-height: 100%;
