@@ -80,6 +80,7 @@ block content
                       h6 #{objeto.code}
                       h6 Receita Bruta: R$ #{objeto.revenues}
                       h6 Resta em Estoque: #{objeto.quantity_remaining}
+                      h6 Receita em Porcentagem: #{objeto.percentage}%
                     .icon
                       i #{objeto.position}º          
             section.col-lg-12.connectedSortable
@@ -98,6 +99,7 @@ block content
                         th(style="font-weight: bold;") Posição
                         th(style="font-weight: bold;") Quantidade Restante
                         th(style="font-weight: bold;") Renda Bruta
+                        th(style="font-weight: bold;") Renda em Porcentagem
                     tbody.text-center
                       each objeto in topTodos
                         tr
@@ -107,7 +109,8 @@ block content
                           th 
                             span(class=`badge badge-info` style="float-right") #{objeto.position}     
                           th #{objeto.quantity_remaining}
-                          th R$ #{objeto.revenues}             
+                          th R$ #{objeto.revenues}
+                          th #{objeto.percentage}%             
             .row
               section.col-lg-6.connectedSortable
                 .card
