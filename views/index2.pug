@@ -81,89 +81,20 @@ block content
                         i.fas.fa-minus
                   .card-body
                     ul.todo-list(data-widget='todo-list')
-                      li
-                        // drag handle 
-                        span.handle
-                          i.fas.fa-map-pin
-                        // checkbox 
-                        .icheck-primary.d-inline.ml-2
-                          input#todoCheck1(type='checkbox', name='todo1')
-                          label(for='todoCheck1')
-                        // todo text 
-                        span.text Design a nice theme
-                        // Emphasis label 
-                        small.badge.badge-danger
-                          i.far.fa-clock
-                          | 2 mins
-                        // General tools such as edit or delete
-                        .tools
-                          i.fas.fa-edit
-                          i.fas.fa-trash
-                      li
-                        span.handle
-                          i.fas.fa-map-pin
-                        .icheck-primary.d-inline.ml-2
-                          input#todoCheck2(type='checkbox', name='todo2', checked='')
-                          label(for='todoCheck2')
-                        span.text Make the theme responsive
-                        small.badge.badge-info
-                          i.far.fa-clock
-                          | 4 hours
-                        .tools
-                          i.fas.fa-edit
-                          i.fas.fa-trash
-                      li
-                        span.handle
-                          i.fas.fa-map-pin
-                        .icheck-primary.d-inline.ml-2
-                          input#todoCheck3(type='checkbox', name='todo3')
-                          label(for='todoCheck3')
-                        span.text Let theme shine like a star
-                        small.badge.badge-warning
-                          i.far.fa-clock
-                          | 1 day
-                        .tools
-                          i.fas.fa-edit
-                          i.fas.fa-trash
-                      li
-                        span.handle
-                          i.fas.fa-map-pin
-                        .icheck-primary.d-inline.ml-2
-                          input#todoCheck4(type='checkbox', name='todo4')
-                          label(for='todoCheck4')
-                        span.text Let theme shine like a star
-                        small.badge.badge-success
-                          i.far.fa-clock
-                          | 3 days
-                        .tools
-                          i.fas.fa-edit
-                          i.fas.fa-trash
-                      li
-                        span.handle
-                          i.fas.fa-map-pin
-                        .icheck-primary.d-inline.ml-2
-                          input#todoCheck5(type='checkbox', name='todo5')
-                          label(for='todoCheck5')
-                        span.text Check your messages and notifications
-                        small.badge.badge-primary
-                          i.far.fa-clock
-                          | 1 week
-                        .tools
-                          i.fas.fa-edit
-                          i.fas.fa-trash
-                      li
-                        span.handle
-                          i.fas.fa-map-pin
-                        .icheck-primary.d-inline.ml-2
-                          input#todoCheck6(type='checkbox', name='todo6')
-                          label(for='todoCheck6')
-                        span.text Let theme shine like a star
-                        small.badge.badge-secondary
-                          i.far.fa-clock
-                          | 1 month
-                        .tools
-                          i.fas.fa-edit
-                          i.fas.fa-trash
+                      for object in tasks
+                        li
+                          span.handle
+                            i.fas.fa-map-pin
+                          .icheck-primary.d-inline.ml-2
+                            input(id=`${object.id}` type='checkbox', name=`${object.name}`)
+                            label(for=`${object.id}`)  
+                          span.text #{object.name}
+                          small.badge.badge-primary
+                            i.far.fa-clock
+                            | #{object.date}
+                          .tools
+                            i.fas.fa-edit(onclick=`updateTask('${object.id}', '${object.name}', '${object.date}'  )`)
+                            i.fas.fa-trash(onclick=`deleteTask('${object.id}','${object.name}')`)
                   // /.card-body 
                   .card-footer
                     button.btn.btn-info.float-right(type='button', data-toggle='modal', data-target='#modal-default')
@@ -176,24 +107,52 @@ block content
               button.close(type='button', data-dismiss='modal', aria-label='Close')
                 span(aria-hidden='true') ×
             .modal-body
-              form(name="sendEmailform" action="javascript:sendPasswordEmail()")
+              form(name="sendTaskForm" action="javascript:createTask()")
                 div(class="form-group")
                   .input-group.mb-4                        
                     input.form-control(id="task1" name ="task_name" type='text', placeholder='Título da Tarefa' required)                          
                     .input-group-append
                       .input-group-text.font-size
-                        span.fas.fa-bookmark  
+                        span.fas.fa-tasks  
                   .input-group.mb-4  
-                    input.form-control(id="task2" name ="task_date" type='month', placeholder='' required)                          
+                    input.form-control(id="task2" name ="task_date" type='date' required)                          
                     .input-group-append
                       .input-group-text.font-size
-                        span.fas.fa-calendar
-                  .input-group.mb-4  
-                    input.form-control(id="task2" name ="task_date" type='time', placeholder='' required)                          
+                        span.fas.fa-calendar                                                    
+                button(class="btn btn-primary" type="submit") Pronto
+      .modal.fade#modal2-default
+        .modal-dialog
+          .modal-content
+            .modal-header
+              h4.modal-title Alterar Tarefa
+              button.close(type='button', data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true') ×
+            .modal-body
+              form(name="sendTaskForm")
+                div(class="form-group")
+                  .input-group.mb-4                        
+                    input.form-control(id="alter1" name ="task_name" type='text', placeholder='Título da Tarefa' required)                          
                     .input-group-append
                       .input-group-text.font-size
-                        span.fas.fa-clock                            
-                button(class="btn btn-primary" type="submit") Pronto   
+                        span.fas.fa-tasks  
+                  .input-group.mb-4  
+                    input.form-control(id="alter2" name ="task_date" type='date' required)                          
+                    .input-group-append
+                      .input-group-text.font-size
+                        span.fas.fa-calendar                                                    
+                button(class="btn btn-primary" type="submit" name="button1") Alterar
+      .modal.fade#modal3-default
+        .modal-dialog
+          .modal-content
+            .modal-header
+              h4(class='modal-title' id="a" name="b") Deseja mesmo excluir a tarefa?
+              button.close(type='button', data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true') ×
+            .modal-body
+              form(name="deleteTaskForm")
+                div(class="form-group")
+                  .input-group.mb-4                                              
+                button(class="btn btn-primary" type="submit" name="buttona") Ok
 
       footer.main-footer
         .float-right.d-none.d-sm-block
