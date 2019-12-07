@@ -7,14 +7,9 @@ async function profileForm() {
 	var cpf = document.getElementById('2').value;
 	var birthdate = document.getElementById('3').value;
 	var email = document.getElementById('4').value;
-	var autenticacao = document.getElementById('5').value;
 
 	if (birthdate == null || birthdate == undefined || birthdate == "") {
 		birthdate = "01/01/0001 00:00:00";
-	}
-
-	if (autenticacao == null || autenticacao == undefined || autenticacao == "") {
-		autenticacao = '00000000-0000-0000-0000-000000000000'
 	}
 
 	try {
@@ -23,8 +18,7 @@ async function profileForm() {
 				name: nome,
 				cpf: cpf,
 				birthdate: birthdate,
-				email: email,
-				tokenId: autenticacao,
+				email: email		
 
 			});
 		console.log(response);
