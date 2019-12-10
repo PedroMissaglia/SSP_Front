@@ -15,7 +15,7 @@ router.get('/', async function(req, res, next) {
 	if (response.status == '200'){
   
 		user = response.data;	
-	  	console.log(user);
+		user.birthdate = user.birthdate.replace(/(\d*)-(\d*)-(\d*).*/, '$3-$2-$1');	
   
 	}
 	}catch (error) {

@@ -66,14 +66,16 @@ async function sendPasswordEmail() {
 			
 			if (response.status == '200'){
 				console.log('Envio realizado com sucesso');
-				$('#modal-default').modal('hide');
-				swal("Pronto!", "Enviamos o e-mail com sucesso.", "success");
+				//$('#modal-default').modal('close');
+        swal("Pronto!", "Enviamos o e-mail com sucesso.", "success");
+      
 			}
 		}
 			
   } catch (error) {
-    $('#modal-default').modal('hide');
+    
     swal("Ops!", "Parece que não conseguimos enviar o e-mail.", "error");
+    //window.location.href = '/';
     }       
   }
 

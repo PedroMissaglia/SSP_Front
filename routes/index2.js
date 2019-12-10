@@ -35,7 +35,7 @@ router.get('/', async function(req, res, next) {
 	}
 
 	for(var j = 0; j < tasks.length; j++) {
-		 tasks[j].date = tasks[j].date.replace(/(\d*)-(\d*)-(\d*).*/, '$2/$3/$1');	
+		 tasks[j].date = tasks[j].date.replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');	
 	  }
 
 	res.render('index2', { title: 'Express' ,

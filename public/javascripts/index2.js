@@ -51,8 +51,7 @@ async function deleteTask(id, name) {
       }
     } catch (error) {
 
-        swal("Ops!", "Parece que estamos com uma instabilidade, por favor tente novamente mais tarde.", "error");
-           
+        swal("Ops!", "Parece que estamos com uma instabilidade, por favor tente novamente mais tarde.", "error");          
     }
         })
 }
@@ -80,7 +79,7 @@ async function updateTask(id, name, date) {
       }
     } catch (error) {
 
-        swal("Ops!", "Parece que estamos com uma instabilidade, por favor tente novamente mais tarde.", "error");
+        swal("Ops!", "Parece que algo deu errado, verifique se todos os campos foram preenchidos.", "error");
            
     }
         })

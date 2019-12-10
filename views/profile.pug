@@ -105,9 +105,9 @@ block content
                               .input-group-append
                                 span.input-group-text
                                   i.fas.fa-id-card
-                            label.col-sm-4.control-label(for='inputDate', placeholder=`${user.birthdate}`) Data de nascimento
+                            label.col-sm-4.control-label(for='inputDate') Data de nascimento
                             .input-group.mb-3
-                              input.form-control(id="3" type='date', placeholder='Data de nascimento')
+                              input.form-control(id="3" type='date', value=`${user.birthdate}`)
                               .input-group-append
                                 span.input-group-text
                                   i.fas.fa-calendar-alt
