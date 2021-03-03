@@ -20,7 +20,7 @@
     "morgan": "~1.9.1",
     "particlesjs": "^2.2.3",
     "popper.js": "^1.15.0",
-    "pug": "2.0.0-beta11",
+    "pug": "3.0.1",
     "sass": "^1.23.0-module.beta.1",
     "sweetalert": "^2.1.2",
     "sweetalert2": "^8.18.1"
